@@ -1,0 +1,45 @@
+{
+  "name": "template",
+  "version": "1.0.0",
+  "description": "template for gulp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alexi1569/Template.git"
+  },
+  "author": "Alexi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alexi1569/Template/issues"
+  },
+  "homepage": "https://github.com/Alexi1569/Template#readme",
+  "dependencies": {
+    "gulp-shorthand": "^1.1.0",
+    "npm": "^6.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "browser-sync": "^2.23.7",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-cache": "^1.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^3.0.1",
+    "gulp-html-beautify": "^1.0.1",
+    "gulp-plumber": "^1.2.1",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.0.1",
+    "gulp-tinypng": "^1.0.2",
+    "gulp-uglify": "^3.0.0",
+    "gulp-uncss": "^1.0.6"
+  },
+  "browserslist": [
+    "cover 99.5%"
+  ]
+}

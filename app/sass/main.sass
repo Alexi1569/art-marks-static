@@ -1,0 +1,214 @@
+﻿$tr: .25s all ease-in
+$accent: red
+
+*,
+*:before,
+*:after
+  padding: 0
+  margin: 0
+  box-sizing: border-box
+  appearance: none
+  &:focus
+    outline: none
+
+select
+  display: none
+
+ul
+  list-style-type: none
+
+body
+  font-size: 16px
+  font-family: sans-serif
+  font-feature-settings: 'kern'
+  -webkit-font-smoothing: antialiased
+
+a
+  color: $accent
+  transition: $tr
+
+.header,
+.main,
+.footer
+  width: 100%
+
+.hidden
+  display: none !important
+
+.page
+  min-height: 100vh
+  position: relative
+
+.main
+  flex: 1
+
+html
+  font-size: 16px
+  text-size-adjust: 100%
+
+html, body
+  overflow-x: hidden
+
+button
+  cursor: pointer
+
+textarea
+  resize: none
+  width: 100%
+  height: 100%
+
+input,
+textarea
+  font-family: sans-serif
+  font-size: 14px
+  color: #333
+  &::-webkit-input-placeholder
+    font-size: 14px
+    color: #333
+    font-family: sans-serif
+  &::-moz-placeholder
+    font-size: 14px
+    color: #333
+    font-family: sans-serif
+  &:-ms-input-placeholder
+    font-size: 14px
+    color: #333
+    font-family: sans-serif
+  &:-moz-placeholder
+    font-size: 14px
+    color: #333
+    font-family: sans-serif
+
+input[type="submit"]
+  cursor: pointer
+
+.container
+  width: 100%
+  max-width: 1170px
+  padding-left: 15px
+  padding-right: 15px
+  margin: 0 auto
+
+.inline-flex
+  display: -webkit-inline-flex
+  display: -moz-inline-flex
+  display: -ms-inline-flex
+  display: -o-inline-flex
+  display: inline-flex
+
+.flex
+  display: -webkit-flex
+  display: -moz-flex
+  display: -ms-flex
+  display: -o-flex
+  display: flex
+
+.ai-s
+  align-items: stretch
+
+.ai-c
+  align-items: center
+
+.ai-fs
+  align-items: flex-start
+
+.ai-b
+  align-items: baseline
+
+.ai-fe
+  align-items: flex-end
+
+.jc-sb
+  justify-content: space-between
+
+.jc-sa
+  justify-content: space-around
+
+.jc-fe
+  justify-content: flex-end
+
+.jc-fs
+  justify-content: flex-start
+
+.jc-c
+  justify-content: center
+
+.fd-c
+  flex-direction: column
+
+.fw-w
+  flex-wrap: wrap
+
+.btn
+  border: 0
+  background-color: transparent
+  font-family: sans-serif
+
+.mobile-menu
+  transition: $tr
+  display: none
+
+.form
+  &__group
+    position: relative
+    &.has--error
+      .form__group-message
+        display: inline-block
+    &-label
+      display: block
+    &-input
+      display: block
+    &-message
+      font-size: .8em
+      color: red
+      display: none
+      margin-top: .2rem
+
+.checkbox
+  position: relative
+  padding-left: 22px
+  cursor: pointer
+  display: inline-block
+  input
+    display: none
+    &:checked + span
+      &:before
+
+      &:after
+
+  span
+    transition: $tr
+    &:before
+      content: ''
+      display: inline-block
+      position: absolute
+      transition: $tr
+    &:after
+      content: ''
+      display: inline-block
+      position: absolute
+      transition: $tr
+
+.radio
+  position: relative
+  padding-left: 22px
+  cursor: pointer
+  display: inline-block
+  input
+    display: none
+    &:checked + span
+      &:before
+
+      &:after
+  span
+    transition: $tr
+    &:before
+      content: ''
+      display: inline-block
+      position: absolute
+      transition: $tr
+    &:after
+      content: ''
+      display: inline-block
+      position: absolute
+      transition: $tr

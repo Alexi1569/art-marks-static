@@ -7,11 +7,12 @@ html(lang='en')
     link(rel='stylesheet', type='text/css', href='css/main.min.css')
     title Title
   body
-    #page.page.flex.fd-c.jc-sb
-      include ../includes/_header
+    .body-wrapper
+      include ../includes/_hidden
+      .cursor-wrap
+        span.cursor.cursor-dot(data-ref="dot")
+        span.cursor.cursor-dot-bg(data-ref="dotBg")
+      .flex.fd-c.ai-c.jc-c.wrapper
+        block content
 
-      block main
 
-      include ../includes/_footer
-
-    include ../includes/_hidden

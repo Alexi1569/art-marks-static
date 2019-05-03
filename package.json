@@ -41,5 +41,8 @@
   },
   "browserslist": [
     "cover 99.5%"
-  ]
+  ],
+  "prettier": {
+    "singleQuote": true
+  }
 }

@@ -1,122 +1,170 @@
-﻿$tr: .25s all ease-in
-$accent: red
+﻿@font-face
+  font-family: 'Futura PT demi'
+  src: url('../fonts/FuturaPT-Demi.eot')
+  src: url('../fonts/FuturaPT-Demi.eot?#iefix') format("embedded-opentype"), url('../fonts/FuturaPT-Demi.woff2') format("woff2"), url('../fonts/FuturaPT-Demi.woff') format("woff"), url('../fonts/FuturaPT-Demi.ttf') format("truetype"), url('../fonts/FuturaPT-Demi.svg#FuturaPT-Demi') format("svg")
+  font-weight: 600
+  font-style: normal
 
-*,
-*:before,
-*:after
+
+@font-face
+  font-family: 'Futura PT heavy'
+  src: url('../fonts/FuturaPT-Heavy.eot')
+  src: url('../fonts/FuturaPT-Heavy.eot?#iefix') format("embedded-opentype"), url('../fonts/FuturaPT-Heavy.woff2') format("woff2"), url('../fonts/FuturaPT-Heavy.woff') format("woff"), url('../fonts/FuturaPT-Heavy.ttf') format("truetype"), url('../fonts/FuturaPT-Heavy.svg#FuturaPT-Heavy') format("svg")
+  font-weight: 900
+  font-style: normal
+
+
+@font-face
+  font-family: 'Futura PT bold'
+  src: url('../fonts/FuturaPT-Bold.eot')
+  src: url('../fonts/FuturaPT-Bold.eot?#iefix') format("embedded-opentype"), url('../fonts/FuturaPT-Bold.woff2') format("woff2"), url('../fonts/FuturaPT-Bold.woff') format("woff"), url('../fonts/FuturaPT-Bold.ttf') format("truetype"), url('../fonts/FuturaPT-Bold.svg#FuturaPT-Bold') format("svg")
+  font-weight: bold
+  font-style: normal
+
+
+@font-face
+  font-family: 'Futura PT medium'
+  src: url('../fonts/FuturaPT-Medium.eot')
+  src: url('../fonts/FuturaPT-Medium.eot?#iefix') format("embedded-opentype"), url('../fonts/FuturaPT-Medium.woff2') format("woff2"), url('../fonts/FuturaPT-Medium.woff') format("woff"), url('../fonts/FuturaPT-Medium.ttf') format("truetype"), url('../fonts/FuturaPT-Medium.svg#FuturaPT-Medium') format("svg")
+  font-weight: 500
+  font-style: normal
+
+
+@font-face
+  font-family: 'Futura PT book'
+  src: url('../fonts/FuturaPT-Book.eot')
+  src: url('../fonts/FuturaPT-Book.eot?#iefix') format("embedded-opentype"), url('../fonts/FuturaPT-Book.woff2') format("woff2"), url('../fonts/FuturaPT-Book.woff') format("woff"), url('../fonts/FuturaPT-Book.ttf') format("truetype"), url('../fonts/FuturaPT-Book.svg#FuturaPT-Book') format("svg")
+  font-weight: normal
+  font-style: normal
+
+$book: 'Futura PT book'
+
+*, *:before, *:after
   padding: 0
   margin: 0
   box-sizing: border-box
   appearance: none
-  &:focus
-    outline: none
 
-select
-  display: none
-
-ul
-  list-style-type: none
-
-body
-  font-size: 16px
-  font-family: sans-serif
-  font-feature-settings: 'kern'
-  -webkit-font-smoothing: antialiased
-
-a
-  color: $accent
-  transition: $tr
-
-.header,
-.main,
-.footer
-  width: 100%
-
-.hidden
-  display: none !important
-
-.page
-  min-height: 100vh
-  position: relative
-
-.main
-  flex: 1
-
-html
-  font-size: 16px
-  text-size-adjust: 100%
-
-html, body
-  overflow-x: hidden
-
-button
-  cursor: pointer
-
-textarea
-  resize: none
-  width: 100%
-  height: 100%
-
-input,
-textarea
-  font-family: sans-serif
-  font-size: 14px
-  color: #333
-  &::-webkit-input-placeholder
-    font-size: 14px
-    color: #333
-    font-family: sans-serif
-  &::-moz-placeholder
-    font-size: 14px
-    color: #333
-    font-family: sans-serif
-  &:-ms-input-placeholder
-    font-size: 14px
-    color: #333
-    font-family: sans-serif
-  &:-moz-placeholder
-    font-size: 14px
-    color: #333
-    font-family: sans-serif
-
-input[type="submit"]
-  cursor: pointer
+*:focus
+  outline: none
 
 .container
-  width: 100%
-  max-width: 1170px
-  padding-left: 15px
-  padding-right: 15px
-  margin: 0 auto
+  max-width: 100%
+  margin: 0 15px
+  padding: 0 6.48rem
 
-.inline-flex
-  display: -webkit-inline-flex
-  display: -moz-inline-flex
-  display: -ms-inline-flex
-  display: -o-inline-flex
-  display: inline-flex
+path
+  transition: fill .4s ease
+
+.sidebar-toggler-el
+  &.prevent
+    pointer-events: none
+    cursor: none
+
+body .blueimp-gallery
+  .close
+    font-size: 0
+    background-image: url('../../static/img/close.svg')
+    background-color: rgba(0, 0, 0, 0.4)
+    line-height: 1
+    background-repeat: no-repeat
+    background-position: center
+    -webkit-background-size: 1.2rem
+    background-size: 1.2rem
+    margin: 0
+    right: 1.5rem
+    top: 1.5rem
+    display: inline-block
+    width: 1.5rem
+    height: 1.5rem
+  .next
+    background-image: url('../../static/img/arrow-right.svg')
+    right: 1.5rem
+  .prev
+    background-image: url('../../static/img/arrow-left.svg')
+    left: 1.5rem
+  .next, .prev
+    font-size: 0
+    background-position: center
+    background-repeat: no-repeat
+    background-size: 1.5rem
+    margin: 0
+    transform: translateY(-50%)
+    border-width: 2px
+    width: 2rem
+    height: 2rem
+    display: inline-block
+
+body .zoom
+  &:before
+    content: ''
+    display: inline-block
+    position: absolute
+    bottom: 0.6rem
+    right: 0.6rem
+    width: 1.3rem
+    z-index: 1
+    cursor: pointer
+    transition: .2s all ease
+    height: 1.3em
+    background: url('../../static/img/zoom.svg') no-repeat center
+    -webkit-background-size: contain
+    background-size: contain
+  &:after
+    top: auto
+    bottom: 0
+    width: 0
+    cursor: pointer
+    transition: .2s all ease
+    height: 0
+    border-style: solid
+    border-width: 0 0 4rem 4rem
+    background-image: none
+    border-color: transparent transparent rgba(43, 142, 217, .7) transparent
+    display: inline-block
+
+.body-wrapper
+  position: relative
+  width: 100vw !important
+
+.text-center
+  text-align: center
+
+.wrapper
+  min-height: 100vh
 
 .flex
-  display: -webkit-flex
-  display: -moz-flex
-  display: -ms-flex
-  display: -o-flex
   display: flex
 
-.ai-s
-  align-items: stretch
-
-.ai-c
-  align-items: center
+.inline-flex
+  display: inline-flex
 
 .ai-fs
   align-items: flex-start
 
+.ai-c
+  align-items: center
+
 .ai-b
   align-items: baseline
 
+.ai-s
+  align-items: stretch
+
 .ai-fe
   align-items: flex-end
+
+.jc-fs
+  justify-content: flex-start
+
+.jc-s
+  justify-content: stretch
+
+.jc-c
+  justify-content: center
+
+.jc-fe
+  justify-content: flex-end
 
 .jc-sb
   justify-content: space-between
@@ -124,91 +172,3010 @@ input[type="submit"]
 .jc-sa
   justify-content: space-around
 
-.jc-fe
-  justify-content: flex-end
-
-.jc-fs
-  justify-content: flex-start
-
-.jc-c
-  justify-content: center
+.fw-w
+  flex-wrap: wrap
 
 .fd-c
   flex-direction: column
 
-.fw-w
-  flex-wrap: wrap
+.fd-r
+  flex-direction: row
+
+html,
+body
+  font-size: 16px
+  overflow-x: hidden
+
+body
+  overflow-x: hidden
+  font-family: $book, Arial, sans-serif
+  cursor: none !important
+  *
+    cursor: none !important
+
+.center
+  flex: 1
+  width: 100%
+
+.wrapper
+  padding-right: 7.5rem
+
+.cursor
+  position: absolute
+  pointer-events: none
+  z-index: 1000000
+  border-radius: 50%
+  opacity: 0
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  &-wrap
+    transition: opacity .3s ease-in-out
+    &.transition
+      .cursor
+        transition: opacity .3s ease-in-out, transform .3s ease-in-out, -webkit-transform .3s ease-in-out
+    &.large
+      .cursor
+        &.cursor-dot-bg
+          transform: translate(-50%, -50%) scale(2)
+        &.cursor-dot
+          transform: translate(-50%, -50%) scale(.75)
+    &.visible
+      .cursor
+        &.cursor-dot-bg
+          opacity: .65
+        &.cursor-dot
+          opacity: 1
+  &.cursor-dot
+    height: 0.28125vw
+    width: 0.28125vw
+    background-image: linear-gradient( 90deg, rgb(47,139,218) 0%, rgb(0,171,211) 100%)
+  &.cursor-dot-bg
+    width: 1.40625vw
+    height: 1.40625vw
+    background-image: linear-gradient( 90deg, rgb(47,139,218) 0%, rgb(0,171,211) 100%)
+
+.logo
+  display: inline-block
+  width: 8.87500rem
+
+header
+  width: 100%
+  border-bottom: 1px solid #e8e8e8
+
+.header.header--main
+  border-bottom: 0
+
+.header__line
+  padding: 1.8125rem 0
+
+header a
+  text-decoration: none
+  color: inherit
+  display: block
+
+
+.nav__list-inner
+  position: absolute
+  left: -1.5rem
+  right: -1.5rem
+  min-width: 15.25rem
+  top: 100%
+  z-index: 1
+  background-color: #fff
+  padding: 1.5rem
+  text-transform: none
+  letter-spacing: 0
+  font-family: 'Futura PT medium'
+  list-style-type: none
+  visibility: hidden
+  opacity: 0
+  transition: .5s all ease-in
+  li
+    margin-bottom: .4rem
+    &:last-child
+      margin-bottom: 0
+
+.header__nav-list
+  font-size: 0.9375em
+  color: #303030
+  font-family: 'Futura PT heavy'
+  letter-spacing: 0.025em
+  text-transform: uppercase
+  margin-right: 7.5rem
+
+.nav__fill
+  position: absolute
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  background-color: #fff
+  z-index: -1
+
+.header__nav-list > li.active > a, .header__nav-list > li:hover > a, .nav__list-inner li:hover a
+  background: linear-gradient(90deg, rgb(47, 139, 218) 0%, rgb(0, 171, 211) 100%)
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+
+.header__nav-list > li.active, .header__nav-list > li:hover
+  .nav__list-inner
+    opacity: 1
+    visibility: visible
+
+.nav__list
+  list-style-type: none
+
+.phones__list
+  letter-spacing: 0.025em
+  color: #333333
+  font-family: 'Futura PT medium'
+  font-size: 0.9375em
+  a:hover
+    background: linear-gradient(90deg, rgb(47, 139, 218) 0%, rgb(0, 171, 211) 100%)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+
+.contacts__phones
+  font-size: 1em
+
+.header__phones
+  margin-right: 2.5rem
+
+.phones__list a
+  color: inherit
+  text-decoration: none
+  display: block
 
 .btn
+  display: inline-block
+  font-family: 'Futura PT demi'
+  font-size: 0.8125em
+  text-transform: uppercase
+  color: #fff
+  letter-spacing: 0.025em
+  text-align: center
+  min-width: 10.9375rem
+  cursor: pointer
+  line-height: 1
+  text-decoration: none
+  padding: 0.7rem
   border: 0
-  background-color: transparent
-  font-family: sans-serif
+  transition: 0.4s all ease-in
+  background: transparent
 
-.mobile-menu
-  transition: $tr
+.p-about__block-btn
+  margin-top: 2.2rem
+
+.p-portfolio__btn
+  margin-top: 2.8125rem
+
+.p-blog__btn
+  margin-top: 4.375rem
+
+.fluid__form__btn
+  padding-left: 0
+  padding-right: 0
+  width: 17em
+  min-width: auto
+  margin: 0 1.25rem
+
+.btn.btn--linear
+  border: 1px solid #cccccc
+  padding-top: .63rem
+  padding-bottom: .63rem
+  color: #333333
+
+.s-portfolio__btn
+  margin: 3.75rem auto 0
+
+.s-team__btn
+  margin: 2.8125rem auto 0
+
+.s-services__block-btn
+  margin-top: 2.2rem
+
+.btn--icon:hover
+  .btn__wrap-inner:before
+    width: 100%
+  .btn__wrap-text
+    color: #fff
+
+.btn__wrap-text
+  display: inline-block
+  transition: 0.3s all ease-in
+
+.sidebar__overlay
+  position: absolute
+  width: 100vw
+  height: 100vh
+  z-index: 999
+  right: 0
+  background-color: transparent
+  opacity: 0
+  visibility: hidden
+  top: 0
+  &.prevent
+    opacity: 1
+    visibility: visible
+
+.btn
+  &.btn--filled
+    background-image: linear-gradient(90deg, rgb(47, 139, 218) 0%, rgb(0, 171, 211) 100%)
+    position: relative
+    transition: .2s all ease
+    &:before
+      content: ''
+      display: block
+      position: absolute
+      left: 2px
+      right: 2px
+      top: 2px
+      bottom: 2px
+      background-color: #fff
+      transform: scale(0.5)
+      opacity: 0
+      transition: 0.3s all cubic-bezier(0.17, 0.67, 0.6, 0.88)
+    .btn__wrap-inner
+      position: relative
+      z-index: 1
+    .btn__wrap-text
+      transition: none
+    &:hover
+      &:before
+        transform: scale(1)
+        opacity: 1
+      box-shadow: 0 7px 12px 0px rgba(43, 142, 217, 0.2)
+      .btn__wrap-text
+        color: #2b8ed9
+  &.btn--icon
+    padding: 0
+    color: inherit
+
+.btn--icon
+  .btn__wrap-inner
+    position: relative
+    display: inline-flex
+    justify-content: flex-end
+    align-items: flex-start
+    &:before
+      content: ''
+      display: inline-block
+      position: absolute
+      left: 0
+      bottom: 0
+      top: 0
+      z-index: -1
+      left: 0
+      width: 2.1875rem
+      transition: 0.4s all ease-in
+      background-image: linear-gradient(90deg, rgb(47, 139, 218) 0%, rgb(0, 171, 211) 100%)
+  .btn__wrap-icon-inner
+    height: 100%
+    width: 100%
+  .btn__wrap-icon
+    display: inline-block
+    height: 2.1875rem
+    width: 2.1875rem
+
+.btn
+  &.btn--icon .btn__wrap-text
+    padding: 0.7rem 1.75rem 0.7rem 0.625rem
+  &.btn--inline .btn__wrap-text
+    color: #2b8ed9
+
+.s-services__presentation-btn
+  font-size: 0.9375em
+  letter-spacing: 0.05em
+  text-align: left
+  font-family: 'Futura PT heavy'
+  line-height: 1.86666667
+  width: 12.8125rem
+  min-width: auto
+  padding: 0
+  margin-bottom: 1.8rem
+  .btn__wrap-text
+    display: inline
+  .btn__wrap-icon-inner
+    width: 1.5625rem
+    height: 1rem
+    margin-left: .625rem
+  .btn__wrap-icon
+    display: inline
+  .btn__wrap-icon-inner
+    background-image: linear-gradient(90deg, rgb(47, 139, 218) 0%, rgb(0, 171, 211) 100%)
+
+.btn__wrap-icon svg
+  fill: #fff
+  height: 0.5rem
+  width: auto
+  display: inline-block
+  vertical-align: middle
+
+.sidebar__toggler
+  background: transparent
+  border: 0
+  font-size: 100%
+  position: relative
+  z-index: 3
+  cursor: pointer
+
+.sidebar__toggler-inner
+  transform: translateY(-35%)
+  opacity: 0
+  transition: 0.15s all ease-in
+  &.in-viewport, &.above-viewport, &.below-viewport
+    transform: translateY(0%)
+    opacity: 1
+  &.above-viewport
+    transform: translateY(0%) !important
+    opacity: 1 !important
+    transition: none !important
+
+.sidebar__toggler.active
+  .sidebar__toggler-text
+    opacity: 0
+  .sidebar__toggler-line
+    transform: rotate(45deg)
+    top: 50%
+    &:before
+      transform: rotate(-90deg)
+      top: 0
+    &:after
+      width: 0
+
+.sidebar__toggler-lines
+  position: relative
+  height: 1rem
+  width: 2.125rem
+
+.sidebar__toggler-text
+  margin-top: 0.375rem
+  transition: 0.4s all ease-out
+  min-width: 2.5rem
+
+.sidebar__toggler-line
+  height: 2px
+  background-color: #393939
+  display: inline-block
+  position: absolute
+  left: 0
+  right: 0
+  width: 100%
+  transition: 0.35s all ease-out
+  &:before, &:after
+    height: 2px
+    background-color: #393939
+    display: inline-block
+    position: absolute
+    left: 0
+    right: 0
+    width: 100%
+    transition: 0.35s all ease-out
+  top: 0
+  &:before, &:after
+    content: ''
+  &:before
+    top: calc(1rem / 2 - 1px)
+  &:after
+    top: calc(1rem - 2px)
+    width: 73.5%
+    right: 0
+    left: auto
+
+.sidebar__text
+  letter-spacing: 0.025em
+  font-family: 'Futura PT medium'
+  color: #666666
+  font-size: 0.875em
+  cursor: pointer
+
+.sidebar__mobile
   display: none
 
-.form
-  &__group
+.sidebar__nav-list
+  li
     position: relative
-    &.has--error
-      .form__group-message
-        display: inline-block
-    &-label
+  will-change: transform
+  z-index: 1
+  a
+    transition: 0.3s all ease-in
+  li:hover a
+    background: linear-gradient(90deg, rgb(47, 139, 218) 0%, rgb(0, 171, 211) 100%)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+
+.sidebar__part
+  transition: 0.4s all ease-in
+
+.sidebar__bottom
+  flex: 1
+  transition: .4s all ease-in
+
+.sidebar__right-wrap
+  flex: 1
+
+.sidebar .sidebar__nav-list
+  opacity: 0
+  transform: translateX(100%)
+
+.sidebar__toggler
+  margin-bottom: 7.5rem
+
+.sidebar
+  position: fixed
+  right: 0
+  bottom: 0
+  z-index: 2
+  top: 0
+  height: 100%
+  padding: 0 2.8125rem 0 2.1875rem
+  text-align: right
+  background-color: #fff
+  padding-top: 6.125rem
+
+
+
+.sidebar__languages
+  list-style-type: none
+  transform: translateY(-35%)
+  opacity: 0
+  transition: 0.15s all ease-in 0.1s
+  &.in-viewport, &.above-viewport, &.below-viewport
+    transform: translateY(0%)
+    opacity: 1
+  &.above-viewport
+    transform: translateY(0%) !important
+    opacity: 1 !important
+    transition: none !important
+  li
+    margin-bottom: 0.2rem
+    &:hover button
+      background: linear-gradient(90deg, rgb(47, 139, 218) 0%, rgb(0, 171, 211) 100%)
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+    &:last-of-type
+      margin-bottom: 0
+  button
+    background-color: transparent
+    border: 0
+    line-height: 1
+    cursor: pointer
+    font-family: 'Futura PT medium'
+    letter-spacing: 0.01em
+    color: #747474
+    font-size: 100%
+
+.sidebar__languages-item.active
+  color: #333333
+  border-bottom: 1px solid #333333
+
+.p-team__socials
+  list-style-type: none
+  margin-top: 1rem
+  margin-bottom: -5px
+  opacity: 0
+  transition: .3s all ease-in
+  li
+    margin: 0 5px 5px
+  a
+    width: 1.875rem
+    height: 1.875rem
+    line-height: 1
+    border-radius: 3px
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    background-image: linear-gradient(135deg, rgb(151, 47, 218) 0%, rgb(50, 47, 184) 100%)
+  svg
+    display: block
+    fill: #fff
+
+.gradient-svg
+  position: absolute
+  left: -999px
+  top: -999px
+  z-index: -1
+  width: 0
+  height: 0
+
+.header__socials
+  list-style-type: none
+  transform: translateY(35%)
+  opacity: 0
+  transition: 0.15s all ease-in
+  &.in-viewport, &.above-viewport, &.below-viewport
+    transform: translateY(0%)
+    opacity: 1
+  &.above-viewport
+    transform: translateY(0%) !important
+    opacity: 1 !important
+    transition: none !important
+  li:hover svg
+    fill: url('#blue-gradient')
+  a
+    display: block
+    width: 1.1875rem
+    height: 1.25rem
+  li
+    margin-bottom: 0.6rem
+    &:last-child
+      margin-bottom: 0
+  svg
+    height: 100%
+    display: block
+    fill: #9d9d9d
+    transition: 0.4s all ease-in
+
+.sidebar__buttons-inner .sidebar__button
+  position: absolute
+  opacity: 0
+  transition: 0.45s all ease-out
+  top: 0
+  left: 0
+  transform: scale(0.5) translateX(0%) translateY(0%)
+
+.sidebar__buttons-message
+  &:before
+    content: ''
+    display: block
+    position: absolute
+    left: 0
+    width: 100%
+    top: 50%
+    height: 250%
+    transform: translate(-20%, -50%)
+    z-index: -1
+  &:hover:before
+    z-index: 1
+
+.sidebar__buttons
+  transform: translateY(35%)
+  opacity: 0
+  transition: 0.15s all ease-in 0.1s
+  &.in-viewport, &.above-viewport, &.below-viewport
+    opacity: 1
+    transform: translateY(0)
+  &.above-viewport
+    transform: translateY(0%) !important
+    opacity: 1 !important
+    transition: none !important
+
+.sidebar__buttons-inner.show .sidebar__button
+  opacity: 1
+  &:first-child
+    transform: scale(1) translateX(-120%) translateY(-75%)
+  &:last-child
+    transform: scale(1) translateX(-120%) translateY(75%)
+
+.sidebar__button
+  width: 2.5rem
+  cursor: pointer
+  height: 2.5rem
+  border-radius: 0.3125rem
+  background-image: linear-gradient(90deg, rgb(47, 139, 218) 0%, rgb(0, 171, 211) 100%)
+  border: 0
+  background-color: transparent
+  transition: 0.3s all ease-out
+  &.active
+    background-image: linear-gradient(90deg, rgba(47, 139, 218, 0) 0%, rgba(0, 171, 211, 0) 100%)
+    border: 1px solid #2b8ed9
+    svg
+      fill: #2b8ed9
+  &:focus
+    outline: 0
+  svg
+    width: 50%
+    fill: #fff
+    transition: 0.15s all ease-out
+
+.sidebar__buttons-message
+  position: relative
+  margin-bottom: 3.75rem
+  &:hover
+    .sidebar__button--message
+      background-image: linear-gradient(90deg, rgba(47, 139, 218, 0) 0%, rgba(0, 171, 211, 0) 100%)
+      border: 1px solid #2b8ed9
+      svg
+        fill: #2b8ed9
+    .sidebar__buttons-inner
+      .sidebar__button
+        opacity: 1
+        &:first-child
+          transform: scale(1) translateX(-120%) translateY(-75%)
+        &:last-child
+          transform: scale(1) translateX(-120%) translateY(75%)
+
+
+.sidebar__arrow-text
+  margin-bottom: 0.375rem
+  display: block
+
+.sidebar__arrow
+  &.show
+    opacity: 1
+    transform: translateX(0%)
+  text-align: center
+  opacity: 0
+  transform: translateX(250%)
+  transition: 0.4s all ease-out
+  svg
+    width: 1.1875rem
+    fill: #7a7979
+    display: inline-block
+
+.footer
+  width: 100%
+  padding: 3.75rem 0 3.125rem
+  font-size: 1em
+  &.footer--line
+    border-top: 1px solid #e8e8e8
+  &.footer--margin
+    margin-bottom: 89px
+  a:hover
+    background: linear-gradient(90deg, rgb(47, 139, 218) 0%, rgb(0, 171, 211) 100%)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+
+.footer__item a:hover
+  background: linear-gradient(90deg, rgb(47, 139, 218) 0%, rgb(0, 171, 211) 100%)
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+
+.footer__contacts-item
+  margin-bottom: .75rem
+  a
+    text-decoration: none
+    color: inherit
+  &:last-child
+    margin-bottom: 0
+
+.footer--padding
+  padding-top: 0.3rem
+
+.footer__info-row
+  margin-top: 1.65rem
+
+.footer__col
+  margin-right: 2.5rem
+
+.footer__wrapper
+  font-size: .875em
+  letter-spacing: 0.001em
+  margin-right: -2.5rem
+  color: #666666
+  font-family: 'Futura PT medium'
+
+.footer__info-value
+  text-decoration: none
+  color: inherit
+  font-family: 'Futura PT medium'
+
+.footer__info-title
+  text-transform: uppercase
+  margin-bottom: .2rem
+  font-family: 'Futura PT medium'
+
+.footer__col-title
+  font-size: 1.14285714em
+  font-family: 'Futura PT heavy'
+  letter-spacing: 0.025em
+  text-transform: uppercase
+  color: #303030
+
+.footer__col-item
+  margin-top: 2.25rem
+
+@keyframes blink
+  0%
+    opacity: 1
+
+  50%
+    opacity: 0
+
+  100%
+    opacity: 1
+
+
+body
+  .s-banner__subtitle span.typed-cursor, .typed-cursor.typed-cursor--blink
+    animation: blink 1s infinite
+
+.s-banner
+  background-position: center
+  background-size: cover
+  background-repeat: no-repeat
+  color: #fff
+  letter-spacing: 0.025em
+  position: relative
+  width: 100%
+  min-height: 45rem
+
+.s-banner__inner
+  padding: 4rem 2rem
+  width: 100%
+
+.s-banner__title
+  font-family: 'Futura PT heavy'
+  font-size: 9.37500em
+  text-transform: uppercase
+  line-height: 1
+  opacity: 0
+  span
+    opacity: 0
+    position: relative
+
+.s-banner__subtitle
+  font-size: 2.875em
+  opacity: 0
+  position: relative
+  span
+    transition: .25s all ease
+
+
+
+.mouse
+  height: 3.125rem
+  position: absolute
+  bottom: 0
+  left: 50%
+  transform: translateX(-50%)
+
+@keyframes mouseLineAnim
+  from
+    transform: translateY(100%)
+
+  to
+    transform: translateY(0%)
+
+
+@keyframes mouseIconAnim
+  from
+    transform: translateY(-30%)
+
+  to
+    transform: translateY(0%)
+
+
+.mouse__line
+  display: inline-block
+  margin: 0.25rem auto 0
+  width: 1px
+  flex: 1
+  transition: .3s all ease
+  background-color: #ffffff
+  animation: mouseLineAnim 2s infinite ease-in-out
+
+.mouse svg
+  display: block
+  fill: #fff
+  transition: .3s all ease
+  height: 1.3rem
+  animation: mouseIconAnim 2s infinite ease-in-out
+
+.s-services
+  color: #303030
+  padding: 4.37500rem 0 8.125rem
+  .caption
+    margin-bottom: 3.75rem
+
+.s-services__content
+  padding-top: 4.0625rem
+  margin-bottom: -4.375rem
+
+
+.caption
+  font-size: 1em
+  line-height: 1.2
+  margin: 0 auto
+
+.caption--clients
+  width: 28%
+  transition: 1.3s transform cubic-bezier(0.19, 1, 0.22, 1), 0.85s opacity cubic-bezier(0.19, 1, 0.22, 1) 0.1s
+
+.p-blog__inner-caption .caption__main
+  font-size: 1.125em
+  letter-spacing: 0
+
+.caption--left
+  text-align: left
+
+.sidebar-modal__caption .caption__main
+  font-size: 1.5em
+  text-transform: none
+  letter-spacing: 0
+
+.caption
+  &.header-modal__caption .caption__main
+    font-size: 1.5em
+  &.caption--smallest .caption__main
+    font-size: 1.125em
+    letter-spacing: 0.001em
+    line-height: 1.2
+
+.p-portfolio-item__caption .caption__content
+  margin-top: .3rem
+  font-style: normal
+  font-family: 'Futura PT medium'
+  letter-spacing: 0.015em
+
+.caption
+  &.p-contacts__bottom-caption
+    margin-bottom: 2.8125rem
+    margin-left: 0
+    margin-right: 0
+    text-align: left
+  &.caption--big .caption__main
+    font-size: 3rem
+    letter-spacing: 0.05em
+    font-family: 'Futura PT demi'
+    line-height: 0.958333333
+  &.caption--small .caption__main
+    font-size: 1.625em
+    font-family: 'Futura PT demi'
+
+.p-services-item__popular-title.caption--small .caption__main
+  font-family: 'Futura PT heavy'
+  letter-spacing: 0
+
+.caption__inner
+  opacity: 0
+  transform: translateY(20%)
+  transition: 1.2s transform cubic-bezier(0.19, 1, 0.22, 1), 0.8s opacity cubic-bezier(0.19, 1, 0.22, 1) 0.1s
+  &.in-viewport, &.above-viewport, &.fully-in-viewport
+    opacity: 1
+    transform: translateY(0)
+  &.above-viewport.above-viewport
+    transform: translateY(0%) !important
+    opacity: 1 !important
+    transition: none !important
+
+.p-services__caption .caption__content
+  width: 45.7%
+
+.caption__content
+  color: #333333
+  letter-spacing: 0.001em
+  font-size: 1.0625em
+  font-style: italic
+  line-height: 1.05882353
+  p
+    margin-bottom: .875rem
+    &:last-child
+      margin-bottom: 0
+  margin-top: 3.125rem
+
+.caption--services
+  opacity: 0
+  transform: translateY(-40%)
+  &.caption--services--visible
+    opacity: 1
+    transition: 0.4s all ease-in 0.4s
+    transform: translateY(0%)
+
+.caption--team
+  width: 40%
+
+.caption__main
+  color: inherit
+  text-transform: uppercase
+  font-family: 'Futura PT heavy'
+  font-size: 2.125em
+  letter-spacing: 0.025em
+
+.caption__additional
+  color: #666666
+  font-size: 1.0625em
+  line-height: 1.23529412
+  margin-top: 1.5rem
+  letter-spacing: 0.001em
+
+.caption--centered
+  text-align: center
+
+
+
+
+
+.services__block
+  transform: translateY(5rem)
+  opacity: 0
+  transition: 1.7s transform cubic-bezier(0.19, 1, 0.22, 1), 1.2s opacity cubic-bezier(0.19, 1, 0.22, 1)
+
+.s-services__services__block
+  width: 42%
+  margin-bottom: 4.375rem
+
+.services__block
+  &.in-viewport
+    transform: translateY(0%)
+    opacity: 1
+  &.above-viewport
+    transform: translateY(0%) !important
+    opacity: 1 !important
+    transition: none !important
+
+.services__block--web, .services__block--seo
+  transition-delay: 0.1s
+
+.services__block--smm
+  transition-delay: 0.2s
+
+.p-services__services__block
+  width: 25%
+  margin-right: 12.5%
+  margin-bottom: 5rem
+  .s-services__nav-list li
+    width: 100%
+    margin-right: 0
+  &:nth-child(3n)
+    margin-right: 0
+
+.s-services__services__block:last-child
+  margin-right: 6.6%
+
+.p-services__services__block
+  &:nth-child(1)
+    transition-delay: .1s
+  &:nth-child(2)
+    transition-delay: .2s
+  &:nth-child(3)
+    transition-delay: .3s
+  &:nth-child(4)
+    transition-delay: .4s
+  &:nth-child(5)
+    transition-delay: .5s
+
+.services__block-title
+  position: relative
+  font-size: 2.375em
+  font-family: 'Futura PT medium'
+  letter-spacing: 0.05em
+  text-transform: uppercase
+  margin-bottom: 2.5rem
+
+.services__block-title--additional
+  font-size: 1.89473684em
+  font-family: 'Futura PT Bold'
+  position: absolute
+  top: 0
+  line-height: 1
+  left: 2rem
+  z-index: -1
+
+
+
+
+
+.brief__content
+  font-size: 1em
+  font-family: 'Futura PT medium'
+
+.brief__content-item
+  margin-bottom: .75rem
+  &:last-child
+    margin-bottom: 0
+
+.brief__content-top
+  i
+    display: inline-block
+    width: 8px
+    margin-right: 10px
+  svg
+    display: block
+    width: 100%
+    height: auto
+    fill: #333333
+
+.toggler-item.opened .toggler-item__bottom
+  opacity: 1
+
+.toggler-item__top
+  cursor: pointer
+
+.faq__item .toggler-item__inner
+  opacity: 0
+  transform: translateX(-25%)
+  transition: 0.9s all cubic-bezier(0.19, 1, 0.22, 1)
+  &.in-viewport
+    opacity: 1
+    transform: translateX(0%)
+  &.above-viewport
+    transform: translateX(0%) !important
+    opacity: 1 !important
+    transition: none !important
+
+.toggler-item__bottom
+  transition: all 0.3s ease-out
+  max-height: 0
+  overflow: hidden
+  opacity: 0
+
+.s-services__presentation
+  width: 52%
+  margin-bottom: 2.8125rem
+  .btn__wrap
+    opacity: 0
+    transform: translateX(30%)
+    transition-delay: 0.3s
+    transition: 1.4s transform cubic-bezier(0.19, 1, 0.22, 1), 1s opacity cubic-bezier(0.19, 1, 0.22, 1)
+  &.in-viewport
+    .s-services__mockup, .btn__wrap
+      transform: translateX(0%)
+      opacity: 1
+  &.above-viewport
+    .s-services__mockup, .btn__wrap
+      transform: translateX(0%) !important
+      opacity: 1 !important
+      transition: none !important
+
+.s-services__mockup
+  margin-right: 3.75rem
+  flex: 1
+  transform: translateX(30%)
+  opacity: 0
+  transition-delay: 0.2s
+  transition: 1.4s transform cubic-bezier(0.19, 1, 0.22, 1), 1s opacity cubic-bezier(0.19, 1, 0.22, 1)
+  img
+    display: block
+    width: 100%
+    height: auto
+
+.s-services__content
+  position: relative
+
+
+
+
+
+.s-services__presentation-title-img
+  position: absolute
+  right: calc(-7.9375rem + 15px)
+  z-index: -1
+
+.artmarks-img
+  transform: translateX(30%)
+  opacity: 0
+  transition: 1.2s transform cubic-bezier(0.19, 1, 0.22, 1) 0.2s, 0.9s opacity cubic-bezier(0.19, 1, 0.22, 1) 0.3s
+
+.s-calculator__img
+  &.artmarks-img
+    transform: translateX(0%) !important
+    opacity: 1 !important
+  position: absolute
+  top: 0
+  width: 38.1%
+  z-index: -1
+  right: 6.1%
+  img
+    width: 100%
+    display: block
+    height: auto
+
+.artmarks-img
+  &.p-team__artmarks
+    width: 114%
+    position: absolute
+    top: 16%
+    left: -8.5%
+  &.in-viewport
+    opacity: 1
+    transform: translateX(0%)
+  &.above-viewport
+    transform: translateX(0%) !important
+    opacity: 1 !important
+    transition: none !important
+
+.s-services__presentation-title-img
+  top: 0
+  width: 66.34%
+
+.fancybox-content
+  padding: 0
+
+.artmarks-img img
+  display: block
+  width: 100%
+  height: auto
+
+.p-about__artmarks
+  position: absolute
+  z-index: -1
+  bottom: -.6rem
+  right: -.5rem
+  width: 129%
+
+.p-services__title-img
+  position: absolute
+  bottom: 0
+  right: calc(-7.9375rem + 15px)
+  z-index: -1
+  width: 56%
+
+
+
+.hidden
+  display: none !important
+
+
+
+.sidebar__modal form
+  padding: 0 0.4375rem
+
+.header__modal .modal-container, .p-services-item__modal .modal-container
+  width: 54.375rem
+
+.thank__modal .modal-container
+  width: 29rem
+  padding-top: 8.4375rem
+  padding-bottom: 8.4375rem
+
+.modal-mask
+  position: fixed
+  z-index: 9998
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-color: rgba(0, 0, 0, 0.5)
+  display: table
+  transition: opacity 1s cubic-bezier(0.19, 1, 0.22, 1)
+
+.modal-wrapper
+  display: table-cell
+  vertical-align: middle
+  text-align: center
+
+.sidebar__modal .modal-container
+  width: 28.5rem
+
+.modal-container
+  margin: 0px auto
+  padding: 3.4375rem 3.75rem 2rem
+  background-color: #fff
+  transition: all 1s cubic-bezier(0.19, 1, 0.22, 1)
+  display: inline-block
+  position: relative
+  max-height: 90vh
+  max-width: 100%
+  overflow-y: auto
+
+.modal
+  max-width: 90%
+  text-align: center
+
+.modal-header p
+  font-size: 1.5em
+  font-family: 'Futura PT heavy'
+  margin-bottom: 3.4375rem
+
+.modal-close
+  width: 18px
+  height: 18px
+  display: block
+  position: absolute
+  border: 0
+  background: transparent
+  cursor: pointer
+  right: 16px
+  top: 16px
+  svg
+    width: 10px
+    height: 10px
+    display: inline-block
+    margin: auto
+    fill: #8a8a8a
+
+.modal-default-button
+  float: right
+
+.modal-enter, .modal-leave-active
+  opacity: 0
+
+.modal-enter .modal-container, .modal-leave-active .modal-container
+  -webkit-transform: scale(1.1)
+  transform: scale(1.1)
+
+
+
+.form__inner
+  margin-top: 2.6rem
+  margin-bottom: 4.6875rem
+
+.p-contacts__form
+  text-align: center
+
+.form__inner-part:first-child
+  width: 35%
+
+.s-calculator__form .form__inner
+  margin-top: 0
+
+.sidebar__form .form__inner
+  flex-wrap: wrap
+
+.form__inner-part:last-child
+  width: 49%
+
+.p-services-item__form textarea
+  max-height: 10.375rem
+
+.header__discuss-form .form__inner-part
+  &:first-child
+    width: 40%
+  &:last-child
+    width: 53%
+
+.s-calculator__form
+  width: 100%
+  margin-left: 1.2rem
+  .form__inner-part:first-child
+    width: 72.22%
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    margin-bottom: 3.125rem
+    .form-input
+      width: 26.9%
+  .form-input
+    margin-bottom: 0
+  .form-input--textarea
+    width: 72.22%
+  .form__inner-part:last-child .form-input:last-child
+    width: auto
+    flex: 1
+    margin-left: 7.8%
+  .form__inner
+    margin-bottom: 1rem
+    flex-wrap: wrap
+  .form__inner-part:last-child
+    width: 100%
+    display: flex
+    align-items: flex-start
+    flex-direction: row
+    justify-content: space-between
+    height: 6.25rem
+  textarea
+    max-height: 5.5rem
+
+
+
+
+.form-input__inner
+  position: relative
+
+.form-input--file .file--loaded
+  span
+    color: #2a8ed9
+  svg
+    fill: #2a8ed9
+
+.input-icon
+  position: absolute
+  right: 0
+  top: 50%
+  width: 1rem
+  transform: translateY(-50%)
+  svg
+    display: block
+    width: 100%
+    height: auto
+    fill: #939393
+
+.form-input.form-input--focused
+  .form-input__line
+    transform: translateX(0%)
+    opacity: 1
+  input, textarea
+    border-color: transparent
+
+::-webkit-input-placeholder
+  color: #919191
+
+.form-input__textarea-text
+  position: absolute
+  left: 0
+  top: 0
+  padding: 0.25rem 0
+  width: 100%
+  font-family: 'Futura PT medium'
+  font-size: 16px
+  letter-spacing: 0.005em
+  text-align: left
+  right: 0
+  white-space: pre-wrap
+  z-index: -1
+  padding: .25rem 0
+
+::-moz-placeholder, ::-moz-placeholder, :-ms-input-placeholder
+  color: #919191
+
+.form-input
+  overflow: hidden
+  margin-bottom: 2.375rem
+  &:last-child
+    margin-bottom: 0
+
+.form-input__line
+  position: absolute
+  bottom: 0
+  left: 0
+  right: 0
+  width: 100%
+  opacity: 0
+  height: 2px
+  background-color: #00abd3
+  transform: translateX(-50%)
+  transition: 0.4s all ease-out
+
+.fancybox-is-open .fancybox-bg
+  background-color: rgba(#000, .5)
+
+input:not([type="submit"]):not([type="file"]):not([type="range"])
+  border: 0
+  border-bottom: 1px solid #dddddd
+  padding: 0.25rem 0
+  width: 100%
+  font-family: 'Futura PT medium'
+  font-size: 16px
+  letter-spacing: 0.005em
+  background-color: transparent
+  color: #303030
+  transition: 0.4s all ease-out
+  display: block
+
+textarea
+  border: 0
+  border-bottom: 1px solid #dddddd
+  padding: 0.25rem 0
+  width: 100%
+  font-family: 'Futura PT medium'
+  font-size: 16px
+  letter-spacing: 0.005em
+  background-color: transparent
+  color: #303030
+  transition: 0.4s all ease-out
+  display: block
+  resize: none
+  max-height: 7.5rem
+
+.form-input--file
+  .form-input__inner
+    padding-bottom: 0.375rem
+  svg
+    margin-bottom: 0.1875rem
+  span, svg
+    transition: .2s all ease
+
+.form-input--textarea
+  margin-bottom: 1rem
+  .form-input__inner
+    max-height: 100%
+
+input:not([type="submit"]), textarea
+  height: 100%
+
+.form-input--file
+  input[type="file"]
+    opacity: 0
+    position: absolute
+    z-index: 1
+    left: 0
+    width: 1px
+    height: 1px
+    top: 0
+    bottom: 0
+    right: 0
+    cursor: pointer
+  position: relative
+  label
+    width: 100%
+    height: 100%
+    cursor: pointer
+    text-align: left
+
+.form-input
+  width: 100%
+
+.form-input--textarea textarea
+  height: auto
+
+.form-input--file
+  span
+    display: block
+    font-size: .875em
+    font-family: 'Futura PT medium'
+    cursor: pointer
+  svg
+    display: inline-block
+    width: 1rem
+    height: auto
+    fill: #303030
+    margin-right: .5rem
+
+
+
+.footer__nav-list li
+  margin-bottom: .75rem
+  &:last-child
+    margin-bottom: 0
+
+.error__nav-list
+  font-size: 1em
+  margin-top: 1.875rem
+  li
+    position: relative
+    padding-right: 1.875rem
+    margin-right: 1.875rem
+    &:hover a
+      color: #415b91
+    &:last-of-type
+      padding-right: 0
+      margin-right: 0
+      &:after
+        display: none
+    &:after
+      content: ''
+      width: 4px
+      height: 4px
+      background-color: #415b91
+      border-radius: 50%
+      display: inline-block
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      right: 0
+  a
+    display: block
+    font-family: 'Futura PT medium'
+    border-bottom: 1px solid #636363
+    text-decoration: none
+    color: inherit
+    transition: .3s all ease
+
+.footer__nav-list a
+  text-decoration: none
+  color: inherit
+  display: block
+
+.header__nav-list li
+  margin-right: 3.375rem
+  position: relative
+
+.sidebar__nav-list li:first-child
+  margin-top: 5.8rem
+
+.header__nav-list li:last-of-type
+  margin-right: 0
+
+.sidebar__nav-list
+  letter-spacing: 0.025em
+  font-family: 'Futura PT heavy'
+  padding: 2.8125rem 8.12500rem 0 5.3125rem
+  transition: 1.2s all cubic-bezier(0.19, 1, 0.22, 1)
+  position: absolute
+  right: 0
+  top: 0
+  bottom: 0
+
+.s-services__nav-list
+  font-size: 1em
+
+.briefs__nav-list
+  margin-left: 1.8rem
+  li:first-child
+    margin-top: .75rem
+  a
+    color: inherit
+    position: relative
+    padding-left: 1.25rem
+    display: block
+    width: 100%
+    text-decoration: none
+    padding-right: 1.37500em
+    transition: .4s all ease-in
+
+.s-services__nav-list a
+  color: inherit
+  font-family: 'Futura PT medium'
+  text-decoration: none
+  position: relative
+  padding-left: 1.25rem
+  display: block
+  width: 100%
+  padding-right: 1.37500em
+  transition: .4s all ease-in
+  &:before
+    content: ''
+    position: absolute
+    width: 4px
+    height: 4px
+    background-image: linear-gradient(90deg, rgb(47, 139, 218) 0%, rgb(0, 171, 211) 100%)
+    left: 0
+    top: 8px
+
+.briefs__nav-list a:before
+  content: ''
+  position: absolute
+  width: 4px
+  height: 4px
+  background-image: linear-gradient(90deg, rgb(47, 139, 218) 0%, rgb(0, 171, 211) 100%)
+  left: 0
+  top: 8px
+
+.s-services__nav-list li
+  margin-bottom: .3rem
+  width: 48%
+  margin-right: 4%
+  &:nth-child(2n)
+    margin-right: 0
+  &:hover a:before
+    height: 2px
+    top: 9px
+    width: 2rem
+    transition: .4s width ease-in
+
+.briefs__nav-list li:hover a:before
+  height: 2px
+  top: 9px
+  width: 2rem
+  transition: .4s width ease-in
+
+.s-services__nav-list li:hover a, .briefs__nav-list li:hover a
+  padding-left: 2.625rem
+  padding-right: 0em
+
+.sidebar__nav-list li
+  font-size: 1.75em
+  text-transform: uppercase
+  color: #303030
+  margin-bottom: .8rem
+  &:last-child
+    margin-bottom: 0
+  &.nav__item--big
+    font-size: 2.875em
+
+.sidebar__toggler--header
+  display: none
+
+
+
+.s-calculator__content
+  display: none
+  &.active
+    display: block
+
+.s-calculator__navigation-title
+  text-transform: uppercase
+  font-family: 'Futura PT heavy'
+  margin-bottom: 2.375rem
+
+.s-calculator__navigation
+  font-size: 1em
+
+.s-calculator__navigation-list
+  font-family: 'Futura PT medium'
+  list-style: none
+  li
+    color: #c1bfbf
+    font-family: 'Futura PT book'
+    letter-spacing: 0.001em
+    line-height: 1.3
+    margin-bottom: .625rem
+    transition: 0.4s all ease-in
+    pointer-events: none
+    cursor: not-allowed
+    position: relative
+
+.s-calculator__navigation-icon
+  display: inline-block
+  position: absolute
+  right: 100%
+  top: 50%
+  transform: translateY(-50%)
+  fill: #2a8ed9
+  width: .75rem
+  margin-right: .625rem
+  svg
+    display: inline-block
+    margin: auto
+    width: 100%
+    height: auto
+
+.s-calculator__navigation-list li
+  i
+    opacity: 0
+    visibility: hidden
+    transition: .4s all ease-in
+  &:last-child
+    margin-bottom: 0
+  &.active
+    color: #303030
+    font-family: 'Futura PT medium'
+    cursor: pointer
+    pointer-events: initial
+  &.answered
+    color: #c1bfbf
+    cursor: pointer
+    pointer-events: initial
+    i
+      opacity: 1
+      visibility: visible
+
+.s-calculator__arrow
+  display: inline-block
+  position: absolute
+  left: -2.4rem
+  width: 1.2rem
+  top: 50%
+  transform: translate(150%, -50%)
+  height: 1.2rem
+  transition: 0.25s transform ease-out 0.15s, 0.2s opacity ease-out
+  opacity: 0
+  &.show
+    transform: translate(0%, -50%)
+    opacity: 1
+    transition: 0.25s transform ease-out, 0.2s opacity ease-out 0.15s
+  svg
+    width: 100%
+    display: block
+    fill: #2a8ed9
+
+
+.s-calculator__steps
+  margin-bottom: 2.8125rem
+  cursor: pointer
+  position: relative
+
+.s-calculator__progress
+  width: 10.625rem
+  height: 0.375rem
+  border-radius: 0.1875rem
+  background-color: #fff
+
+.s-calculator__progress-line
+  background-color: #2a8ed9
+  border-radius: 0.1875rem
+  transition: 0.4s all ease-out
+  width: 0
+  height: 100%
+
+.s-calculator__steps-title
+  span
+    display: inline-block
+    margin: 0 0.1rem
+  color: #333333
+  font-size: .75em
+  margin-right: 1rem
+  font-family: 'Futura PT heavy'
+  text-transform: uppercase
+  letter-spacing: 0.05em
+
+.s-calculator__content
+  color: #333333
+
+.s-calculator__content--2 .s-calculator__step-item-title, .s-calculator__content--3 .s-calculator__step-item-title, .s-calculator__content--4 .s-calculator__step-item-title
+  text-transform: none
+  font-size: 1em
+  margin-top: .8rem
+
+.s-calculator__content-body
+  margin-left: -1.2rem
+
+.s-calculator__content--animated
+  opacity: 0 !important
+
+.s-calculator__content
+  transition: 1s all ease
+
+.s-calculator__content-title
+  line-height: 1.17647059rem
+  margin-bottom: 3.4rem
+  min-height: 5.3125rem
+
+.s-calculator__step-item
+  text-align: left
+  position: relative
+  z-index: 0
+  width: 20%
+  cursor: pointer
+  &:nth-child(2)
+    transition-delay: 0.05s
+  &:nth-child(3)
+    transition-delay: 0.1s
+  &:nth-child(4)
+    transition-delay: 0.15s
+  &:nth-child(5)
+    transition-delay: 0.2s
+
+.s-calculator__step-item-inner
+  min-height: 10.7rem
+  width: 100%
+  padding: 2rem 1.5rem 1rem
+  transition: 0.4s all ease-in
+  margin-right: 3rem
+  position: relative
+
+.s-calculator__step-item-arrow
+  display: none
+  width: 1.6rem
+  svg
+    display: block
+    width: 100%
+    height: auto
+    fill: #bfbfbf
+
+.s-calculator__step-item
+  &:hover .s-calculator__step-item-inner
+    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.07)
+  &:last-child
+    margin-right: 0
+
+.s-calculator__step-item-figure
+  position: absolute
+  z-index: -1
+  width: 0
+  height: 0
+  left: 0
+  top: 50%
+  transform: translate(0%, -50%)
+  border-style: solid
+  transition: 0.25s transform ease-in, 0.1s opacity ease-in
+  border-width: 1.1875rem 0 1.1875rem 4rem
+
+.s-calculator__step-item:hover .s-calculator__step-item-figure.show--on-hover
+  opacity: 1
+  transform: translate(0%, -50%)
+
+.s-calculator__step-item-figure.show--on-hover
+  opacity: 0
+  transform: translate(-20%, -50%)
+
+.s-calculator__step-item-icon
+  position: relative
+  width: 6.875rem
+  max-width: 100%
+  i
+    height: 100%
+    width: 100%
+    &:before
+      display: inline-block
+      height: 100%
+      vertical-align: middle
+      content: ""
+  svg
+    display: inline-block
+    max-height: 100%
+    max-width: 100%
+    height: auto
+    width: auto
+    vertical-align: middle
+
+.s-calculator__step-item-title
+  font-size: 1.25em
+  letter-spacing: 0.025em
+  font-family: 'Futura PT demi'
+  color: #303030
+  text-transform: uppercase
+  margin-top: 0.65rem
+  line-height: 1
+  flex: 1
+
+.s-calculator--company
+  .st0
+    fill: none
+    stroke: #000
+    stroke-width: 1.1
+    stroke-linecap: round
+    stroke-linejoin: round
+  .st1
+    fill: none
+    stroke: #000000
+    stroke-width: 1.1
+
+.s-calculator--exist-project .st0
+  fill: none
+  stroke: #000000
+  stroke-width: 4
+  stroke-miterlimit: 10
+
+
+.calc-step-leave, .calc-step-leave-active
+  position: absolute
+  opacity: 0
+  transition: none
+
+.calc-step-enter, .calc-step-enter-active
+  transition: 0.1s all cubic-bezier(0.15, 0.95, 0.87, 0.95)
+  transform: translateX(-20%)
+  opacity: 0
+
+.s-calculator
+  background-color: #f0f5f7
+  padding: 4.0625rem 0 3.125rem
+
+.s-calculator__left
+  width: 74.75%
+  padding-right: 4.5%
+  min-height: 29.0625rem
+  position: relative
+
+.s-calculator__wrapper
+  position: relative
+  z-index: 0
+
+.s-calculator__right
+  border-left: 1px solid #ffffff
+  padding: 3rem 0 5.3125rem 4.5%
+  width: 25.25%
+
+
+.s-clients
+  color: #303030
+  padding-top: 8.125rem
+
+.s-clients__logotypes
+  padding-top: 4.375rem
+  margin-bottom: -2.5rem
+
+.client-fade-enter-active, .client-fade-leave-active
+  transition: 0.2s all ease-in
+
+.client-fade-enter, .client-fade-leave-to
+  opacity: 0
+
+.s-clients__item
+  position: relative
+  cursor: pointer
+  transition: 1.2s all cubic-bezier(0.19, 1, 0.22, 1)
+  margin-bottom: 2.5rem
+
+
+
+.s-clients__item-inner
+  opacity: 0
+  transition: 0.2s all ease-in
+  transform: translateY(25%)
+  &.in-viewport
+    opacity: 1
+    transform: translateY(0)
+  &.above-viewport
+    transform: translateY(0%) !important
+    opacity: 1 !important
+    transition: none !important
+
+
+
+.s-clients__item
+  &.disabled
+    opacity: .4
+    pointer-events: none
+    cursor: not-allowed
+
+.s-clients__item
+  &.active
+    .s-clients__item-btns
+      opacity: 1
+      visibility: visible
+
+.s-clients__item-btns
+  position: absolute
+  right: 0
+  font-size: .875em
+  top: 50%
+  transform: translateY(-50%)
+  opacity: 0
+  visibility: hidden
+  transition: .25s all ease-in
+  a
+    font-family: 'Futura PT demi'
+    letter-spacing: 0.05em
+    text-transform: uppercase
+    text-decoration: none
+    position: relative
+    padding: 0.625rem 1.125rem
+    line-height: 1
+    color: inherit
+    transition: 0.4s all ease-out
+    background-color: #f5f5f5
+    overflow: hidden
+    background-image: none
+    z-index: 0
+    margin-bottom: .625rem
+    &:before
+      content: ''
       display: block
-    &-input
-      display: block
-    &-message
-      font-size: .8em
-      color: red
+      position: absolute
+      left: 0
+      top: 0
+      bottom: 0
+      z-index: -1
+      right: 0
+      width: 100%
+      height: 100%
+      background-image: linear-gradient(90deg, rgb(47, 139, 218) 0%, rgb(0, 171, 211) 100%)
+      opacity: 0
+      transform: translateX(-80%)
+      transition: 0.3s transform ease-out, 0.2s opacity 0.1s
+    &:hover
+      background-color: transparent
+      color: #fff
+      &:before
+        transform: translateX(0)
+        opacity: 1
+    &:last-child
+      margin-bottom: 0
+
+.s-clients__item-img img
+  max-width: 100%
+  display: block
+  height: auto
+  max-height: 4.0625rem
+  width: auto
+
+.s-portfolio
+  color: #303030
+  padding-top: 7.5rem
+  > .container
+    text-align: center
+
+.s-portfolio__wrapper
+  padding-top: 2.8125rem
+  text-align: left
+
+@keyframes hoverEffect
+  0%
+    transform: scale(1.01)
+
+  100%
+    transform: scale(1.4)
+
+
+.s-portfolio__item-info
+  font-size: 0
+
+.s-portfolio__item
+  &:hover .s-portfolio__item-info
+    font-size: 100%
+  &.hovered .s-portfolio__item-img,
+  &:hover .s-portfolio__item-img
+    animation: hoverEffect 10s infinite alternate cubic-bezier(0.46, 0.2, 0.44, 0.71)
+
+.s-portfolio__item-img
+  position: absolute
+  left: 0
+  top: 0
+  bottom: 0
+  right: 0
+  transform: scale(1.01)
+  background-position: center
+  -webkit-background-size: cover
+  z-index: 1
+  background-repeat: no-repeat
+
+.s-portfolio__item
+  &:nth-child(even) a
+    transform: translateX(10%)
+    opacity: 0
+  &:nth-child(odd) a
+    transform: translateX(-10%)
+    opacity: 0
+  a
+    &.in-viewport
+      opacity: 1
+      transform: translateX(0%)
+      transition: 1.3s transform cubic-bezier(0.19, 1, 0.22, 1), 1s opacity cubic-bezier(0.19, 1, 0.22, 1) 0.15s
+    &.above-viewport
+      transform: translateX(0%) !important
+      opacity: 1 !important
+      transition: none !important
+  &.p-portfolio__item
+    width: calc(50% - 4px)
+    margin-bottom: 8px
+  width: 50%
+  overflow: hidden
+  font-size: 1.25em
+  position: relative
+  text-align: center
+  line-height: 1.3
+  letter-spacing: 0.05em
+  padding-bottom: 32.34%
+  transition: 1.3s transform cubic-bezier(0.19, 1, 0.22, 1), 1s opacity cubic-bezier(0.19, 1, 0.22, 1) 0.15s
+  position: relative
+  z-index: 0
+
+.s-portfolio__item-description
+  margin-bottom: .6rem
+  transition: 0.45s all ease-out
+
+.s-portfolio__item-category
+  transition: 0.45s all ease-out
+
+.s-portfolio__item-title
+  font-size: 1.4em
+  text-transform: uppercase
+  font-family: 'Futura PT heavy'
+
+.s-portfolio__item a
+  display: block
+  width: 100%
+  padding: 1.4rem
+  height: 100%
+  color: #fff
+  position: relative
+  text-decoration: none
+  position: absolute
+  left: 0
+  top: 0
+  bottom: 0
+  right: 0
+
+.s-portfolio__item-inner
+  height: 100%
+  width: 100%
+  position: relative
+  z-index: 2
+
+.s-portfolio__item-overlay:before
+  content: ''
+  display: block
+  position: absolute
+  left: 0
+  top: 0
+  bottom: 0
+  right: 0
+  z-index: 2
+  background-color: rgba(0, 0, 0, 0.5)
+
+
+.s-team
+  padding: 8.125rem 0
+  color: #303030
+  > .container
+    text-align: center
+
+.s-team__items
+  margin-right: -1.5rem
+
+.s-team__wrapper
+  padding-top: 3.4375rem
+  width: 79%
+  margin: 0 auto
+  text-align: left
+
+.s-team__advantages
+  margin-top: 3.125rem
+  padding-top: 1.5rem
+  margin-right: -1.5rem
+  border-top: 1px solid #e8e8e8
+
+.s-team--padding
+  padding-left: 5.1%
+  padding-right: 5.1%
+
+@for $i from 1 through 50
+  .p-team__item:nth-child(#{$i})
+    transition-delay: $i / 20 + s
+
+.s-team__item
+  width: 21.1%
+  font-size: 1em
+  margin-right: 1.5rem
+  opacity: 0
+  transition: 1s all cubic-bezier(0.19, 1, 0.22, 1)
+  transform: translateY(35%)
+  &:nth-child(2)
+    transition-delay: 0.1s
+  &:nth-child(3)
+    transition-delay: 0.15s
+  &:nth-child(4)
+    transition-delay: 0.2s
+  &.in-viewport
+    opacity: 1
+    transform: translateY(0)
+  &.above-viewport
+    transform: translateY(0%) !important
+    opacity: 1 !important
+    transition: none !important
+
+.s-team__item-img
+  width: 100%
+  margin: 0 auto
+  img
+    max-width: 100%
+    margin: 0 auto
+    height: auto
+    display: block
+
+.s-team__item-name
+  font-family: 'Futura PT demi'
+  letter-spacing: 0.025em
+  text-transform: uppercase
+
+.s-team__item-info
+  margin-top: 1.5rem
+
+.s-team__item-position
+  font-family: 'Futura PT medium'
+  color: #575757
+  font-size: .875em
+  line-height: 1.05
+  margin-top: .625rem
+
+.p-team__item
+  transform: translateY(-20%)
+  opacity: 0
+  transition: 1.35s transform cubic-bezier(0.19, 1, 0.22, 1), 0.8s opacity cubic-bezier(0.19, 1, 0.22, 1)
+  &.in-viewport
+    opacity: 1
+    transform: translateY(0%)
+
+.p-team__item-name
+  text-transform: uppercase
+  font-size: 1.125em
+  font-family: 'Futura PT bold'
+  letter-spacing: 0.025em
+  transition: .3s all ease-in
+
+.p-team__item-position
+  font-family: 'Futura PT medium'
+  font-size: .875em
+  letter-spacing: 0.015em
+  transition: .3s all ease-in
+
+.p-team__item-info
+  position: relative
+  z-index: 3
+  text-align: center
+
+.p-team__item-img
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    bottom: 0
+    right: 0
+    height: 100%
+    width: 100%
+    background-color: rgba(0, 0, 0, 0.3)
+  background-position: center
+  -webkit-background-size: cover
+  background-size: cover
+  background-repeat: no-repeat
+  position: absolute
+  left: 0
+  z-index: 1
+  top: 0
+  bottom: 0
+  transition: .55s all ease-in
+  right: 0
+  clip-path: circle(27% at 50% 37%)
+  height: 100%
+  width: 100%
+  &.p-team__item-img--bg
+    clip-path: circle(27% at 50% 37%)
+    z-index: 2
+    &:before
       display: none
-      margin-top: .2rem
 
-.checkbox
+.p-team__item
+  width: 19.5%
   position: relative
-  padding-left: 22px
-  cursor: pointer
-  display: inline-block
-  input
+  font-size: 1em
+  margin-right: 0.625%
+  max-width: 300px
+  z-index: 0
+  max-height: 380px
+  min-height: 380px
+  padding: 17.2rem 1.2rem 1.2rem
+  &:nth-of-type(5n)
+    margin-right: 0
+  &:hover
+    .p-team__item-img
+      clip-path: circle(100% at 50% 37%)
+    .p-team__socials
+      opacity: 1
+    .p-team__item-img.p-team__item-img--bg
+      clip-path: circle(27% at 50% 37%)
+    color: #ffffff
+
+.s-team__advantage
+  font-size: 1em
+  line-height: 1.2
+  margin-right: 1.5rem
+
+.s-team__advantage-main
+  font-size: 1.875em
+  letter-spacing: 0.025em
+  font-family: 'Futura PT demi'
+
+.s-team__advantage-additional
+  font-family: 'Futura PT medium'
+  color: #464646
+  letter-spacing: 0.005em
+  margin-top: .15rem
+  font-size: .875em
+
+.s-discuss
+  background-color: #f0f5f7
+  padding: 4.5rem 0
+  color: #303030
+  text-align: center
+
+.p-services-category-item__discuss.s-discuss
+  background-color: #fff
+  padding-top: 0
+
+.s-discuss__wrapper
+  width: 56%
+  margin: 0 auto
+
+.p-services-category-item__discuss, .p-services-category__discuss
+  margin-top: 7.5rem
+
+
+
+// paste
+
+
+
+
+
+
+
+// ##here
+
+
+
+
+
+// styles
+
+@media screen and (max-height: 750px)
+  .sidebar__toggler
+    margin-bottom: 5rem
+
+@media screen and (max-height: 700px)
+  .sidebar__toggler
+    margin-bottom: 3.8rem
+
+@media screen and (max-height: 650px)
+  .sidebar__toggler
+    margin-bottom: 3.2rem
+
+@media screen and (max-height: 600px)
+  .sidebar__toggler
+    margin-bottom: 1.7rem
+
+@media screen and (max-width: 1650px)
+  .p-team__item
+    padding-top: 15rem
+    min-height: 365px
+  .caption--team
+    width: 60%
+  .header__nav-list
+    margin-right: 4rem
+    li
+      margin-right: 2.5rem
+
+@media screen and (max-width: 1600px)
+  .caption--clients
+    width: 40%
+
+@media screen and (max-width: 1500px)
+  .s-discuss__wrapper
+    width: 70%
+  .s-discuss__form .form__inner-part:first-child
+    width: 40%
+  .s-calculator__step-item-icon
+    width: 6rem
+  .s-calculator__content--2 .s-calculator__step-item-title, .s-calculator__content--3 .s-calculator__step-item-title, .s-calculator__content--4 .s-calculator__step-item-title
+    font-size: .95em
+  .s-calculator__step-item-inner
+    margin-right: 1.8rem
+  .s-services__mockup
+    margin-right: 2.2rem
+  .s-services__presentation-title-img, .p-services__title-img
+    right: calc(-5rem + 15px)
+  .s-services__presentation-title-img
+    width: 70%
+  .p-services-item__form textarea
+    max-height: 10.5rem
+  .s-services__content
+    padding-top: 3.8rem
+  .s-services__presentation-btn
+    font-size: .85em
+  .container
+    padding: 0 5rem
+  .footer.footer--margin
+    margin-bottom: 85px
+  html
+    font-size: 15px
+
+@media screen and (max-width: 1450px)
+  .p-team__item
+    width: 23.5%
+    margin-right: 2%
+    padding-top: 16rem
+    min-height: 335px
+    &:nth-of-type(5n)
+      margin-right: 2%
+    &:nth-of-type(4n)
+      margin-right: 0
+  .header__nav-list
+    margin-right: 2.8rem
+    li
+      margin-right: 1.7rem
+  .btn.header__btn
+    padding: .7rem 1.3rem
+    font-size: .75em
+  .sidebar__nav-list li
+    &.nav__item--big
+      font-size: 2.3em
+    font-size: 1.6em
+
+@media screen and (max-width: 1400px)
+  .s-team__wrapper
+    width: 100%
+
+
+
+
+
+@media screen and (min-width: 1351px)
+  .s-clients__item
+    width: 14.5%
+    &:nth-child(6n)
+      margin-right: 0
+    &:not(:nth-child(6n))
+      margin-right: 2.6%
+
+@media screen and (min-width: 1101px) and (max-width: 1350px)
+  .s-clients__item
+    width: 17.5%
+    &:nth-child(5n)
+      margin-right: 0
+    &:not(:nth-child(5n))
+      margin-right: 3.125%
+
+@media screen and (min-width: 851px) and (max-width: 1100px)
+  .s-clients__item
+    width: 22.5%
+    &:nth-child(4n)
+      margin-right: 0
+    &:not(:nth-child(4n))
+      margin-right: 3.33%
+
+@media screen and (min-width: 651px) and (max-width: 850px)
+  .s-clients__item
+    width: 29%
+    &:not(:nth-child(3n))
+      margin-right: 6.5%
+    &:nth-child(3n)
+      margin-right: 0
+
+@media screen and (min-width: 300px) and (max-width: 650px)
+  .s-clients__item
+    width: 43%
+    &:not(:nth-child(2n))
+      margin-right: 14%
+    &:nth-child(2n)
+      margin-right: 0
+
+
+@media screen and (max-width: 1300px)
+  .services__block-title
+    font-size: 2em
+  .s-services__mockup
+    margin-right: 0
+    margin-bottom: 2rem
+    width: 70%
+  .s-services__presentation
+    flex-direction: column
+    justify-content: flex-start
+    align-items: flex-start
+  .s-services__presentation-title-img
+    width: 65%
+    right: calc(-3.5rem + 15px)
+  .p-services-item__form textarea
+    max-height: 10.93rem
+  .s-services__content
+    padding-top: 3.5rem
+  .s-services__presentation-btn
+    width: 13.8rem
+  .s-banner__title
+    font-size: 7.5em
+  .s-banner__subtitle
+    font-size: 2.3em
+  .footer.footer--margin
+    margin-bottom: 80px
+  .sidebar__nav-list li
+    &.nav__item--big
+      font-size: 1.9em
+    font-size: 1.3em
+  .s-services__nav-list
+    font-size: .9em
+    li
+      margin-bottom: .7rem
+  .header__nav-list
+    font-size: .85em
+  .container
+    padding: 0 3.5rem
+  html
+    font-size: 14px
+
+@media screen and (max-width: 1199px)
+  .s-discuss__wrapper
+    width: 90%
+  .s-team
+    padding: 6.8rem 0
+  .s-portfolio__item
+    font-size: 1.15em
+  .s-portfolio
+    padding-top: 6.8rem
+  .s-clients
+    padding-top: 6.8rem
+  .s-calculator__left
+    padding-right: 0
+  .caption
+    font-size: .9em
+  .caption__content
+    margin-top: 2.9rem
+  .caption.caption--big .caption__main
+    font-size: 2.7em
+  .p-services__caption .caption__content
+    width: 54%
+  .p-services__services__block
+    margin-bottom: 4rem
+  .p-services__title-img
+    width: 45%
+    right: calc(-3rem + 15px)
+  .s-services
+    padding: 6.8rem 0
+  input:not([type="submit"]):not([type="file"]), textarea
+    font-size: 15px !important
+  .container
+    padding: 0 2.3rem
+  .s-banner__title
+    font-size: 5.8em
+  .s-banner
+    min-height: 40rem
+  .s-banner__subtitle
+    font-size: 1.9em
+  body .header__nav-list
     display: none
-    &:checked + span
-      &:before
+  .header__phones
+    font-size: .9em
+  .logo.header__logo
+    width: 8rem
+  .sidebar__nav-list li
+    &.nav__item--big
+      font-size: 1.7em
+    font-size: 1.15em
 
-      &:after
 
-  span
-    transition: $tr
-    &:before
-      content: ''
-      display: inline-block
-      position: absolute
-      transition: $tr
-    &:after
-      content: ''
-      display: inline-block
-      position: absolute
-      transition: $tr
+@media screen and (max-width: 1150px)
+  .p-team__item
+    width: 30%
+    margin-right: 5%
+    padding-top: 17rem
+    &:nth-of-type(5n), &:nth-of-type(4n):not(m:nth-of-type(3n))
+      margin-right: 5%
+    &:nth-of-type(3n)
+      margin-right: 0
 
-.radio
-  position: relative
-  padding-left: 22px
-  cursor: pointer
-  display: inline-block
-  input
+@media screen and (max-width: 1100px)
+  .caption--clients
+    width: 53%
+  .footer__info
+    width: 100%
+    margin-top: 2rem
+    display: flex
+    justify-content: space-between
+    align-items: center
+    order: 1
+    margin-right: 0
+  .footer--padding
+    padding-top: 0
+  .footer__info-row
+    margin-top: 0
+  .footer__wrapper
+    flex-wrap: wrap
+    margin-right: 0
+
+@media screen and (max-width: 1050px)
+  .caption--team
+    width: 80%
+
+@media screen and (max-width: 1020px)
+  .s-calculator__step-item
+    .s-calculator__step-item-inner
+      margin-right: 2.5%
+    &:last-of-type .s-calculator__step-item-inner
+      margin-right: 0
+  .s-calculator__right
     display: none
-    &:checked + span
-      &:before
+  .s-calculator__left
+    width: 100%
 
-      &:after
-  span
-    transition: $tr
-    &:before
-      content: ''
-      display: inline-block
-      position: absolute
-      transition: $tr
-    &:after
-      content: ''
-      display: inline-block
-      position: absolute
-      transition: $tr
+@media screen and (max-width: 991px)
+  .s-discuss__wrapper
+    width: 100%
+  .s-team__advantage
+    width: 30%
+    text-align: center
+    margin-right: 0
+    margin-bottom: 1.5rem
+    font-size: .9em
+  .s-team__advantage-main
+    font-size: 1.7em
+  .s-team__advantages
+    flex-wrap: wrap
+    justify-content: space-around
+    margin-bottom: -1.5rem
+    margin-right: 0
+  .s-portfolio__item
+    font-size: 1em
+  .caption
+    font-size: .8em
+  .caption__content
+    margin-top: 2.7rem
+  .caption.caption--big .caption__main
+    font-size: 2.5em
+  .p-services__caption .caption__content
+    width: 100%
+  .caption__additional
+    margin-top: 1rem
+  .s-services__services__block
+    width: 48%
+  .p-services__services__block
+    margin-bottom: 3.5rem
+  .s-services__services__block:last-child
+    margin-right: 0
+  .s-services__mockup
+    width: 85%
+  .s-services__presentation
+    width: 48%
+  .s-services__presentation-title-img
+    right: calc(-1.8rem + 15px)
+  .p-services__title-img
+    display: none
+  .p-services-item__form textarea
+    max-height: 11.3rem
+  .s-services__content
+    padding-top: 3rem
+  input:not([type="submit"]):not([type="file"]), textarea
+    font-size: 14px !important
+  .s-services__presentation-btn
+    width: 15rem
+  .container
+    padding: 0 1.8rem
+  html
+    font-size: 13px
+  .footer.footer--margin
+    margin-bottom: 76px
+  .s-banner__title
+    font-size: 4.5em
+  .s-banner
+    min-height: 30rem
+  .s-banner__subtitle
+    font-size: 1.7em
+    margin-top: .7rem
+
+@media screen and (max-width: 930px)
+  .p-about__artmarks
+    width: 100%
+    right: 0
+
+@media screen and (max-width: 900px)
+  .s-calculator__form
+    .form__inner-part
+      &:first-child
+        width: 100%
+      &:last-child .form-input:last-child
+        width: 115px
+        flex: 0
+        flex-basis: 115px
+    .form-input--textarea
+      width: auto
+      flex: 1
+  .s-team__item
+    width: 45%
+    margin-right: 0
+    margin-bottom: 2.5rem
+  .p-team__item
+    width: 31%
+    margin-right: 3.5%
+    &:nth-of-type(5n), &:nth-of-type(4n):not(m:nth-of-type(3n))
+      margin-right: 3.5%
+  .s-team__items
+    flex-wrap: wrap
+    margin-bottom: -2.5rem
+    width: 65%
+    margin: 0 auto
+
+
+
+@media screen and (max-width: 850px)
+  .s-services__services__block
+    width: 100%
+  .p-services__services__block
+    .s-services__nav-list li
+      width: 48%
+      margin-right: 4%
+      &:nth-child(2n)
+        margin-right: 0
+    width: 100%
+  .s-services__services__block
+    &.services__block--web
+      order: 2
+    &.services__block--seo
+      order: 3
+    &.services__block--smm
+      order: 4
+  .s-services__presentation
+    width: 100%
+    order: 1
+  .s-services__mockup
+    width: 55%
+    margin-right: 3rem
+  .s-services__presentation
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
+  .s-services__presentation-title-img
+    left: calc(1.8rem + 15px)
+    right: auto
+  .s-services__presentation-btn
+    width: 14rem
+  .footer__wrapper > *:not(.footer__info)
+    display: none
+  .footer__info
+    text-align: center
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    margin-top: 0
+  .footer__info-row
+    margin-top: 1.7rem
+  .footer
+    padding: 2.5rem 0
+
+@media screen and (max-width: 800px)
+  .s-portfolio__item
+    font-size: .85em
+
+@media screen and (max-width: 767px)
+  .s-calculator__form .form__inner-part:first-child .form-input
+    width: 30%
+  .s-team
+    padding: 6rem 0
+  .s-team--padding
+    padding-left: 0
+    padding-right: 0
+  .s-portfolio
+    padding-top: 6rem
+  .s-clients
+    padding-top: 6rem
+  .caption--clients
+    width: 70%
+  .caption.caption--big .caption__main
+    font-size: 2em
+  .caption__main
+    font-size: 1.9em
+  .caption--team
+    width: 100%
+  .s-services__mockup
+    margin-right: 0
+    margin-bottom: 2rem
+    width: 70%
+  .s-services__presentation
+    flex-direction: column
+    justify-content: flex-start
+    align-items: center
+  .modal-container
+    padding: 3.2rem 2.8rem 2.4rem
+  .modal-header p
+    margin-bottom: 2.2rem
+    font-size: 1.4em
+  .p-services-item__form textarea
+    max-height: 10.6rem
+  .s-services__content
+    padding-top: 6%
+  .s-services
+    padding: 6rem 0
+  .p-blog__btn
+    margin-top: 2.8rem
+  .s-banner__title
+    font-size: 3.8em
+  .s-banner
+    min-height: 25rem
+  .s-banner__subtitle
+    font-size: 1.6em
+    margin-top: 1rem
+  .form-input
+    margin-bottom: 2rem
+  .s-services__presentation-title-img.in-viewport
+    left: calc(50% + 2.7rem)
+    transform: translateX(-50%)
+    right: auto
+
+@media screen and (max-width: 650px)
+  .s-team__items
+    width: 80%
+  .s-calculator__step-item
+    width: 100%
+  .s-calculator__form
+    margin-left: 0
+    padding-top: 2rem
+  .s-calculator__step-item .s-calculator__step-item-inner
+    margin-right: 0
+  .s-calculator__content-body
+    flex-wrap: wrap
+    margin-left: 0
+  .s-calculator__step-item-arrow
+    display: inline-block
+  .s-calculator__step-item-inner
+    flex-direction: row
+    align-items: center
+    padding: 1.2rem
+    min-height: auto
+  .s-calculator__step-item-title
+    margin: 0 1.3rem
+    flex: 1
+  .s-calculator__content .s-calculator__step-item-title
+    margin-top: 0
+  .s-calculator__content-title
+    margin-bottom: 0
+    padding-bottom: 1.2rem
+  .s-calculator__step-item-title
+    font-size: 1em
+  .s-calculator__content-title
+    border-bottom: 1px solid #e1e1e1
+  .s-calculator__step-item
+    border-bottom: 1px solid #e1e1e1
+    &:hover .s-calculator__step-item-inner
+      box-shadow: none
+  .s-calculator__img
+    display: none
+  .sidebar__toggler--sidebar
+    display: none
+  .sidebar__toggler.sidebar__toggler--header
+    display: inline-block
+    margin-left: 1.6rem
+    .sidebar__toggler-text
+      display: none
+  .wrapper
+    padding-right: 0
+  .footer.footer--margin
+    margin-bottom: 0px
+  .header__phones
+    display: none
+  .sidebar
+    bottom: auto
+    left: 0
+    height: auto
+    width: 100%
+    padding-top: 0
+  .sidebar__mobile
+    display: flex
+    width: 100%
+  .sidebar__nav-list
+    padding-top: 0
+    background-color: transparent
+    li:first-child
+      margin-top: 3rem
+  .sidebar__toggler
+    margin-bottom: 0
+    display: flex
+    align-items: center
+    justify-content: flex-start
+  .sidebar__languages, .sidebar__buttons
+    flex: 1
+  .sidebar__arrow
+    display: none
+  .sidebar__nav-list
+    padding-left: 0
+    text-align: left
+  .sidebar__right-wrap nav
+    width: 100%
+  .sidebar__arrow
+    text-align: right
+    svg
+      margin-right: .67rem
+  .sidebar__toggler
+    display: none
+  .sidebar__text
+    margin-left: 1rem
+    margin-top: 0
+  .sidebar__nav-list
+    opacity: 1
+    z-index: 1
+    transform: translateX(0)
+    position: initial
+  .sidebar__right-wrap
+    position: absolute
+    opacity: 0
+    transform: translateX(100%)
+    z-index: -1
+    background-color: #fff
+    left: 0
+    right: 0
+    width: 100%
+    height: 100vh
+    padding: 1.4rem 3rem 3rem
+    transition: 0.4s all ease-in
+  .sidebar.opened .sidebar__right-wrap
+    opacity: 1
+    z-index: 1
+    transform: translateX(0)
+  .sidebar__bottom
+    transition: .4s all ease-in
+    flex-direction: row
+    width: 100%
+    flex: 0
+    align-items: center
+  .sidebar__languages
+    display: flex
+    align-items: stretch
+    justify-content: flex-start
+    li
+      margin-right: 1.2rem
+      &:last-child
+        margin-right: 0
+  .header__socials
+    flex-direction: row
+    align-items: stretch
+    li
+      margin-right: 1.2rem
+      &:last-child
+        margin-right: 0
+  .sidebar__buttons
+    display: flex
+    justify-content: flex-end
+    align-items: stretch
+  .sidebar__button-phone
+    margin-left: 1.3rem
+  .sidebar__buttons-message, .header__socials li, .sidebar__languages li
+    margin-bottom: 0
+
+@media screen and (max-width: 600px)
+  .p-team__item
+    width: 47%
+    margin-right: 6%
+    padding-top: 17rem
+    &:nth-of-type(5n), &:nth-of-type(4n), &:nth-of-type(3n)
+      margin-right: 6%
+    &:nth-of-type(2n)
+      margin-right: 0
+  .s-services__mockup
+    width: 90%
+
+@media screen and (max-width: 580px)
+  .caption--clients
+    width: 80%
+
+
+@media screen and (max-width: 550px)
+  .s-portfolio__item
+    width: 100%
+    padding-bottom: 58%
+    &.p-portfolio__item
+      width: 100%
+      padding-bottom: 58%
+  .p-about__artmarks
+    display: none
+
+@media screen and (max-width: 500px)
+  .s-team__items
+    width: 100%
+  .form
+    .form__inner-part
+      &:first-child, &:last-child
+        width: 100%
+    .form__inner
+      margin-bottom: 2.2rem
+  .s-calculator__form
+    .form__inner-part:first-child
+      .form-input
+        width: 100%
+      flex-wrap: wrap
+    .form-input
+      margin-bottom: 2rem
+      &:last-child
+        margin-bottom: 0rem
+    .form__inner-part:last-child
+      height: auto
+  .s-calculator__content--5 .s-calculator__content-body
+    text-align: center
+  .s-calculator__left
+    min-height: 44rem
+  .s-calculator__form .form__inner-part:last-child .form-input:last-child
+    margin-left: 0
+    width: 100%
+    flex-basis: 100%
+  .form
+    .form__inner-part
+      &:first-child
+        margin-bottom: 2rem
+      &:last-child
+        flex-direction: row
+        flex-wrap: wrap
+    .form__inner
+      flex-wrap: wrap
+    .form-input--textarea
+      height: auto
+      flex: 0
+      flex-basis: 100%
+      width: 100%
+  .s-services__presentation-title-img.in-viewport
+    left: 50%
+    width: 100%
+    transform: translateX(-50%)
+
+@media screen and (max-width: 480px)
+  .services__block-title--additional
+    font-size: 1.4em
+    left: 1rem
+
+@media screen and (max-width: 450px)
+  .p-team__item
+    width: 100%
+    margin-right: 0
+    margin-left: auto !important
+    margin-right: auto !important
+    padding-top: 20rem
+    &:nth-of-type(5n), &:nth-of-type(4n), &:nth-of-type(3n), &:nth-of-type(2n)
+      margin-right: 0
+  .caption--clients
+    width: 100%
+  .s-services__mockup
+    width: 100%
+  .modal-container
+    padding: 3rem 2rem 2.2rem
+  .sidebar__right-wrap
+    padding: 0 1.8rem 3rem
+  .btn.sidebar-mobile__btn
+    padding: 0.7rem 1.2rem
+  .phones__list.sidebar-mobile__phones
+    font-size: .85em
+  .sidebar__buttons
+    right: 1.8rem
+  .container
+    padding: 0 1.4rem
+  html
+    font-size: 12px
+  .s-banner__title
+    font-size: 2.6em
+  .s-banner
+    min-height: 22rem
+  .s-banner__subtitle
+    font-size: 1.3em
+    margin-top: 1rem
+  .s-services__presentation-btn
+    width: 16rem
+
+@media screen and (max-width: 420px)
+  .s-services__nav-list li
+    width: 100%
+    margin-right: 0
+  .header__btn
+    display: none
+  .p-services__services__block .s-services__nav-list li
+    width: 100%
+    margin-right: 0
+
+@media screen and (max-width: 400px)
+  .p-team__item-img
+    &.p-team__item-img--bg
+      clip-path: circle(22% at 50% 37%)
+    clip-path: circle(22% at 50% 37%)
+
+@media screen and (max-width: 380px)
+  .s-calculator__arrow
+    left: -1.4rem
+  .s-calculator__arrow
+    left: -1.5rem
+  .container
+    padding: 0 .5rem

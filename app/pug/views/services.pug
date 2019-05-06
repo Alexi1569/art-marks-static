@@ -1,0 +1,231 @@
+extends ../includes/_layout
+
+block content
+  - var isMain = false;
+  include ../includes/_header
+
+  block main
+    main.center
+      .p-services
+        .container
+          .breadcrumbs
+            ul.breadcrumbs__list.flex.jc-fs.fw-w.ai-s
+              li
+                a.nuxt-link-active(href='/') ART MARKS
+              li
+                | Услуги
+          .p-services__top
+            .caption.caption--big.p-services__caption.caption--services--visible
+              .caption__inner.above-viewport.in-viewport(data-in-viewport='i53')
+                p.caption__main Услуги
+                //
+                .caption__content
+                  p
+                    | Мы не просто создаем сайты, мы проводим полный комплекс услуг: заряжаем сайты разработкой, дизайном и рекламой.
+                  p Полное отслеживание всех трендов и инновационных решений.
+            .artmarks-img.p-services__title-img.in-viewport.fully-in-viewport(data-in-viewport='i54')
+              img(src='img/s-services_art-marks.png', alt='ArtMarks')
+          section.p-services__items.flex.fw-w.ai-s.jc-fs
+            .services__block.services__block--web.p-services__services__block.in-viewport.fully-in-viewport(data-in-viewport='i56')
+              .services__block-title
+                p.services__block-title--main Web
+                p.services__block-title--additional(style='color: rgb(241, 240, 253);') Web
+              .services__block-links
+                nav.nav__wrap
+                  ul.nav__list.s-services__nav-list.flex.fw-w.jc-fs.in-viewport.fully-in-viewport(data-in-viewport='i55')
+                    li
+                      a(href='/services/web/complex')
+                        | Комплексное решение
+                      //
+                    li
+                      a(href='/services/web/ecommerce')
+                        | Разработка интернет-магазина
+                      //
+                    li
+                      a(href='/services/web/company')
+                        | Разработка сайта компании
+                      //
+                    li
+                      a(href='/services/web/catalog')
+                        | Разработка каталога
+                      //
+                    li
+                      a(href='/services/web/landung')
+                        | Разработка landing page
+                      //
+                    li
+                      a(href='/services/web/support')
+                        | Техническая поддержка
+                      //
+                      //
+                      //
+            .services__block.services__block--seo.p-services__services__block.in-viewport.fully-in-viewport(data-in-viewport='i58')
+              .services__block-title
+                p.services__block-title--main seo
+                p.services__block-title--additional(style='color: rgb(228, 248, 241);') seo
+              .services__block-links
+                nav.nav__wrap
+                  ul.nav__list.s-services__nav-list.flex.fw-w.jc-fs.in-viewport.fully-in-viewport(data-in-viewport='i57')
+                    li
+                      a(href='/services/seo/complex')
+                        | Комплексное продвижение
+                      //
+                    li
+                      a(href='/services/seo/audience')
+                        | SEO аудит
+                      //
+                    li
+                      a(href='/services/seo/usability')
+                        | Юзабилити аудит
+                      //
+                    li
+                      a(href='/services/seo/filter')
+                        | Вывод из под фильтра
+                      //
+                    li
+                      a(href='/services/seo/analytic')
+                        | Аналитик ниша
+                      //
+                      //
+                      //
+            .services__block.services__block--smm.p-services__services__block.in-viewport.fully-in-viewport(data-in-viewport='i60')
+              .services__block-title
+                p.services__block-title--main smm
+                p.services__block-title--additional(style='color: rgb(226, 246, 253);') smm
+              .services__block-links
+                nav.nav__wrap
+                  ul.nav__list.s-services__nav-list.flex.fw-w.jc-fs.in-viewport.fully-in-viewport(data-in-viewport='i59')
+                    li
+                      a(href='/services/smm/socials')
+                        | Продвижение в instagram и facebok
+                      //
+                    li
+                      a(href='/services/smm/youtube')
+                        | Продвижение в Youtube
+                      //
+                    li
+                      a(href='/services/smm/target')
+                        | Таргетированая реклама
+                      //
+                    li
+                      a(href='/services/smm/content')
+                        | Создание контента
+                      //
+                    li
+                      a(href='/services/smm/analytic')
+                        | Аналитика и аудит
+                      //
+                      //
+                      //
+            .services__block.services__block--ppc.p-services__services__block.in-viewport.below-viewport(data-in-viewport='i62')
+              .services__block-title
+                p.services__block-title--main ppc
+                p.services__block-title--additional(style='color: rgb(247, 240, 220);') ppc
+              .services__block-links
+                nav.nav__wrap
+                  ul.nav__list.s-services__nav-list.flex.fw-w.jc-fs.below-viewport(data-in-viewport='i61')
+                    li
+                      a(href='/services/ppc/complex')
+                        | Комплексная реклама
+                      //
+                    li
+                      a(href='/services/ppc/context')
+                        | Контекстная реклама
+                      //
+                    li
+                      a(href='/services/ppc/media')
+                        | Медийная реклама
+                      //
+                    li
+                      a(href='/services/ppc/remarketing')
+                        | Ремаркетинг
+                      //
+                    li
+                      a(href='/services/ppc/audience')
+                        | Аудит
+                      //
+                      //
+                      //
+            .services__block.services__block--marketing.p-services__services__block.in-viewport.below-viewport(data-in-viewport='i64')
+              .services__block-title
+                p.services__block-title--main Marketing
+                p.services__block-title--additional(style='color: rgb(246, 227, 227);') Marketing
+              .services__block-links
+                nav.nav__wrap
+                  ul.nav__list.s-services__nav-list.flex.fw-w.jc-fs.below-viewport(data-in-viewport='i63')
+                    li
+                      a(href='/services/marketing/analyze')
+                        | Анализ конкурентов
+                      //
+                    li
+                      a(href='/services/marketing/audience')
+                        | Аудит
+                      //
+                    li
+                      a(href='/services/marketing/creative')
+                        | Креативная реклама
+                      //
+                      //
+                      //
+        section.s-discuss
+          .container
+            .s-discuss__wrapper
+              form.form.discuss__project-form.s-discuss__form
+                .caption.caption--centered.caption--services--visible
+                  .caption__inner.in-viewport.fully-in-viewport(data-in-viewport='i49')
+                    p.caption__main обсудить проект
+                    p.caption__additional Все крутые проекты начинаются с заполнения этой формы
+                    //
+                .form__inner.flex.ai-s.jc-sb
+                  .form__inner-part
+                    .form-input
+                      .form-input__inner
+                        //
+                        input(placeholder='Имя', required='required', name='username', type='text', value='')
+                        i.form-input__line
+                        //
+                      span.form-message
+                    .form-input
+                      .form-input__inner
+                        //
+                        input(placeholder='Телефон', required='required', name='userphone', type='tel', value='')
+                        i.form-input__line
+                        //
+                      span.form-message
+                    .form-input
+                      .form-input__inner
+                        //
+                        input(placeholder='E-mail', required='required', name='useremail', type='email', value='')
+                        i.form-input__line
+                        //
+                      span.form-message
+                  .form__inner-part.flex.fd-c.jc-sb.ai-fs
+                    .form-input.form-input--textarea
+                      .form-input__inner
+                        //
+                        textarea(rows='1', placeholder='Опишите свою идею', required='required', name='usertext')
+                        i.form-input__line
+                        //
+                      span.form-message
+                    .form-input.form-input--file
+                      .form-input__inner
+                        //
+                        label.flex.ai-fe.jc-fs(for='header-modal-file2')
+                          input#header-modal-file2(type='file', placeholder='Добавить файл', name='userfile', multiple='multiple')
+                          svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 20 22', xml:space='preserve', style='enable-background:new 0 0 20 22;')
+                            path(d='M15.8,0c2.2,0,3.9,1.8,3.9,3.9c0,0.4-0.1,1.7-1.2,2.8l-8.5,8.5c-0.6,0.7-2.1,1.3-3.3,0.1c-1.2-1.2-0.6-2.7,0.1-3.3l4.4-4.4 L12,8.3l-3.2,3.2l0,0l-1.4,1.4l0,0c-1,1.2,0.6,2.9,2,1.6l8.4-8.4c0.7-0.7,0.9-1.4,0.9-2.2c0-1.6-1.3-2.9-2.9-2.9 c-0.8,0-1.5,0.3-2,0.8l0,0C13.2,2.4,2.3,13.3,2.3,13.4l0,0C1.5,14.2,1,15.3,1,16.5C1,19,3,21,5.5,21c0.6,0,1.8,0,3.5-1.7L19.3,9.1 L20,9.8L9.5,20.2c-1,1.1-2.4,1.8-4,1.8c-3,0-5.5-2.5-5.5-5.5c0-1.6,0.7-3,1.7-4C12.4,1.8,12.6,1.7,13,1.2C13.3,0.9,14.2,0,15.8,0')
+                          span Добавить файл
+                        //
+                        //
+                      span.form-message
+                .btn__wrap
+                  //
+                  button.btn.s-discuss-btn.btn--filled(type='submit')
+                    .btn__wrap-inner
+                      span.btn__wrap-text
+                        | ОТПРАВИТЬ
+                      //
+
+
+  include ../includes/_footer
+  

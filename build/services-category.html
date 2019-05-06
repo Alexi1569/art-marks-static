@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="css/main.min.css">
+    <title>Title</title>
+</head>
+
+<body>
+    <div class="body-wrapper"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="hidden">
+            <symbol id="" viewBox=""></symbol>
+        </svg>
+        <svg version="1.1" class="gradient-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+            <linearGradient id="blue-gradient">
+                <stop offset="0%" stop-color="#2f8bda" />
+                <stop offset="100%" stop-color="#00abd3" />
+            </linearGradient>
+            <path d="M19,0H5C2.2,0,0,2.3,0,5v14c0,2.8,2.2,5,5,5h14c2.8,0,5-2.2,5-5V5C24,2.3,21.8,0,19,0z M16,7h-1.9C13.5,7,13,7.3,13,7.9V9h3 l-0.2,3H13v8h-3v-8H8V9h2V7.1c0-2,1.1-3.1,3.5-3.1H16V7z" />
+        </svg>
+        <div class="modal sidebar__modal" id="sidebar-modal" style="display: none">
+            <div class="modal-container">
+                <div class="modal-body">
+                    <form class="form sidebar__form">
+                        <div class="caption sidebar-modal__caption caption--services--visible">
+                            <div class="caption__inner in-viewport above-viewport" data-in-viewport="i8">
+                                <p class="caption__main">Хотите мы Вам перезвоним?</p>
+                                <!---->
+                                <!---->
+                            </div>
+                        </div>
+                        <div class="form__inner flex ai-s jc-sb">
+                            <div class="form-input">
+                                <div class="form-input__inner">
+                                    <!----><input placeholder="Имя" required="required" name="username" type="text" value=""><i class="form-input__line"></i>
+                                    <!---->
+                                </div><span class="form-message"></span>
+                            </div>
+                            <div class="form-input">
+                                <div class="form-input__inner">
+                                    <!----><input placeholder="Телефон" required="required" name="userphone" type="tel" value=""><i class="form-input__line"></i>
+                                    <!---->
+                                </div><span class="form-message"></span>
+                            </div>
+                        </div>
+                        <div class="btn__wrap">
+                            <!----><button class="btn sidebar__modal-btn btn--filled" type="submit">
+                                <div class="btn__wrap-inner"><span class="btn__wrap-text">жду звонка</span>
+                                    <!---->
+                                </div>
+                            </button></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="modal thank__modal" id="thank-modal" style="display: none">
+            <div class="modal-container">
+                <div class="modal-body">
+                    <div class="thank__message">
+                        <p class="thank__message-title">Заявка принята!</p>
+                        <div class="thank__message-descr">
+                            <p>В ближайшее время с Вами свяжется администратор. Спасибо, что выбрали Art-Marks!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal header__modal" id="header-modal" style="display: none">
+            <div class="modal-container">
+                <div class="modal-body">
+                    <form class="form header__discuss-form">
+                        <div class="caption header-modal__caption caption--services--visible">
+                            <div class="caption__inner fully-in-viewport" data-in-viewport="i7">
+                                <p class="caption__main">Оставить заявку</p>
+                                <!---->
+                                <!---->
+                            </div>
+                        </div>
+                        <div class="form__inner flex ai-s jc-sb">
+                            <div class="form__inner-part">
+                                <div class="form-input">
+                                    <div class="form-input__inner">
+                                        <!----><input placeholder="Имя" required="required" name="username" type="text" value=""><i class="form-input__line"></i>
+                                        <!---->
+                                    </div><span class="form-message"></span>
+                                </div>
+                                <div class="form-input">
+                                    <div class="form-input__inner">
+                                        <!----><input placeholder="Телефон" required="required" name="userphone" type="tel" value=""><i class="form-input__line"></i>
+                                        <!---->
+                                    </div><span class="form-message"></span>
+                                </div>
+                                <div class="form-input">
+                                    <div class="form-input__inner">
+                                        <!----><input placeholder="E-mail" required="required" name="useremail" type="email" value=""><i class="form-input__line"></i>
+                                        <!---->
+                                    </div><span class="form-message"></span>
+                                </div>
+                            </div>
+                            <div class="form__inner-part flex fd-c jc-sb ai-fs">
+                                <div class="form-input form-input--textarea">
+                                    <div class="form-input__inner">
+                                        <!----><textarea rows="1" placeholder="Расскажите об идеи" required="required" name="usertext"></textarea><i class="form-input__line"></i>
+                                        <!---->
+                                    </div><span class="form-message"></span>
+                                </div>
+                                <div class="form-input form-input--file">
+                                    <div class="form-input__inner">
+                                        <!----><label class="flex ai-fe jc-fs" for="header-modal-file"><input id="header-modal-file" type="file" placeholder="Добавить файл" name="userfile" multiple="multiple"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20 22" xml:space="preserve" style="enable-background:new 0 0 20 22;">
+                                                <path d="M15.8,0c2.2,0,3.9,1.8,3.9,3.9c0,0.4-0.1,1.7-1.2,2.8l-8.5,8.5c-0.6,0.7-2.1,1.3-3.3,0.1c-1.2-1.2-0.6-2.7,0.1-3.3l4.4-4.4 L12,8.3l-3.2,3.2l0,0l-1.4,1.4l0,0c-1,1.2,0.6,2.9,2,1.6l8.4-8.4c0.7-0.7,0.9-1.4,0.9-2.2c0-1.6-1.3-2.9-2.9-2.9 c-0.8,0-1.5,0.3-2,0.8l0,0C13.2,2.4,2.3,13.3,2.3,13.4l0,0C1.5,14.2,1,15.3,1,16.5C1,19,3,21,5.5,21c0.6,0,1.8,0,3.5-1.7L19.3,9.1 L20,9.8L9.5,20.2c-1,1.1-2.4,1.8-4,1.8c-3,0-5.5-2.5-5.5-5.5c0-1.6,0.7-3,1.7-4C12.4,1.8,12.6,1.7,13,1.2C13.3,0.9,14.2,0,15.8,0"></path>
+                                            </svg><span>Добавить файл</span></label>
+                                        <!---->
+                                        <!---->
+                                    </div><span class="form-message"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn__wrap">
+                            <!----><button class="btn s-discuss-btn btn--filled" type="submit">
+                                <div class="btn__wrap-inner"><span class="btn__wrap-text">ОТПРАВИТЬ</span>
+                                    <!---->
+                                </div>
+                            </button></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="cursor-wrap"><span class="cursor cursor-dot" data-ref="dot"></span><span class="cursor cursor-dot-bg" data-ref="dotBg"></span></div>
+        <div class="flex fd-c ai-c jc-c wrapper">
+            <header class="header">
+                <div class="container">
+                    <div class="header__line flex jc-sb ai-c">
+                        <div class="header__left"><a class="logo header__logo" href="#"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1189.5 252" style="enable-background:new 0 0 1189.5 252;" xml:space="preserve">
+                                    <polygon points="5.5,47.3 121.8,3 240,47.3 122.8,100.8 " />
+                                    <polygon points="4,55.5 118.8,108.8 118.8,249 4,192.8 " />
+                                    <polygon points="125,108.3 240,55.5 240,192 125,249 " />
+                                    <g>
+                                        <path d="M356,92.2h11.8l47.4,74.5c1.2,1.9-0.2,4.3-2.4,4.3h-11.3c-1.1,0-2.2-0.6-2.8-1.5l-13.8-21.4l-46.2-0.2l-13.7,22 c-0.4,0.7-1.1,1-1.9,1h-12.3c-2.3,0-3.7-2.6-2.5-4.5L356,92.2z M379.1,135.8L361.4,109l-16.3,26.9L379.1,135.8z" />
+                                        <path d="M425.7,167.4V92.2h48.8c5.1,0,9.8,0.8,14.1,2.3c4.3,1.5,8,3.5,11.1,6s5.5,5.3,7.3,8.4s2.6,6.3,2.6,9.5 c0,5.1-1.8,9.8-5.4,13.9c-3.6,4.2-8.4,7.2-14.5,9l23.8,25c1.7,1.8,0.4,4.7-2,4.7H498c-0.8,0-1.6-0.3-2.1-0.9l-24.1-25.5h-28.6 l0.1,23.1c0,1.8-1.5,3.3-3.3,3.3h-10.6C427.3,171,425.7,169.4,425.7,167.4z M443.1,131.2H474c2,0,9.8-0.3,11.5-1s3.2-1.6,4.4-2.7 c1.2-1.1,2.2-2.5,3-4.1c0.7-1.6,1.1-3.2,1.1-5s-0.4-3.6-1.2-5.1c-0.8-1.6-1.9-2.9-3.3-4.1c-1.4-1.1-3-2-4.8-2.7 c-1.8-0.6-9.7-0.9-11.5-0.9H443L443.1,131.2z" />
+                                        <path d="M899.7,167.4V92.2h48.8c5.1,0,9.8,0.8,14.1,2.3s8,3.5,11.1,6s5.5,5.3,7.3,8.4s2.6,6.3,2.6,9.5c0,5.1-1.8,9.8-5.4,13.9 c-3.6,4.2-8.4,7.2-14.5,9l23.8,25c1.7,1.8,0.4,4.7-2,4.7H972c-0.8,0-1.6-0.3-2.1-0.9l-24.1-25.5h-28.6l0.1,23.1 c0,1.8-1.5,3.3-3.3,3.3h-10.6C901.3,171,899.7,169.4,899.7,167.4z M917.1,131.2H948c2,0,9.8-0.3,11.5-1s3.2-1.6,4.4-2.7 c1.2-1.1,2.2-2.5,3-4.1c0.7-1.6,1.1-3.2,1.1-5s-0.4-3.6-1.2-5.1c-0.8-1.6-1.9-2.9-3.3-4.1c-1.4-1.1-3-2-4.8-2.7 c-1.8-0.6-9.7-0.9-11.5-0.9H917L917.1,131.2z" />
+                                        <path d="M606.5,104.2l-35.3,0.2l0.1,63c0,2-1.7,3.7-3.7,3.7h-9.8c-2,0-3.6-1.6-3.6-3.6l0.2-63.2l-35.3,0.2c-2.3,0-4.3-0.6-4.3-2.8 v-5.9c0-1.9,1.5-3.4,3.4-3.4h89.3c1.9,0,3.5,1.6,3.5,3.5v5.5C610.8,103.6,609,104.2,606.5,104.2z" />
+                                        <path d="M754.3,167.8v-51.3l-34.7,39.7c-0.8,1-2,1.5-3.3,1.5h-4.1c-1.3,0-2.5-0.6-3.4-1.5l-35-39l-0.2,50.8c0,1.7-1.4,3.1-3.1,3.1 h-10.1c-1.7,0-3-1.3-3-3V94.8c0-1.4,1.2-2.6,2.6-2.6h13.1l41.5,46.6l41-46.6h13.1c1.7,0,3.1,1.4,3.1,3.1v72.3 c0,1.9-1.5,3.4-3.4,3.4h-11C755.8,171,754.3,169.6,754.3,167.8z" />
+                                        <path d="M831.3,92.2h9.4c0.9,0,1.8,0.5,2.3,1.3l45.5,72.3c1.4,2.3-0.2,5.3-2.9,5.3h-8.7c-2.1,0-4.1-1.1-5.3-2.8L859,148.7 c-0.5-0.8-1.4-1.2-2.3-1.2l-43.1-0.2c-1,0-1.9,0.5-2.4,1.4l-12.3,21c-0.5,0.8-1.4,1.4-2.4,1.4H785c-2.3,0-3.7-2.5-2.4-4.5L829,93.5 C829.5,92.7,830.4,92.2,831.3,92.2z M852,135.3l-16.1-26c0-0.1-0.1-0.1-0.1,0l-16.2,26.2c-0.1,0.2,0,0.4,0.2,0.4l31.9-0.1 C852,135.8,852.1,135.5,852,135.3z" />
+                                        <path d="M1000.8,167.4l0.3-71.5c0-2,1.6-3.6,3.6-3.6h10.1c1.8,0,3.3,1.5,3.3,3.3l0.2,36l56.8-39.4h14.1c2.5,0,3.6,3.2,1.5,4.7 l-42,30.2l43.8,37.8c2.4,2.1,0.9,6-2.2,6h-10.7c-1.1,0-2.2-0.4-3.1-1.2l-39.9-35.3l-18,12.3v20.5c0,2-1.6,3.7-3.7,3.7h-10.6 C1002.4,171,1000.8,169.4,1000.8,167.4z" />
+                                        <path d="M1179.3,110.1c-1,1.1-2.5,1.5-3.9,1.1c-1-0.3-2.2-0.7-3.2-1.1c-1.9-0.9-4.2-1.8-7-2.6c-2.7-0.8-5.7-1.6-8.9-2.2 c-3.2-0.6-11.5-0.9-14.8-0.9c-5.9,0-10.2,1.1-13.2,2.3c-3.7,1.5-6.9,3.6-7.4,6.5c-0.2,1.6,0.5,4.1,1.6,5.1 c3.8,3.1,10.6,4.2,12.7,4.8c2.4,0.7,5.8,1.2,9,1.9c3.2,0.7,6.4,1.1,10.5,1.8c5.4,1,10.1,1.6,14.5,2.8s7.6,1.8,10.7,3.6 s5.4,3.9,7.1,6.4s2.5,5.5,2.5,9.2c0,4.2-1.1,7.8-3.3,10.8c-2.2,3-5.2,5.4-9,7.3c-3.8,1.9-8.1,3.2-13.1,4.1 c-4.9,0.8-10.1,1.3-15.5,1.3c-8.3,0-16.5-0.9-24.5-2.7c-7.3-1.6-16.4-5.4-22.8-8.6c-1.7-0.8-2.3-3-1.2-4.6l3.8-5.4 c1.6-2.3,3.4-2.9,8.2-1c0.3,0.1,0.5,0.2,0.8,0.4c2.4,1.1,9.3,3.1,12.6,4.2c3.3,1.1,7,2,11,2.7s8.2,1.1,12.4,1.1 c11.8,0,23.7-2.7,23.7-8.1c0-1.7-0.7-3.1-2-4.3s-3.3-2.2-5.7-3.1c-2.5-0.9-5.5-1.7-9-2.4s-7.7-1.1-12-2c-5.3-1-15.7-2.6-19.5-3.8 c-3.9-1.2-10.1-2.7-12.7-4.3c-2.6-1.7-4.5-3.6-5.8-5.8c-1.3-2.2-1.9-4.8-1.9-7.8c0-4,1-7.5,3.1-10.7c2.1-3.1,5.6-6.3,9.3-8.4 c3.7-2.1,8.4-3.7,13.3-4.8c4.9-1.1,11.2-1.3,16.8-1.3c7.8,0,15.6,1.2,22.2,3c5,1.3,10.6,3.6,15.1,5.6c1.9,0.9,2.8,3,1,4.9 L1179.3,110.1z" />
+                                    </g>
+                                </svg></a></div>
+                        <div class="header__right flex jc-fe ai-c">
+                            <nav class="nav__wrap">
+                                <ul class="nav__list header__nav-list flex ai-c jc-fe">
+                                    <li><a href="/services">Услуги</a>
+                                        <ul class="nav__list-inner">
+                                            <li><a href="/services/web">WEB разработка</a></li>
+                                            <li><a href="/services/seo">SEO продвижение</a></li>
+                                            <li><a href="/services/smm">SMM продвижение</a></li>
+                                            <li><a href="/services/ppc">PPC</a></li>
+                                            <li><a href="/services/marketing">Маркетинг</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="/portfolio">Портфолио</a>
+                                        <ul class="nav__list-inner">
+                                            <li><a href="/portfolio">Кейсы WEB</a></li>
+                                            <li><a href="/portfolio">Кейсы SEO</a></li>
+                                            <li><a href="/portfolio">Кейсы SMM</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="/blog">Блог</a>
+                                        <ul class="nav__list-inner">
+                                            <li><a href="/blog">Статьи WEB</a></li>
+                                            <li><a href="/blog">Статьи SEO</a></li>
+                                            <li><a href="/blog">Статьи SMM</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="/about">О студии</a>
+                                        <ul class="nav__list-inner">
+                                            <li><a href="/about/team">Наша команда</a></li>
+                                            <li><a href="/about/office">Наши офисы</a></li>
+                                            <li><a href="/about/awards">Наши награды</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="/contacts">Контакты</a></li>
+                                </ul>
+                            </nav>
+                            <div class="phones__list header__phones"><a href="tel: (096) 600-47-56">(096) 600-47-56</a><a href="tel: (063) 944-54-90">(063) 944-54-90</a></div>
+                            <div class="btn__wrap"><a class="btn header__btn btn--filled" data-fancybox data-src="#header-modal" href="#header-modal">
+                                    <div class="btn__wrap-inner"><span class="btn__wrap-text">оставить заявку</span></div>
+                                </a></div><button class="sidebar__toggler sidebar__toggler--header sidebar-toggler-el">
+                                <div class="sidebar__toggler-inner in-viewport">
+                                    <div class="sidebar__toggler-lines"><span class="sidebar__toggler-line"></span></div>
+                                    <p class="sidebar__toggler-text sidebar__text">меню</p>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar flex fd-c ai-s jc-sb">
+                    <div class="sidebar__overlay"></div><button class="sidebar__toggler sidebar__toggler--sidebar sidebar-toggler-el">
+                        <div class="sidebar__toggler-inner in-viewport fully-in-viewport" data-in-viewport="i2">
+                            <div class="sidebar__toggler-lines"><span class="sidebar__toggler-line"></span></div>
+                            <p class="sidebar__toggler-text sidebar__text">меню</p>
+                        </div>
+                    </button>
+                    <div class="flex sidebar__right-wrap fd-c ai-fs jc-sb">
+                        <nav class="nav__wrap">
+                            <ul class="nav__list sidebar__nav-list in-viewport fully-in-viewport" data-in-viewport="i3">
+                                <li class="nav__item--big"><a href="/services">Услуги</a>
+                                    <!---->
+                                </li>
+                                <li class="nav__item--big"><a href="/portfolio">Портфолио</a>
+                                    <!---->
+                                </li>
+                                <li class="nav__item--big"><a href="/contacts">Контакты</a>
+                                    <!---->
+                                </li>
+                                <li><a href="/briefs">Брифы</a>
+                                    <!---->
+                                </li>
+                                <li><a href="/blog">Блог</a>
+                                    <!---->
+                                </li>
+                                <li><a href="/about">О студии</a>
+                                    <!---->
+                                </li>
+                                <div class="nav__fill"></div>
+                            </ul>
+                        </nav>
+                        <div class="sidebar__mobile flex ai-c jc-sb">
+                            <div class="btn__wrap">
+                                <!----><a class="btn sidebar-mobile__btn btn--filled" data-fancybox data-src="#header-modal" href="#header-modal">
+                                    <div class="btn__wrap-inner"><span class="btn__wrap-text">оставить заявку</span>
+                                        <!---->
+                                    </div>
+                                </a></div>
+                            <div class="phones__list sidebar-mobile__phones"><a href="tel: (096) 600-47-56">(096) 600-47-56</a><a href="tel: (063) 944-54-90">(063) 944-54-90</a></div>
+                        </div>
+                        <div class="sidebar__bottom flex fd-c ai-s jc-sb">
+                            <ul class="sidebar__languages in-viewport fully-in-viewport" data-in-viewport="i4">
+                                <li><button class="active sidebar__languages-item">ru</button></li>
+                                <li><button class="sidebar__languages-item">ua</button></li>
+                                <li><button class="sidebar__languages-item">en</button></li>
+                            </ul>
+                            <ul class="header__socials flex fd-c ai-fe jc-fe in-viewport fully-in-viewport" data-in-viewport="i5">
+                                <li><a href="https://www.facebook.com/artmarks.net/" target="_blank"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+                                            <lineargradient id="blue-gradient">
+                                                <stop offset="0%" stop-color="#2f8bda"></stop>
+                                                <stop offset="100%" stop-color="#00abd3"></stop>
+                                            </lineargradient>
+                                            <path d="M19,0H5C2.2,0,0,2.3,0,5v14c0,2.8,2.2,5,5,5h14c2.8,0,5-2.2,5-5V5C24,2.3,21.8,0,19,0z M16,7h-1.9C13.5,7,13,7.3,13,7.9V9h3 l-0.2,3H13v8h-3v-8H8V9h2V7.1c0-2,1.1-3.1,3.5-3.1H16V7z"></path>
+                                        </svg></a></li>
+                                <li><a href="https://www.instagram.com/artmarks.ua/" target="_blank"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+                                            <path d="M15.2,5.5c-0.8,0-1.1,0-3.2,0s-2.4,0-3.2,0C6.6,5.6,5.6,6.7,5.5,8.8c0,0.8,0,1.1,0,3.2s0,2.4,0,3.2c0.1,2.1,1.1,3.2,3.3,3.3 c0.8,0,1.1,0,3.2,0c2.1,0,2.4,0,3.2,0c2.2-0.1,3.2-1.1,3.3-3.3c0-0.8,0-1.1,0-3.2s0-2.4,0-3.2C18.4,6.7,17.4,5.6,15.2,5.5z M12,16.2 c-2.3,0-4.1-1.8-4.1-4.1S9.7,7.9,12,7.9s4.1,1.8,4.1,4.1S14.3,16.2,12,16.2z M16.3,8.7c-0.5,0-1-0.4-1-1s0.4-1,1-1c0.5,0,1,0.4,1,1 C17.2,8.3,16.8,8.7,16.3,8.7z M14.7,12c0,1.5-1.2,2.7-2.7,2.7S9.3,13.5,9.3,12s1.2-2.7,2.7-2.7S14.7,10.6,14.7,12z M19,0H5 C2.2,0,0,2.3,0,5v14c0,2.8,2.2,5,5,5h14c2.8,0,5-2.2,5-5V5C24,2.3,21.8,0,19,0z M20,15.3c-0.1,2.9-1.8,4.5-4.7,4.7 c-0.9,0-1.1,0-3.3,0s-2.4,0-3.3,0c-2.9-0.1-4.5-1.7-4.7-4.7c0-0.9,0-1.1,0-3.3c0-2.2,0-2.4,0-3.3c0.1-2.9,1.7-4.5,4.7-4.7 c0.9,0,1.1,0,3.3,0s2.4,0,3.3,0c2.9,0.1,4.5,1.8,4.7,4.7c0,0.9,0,1.1,0,3.3C20,14.2,20,14.5,20,15.3z"></path>
+                                        </svg></a></li>
+                                <li><a href="https://www.linkedin.com/company/artmarks-net/about/" target="_blank"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24.1" style="enable-background:new 0 0 24 24.1;" xml:space="preserve">
+                                            <path d="M19,0.1H5c-2.8,0-5,2.2-5,5v14c0,2.8,2.2,5,5,5h14c2.8,0,5-2.2,5-5v-14C24,2.3,21.8,0.1,19,0.1z M8,19.1H5v-11h3V19.1z M6.5,6.8c-1,0-1.8-0.8-1.8-1.8s0.8-1.8,1.8-1.8s1.8,0.8,1.8,1.8S7.5,6.8,6.5,6.8z M20,19.1h-3v-5.6c0-3.4-4-3.1-4,0v5.6h-3v-11h3 v1.8c1.4-2.6,7-2.8,7,2.5V19.1z"></path>
+                                        </svg></a></li>
+                                <li><a href="https://www.behance.net/ArtMarksweb-studio" target="_blank"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24.1" style="enable-background:new 0 0 24 24.1;" xml:space="preserve">
+                                            <path d="M8.2,15.1H6v-2h2.3C10.1,13.1,10.3,15.1,8.2,15.1z M15,12.4h3C17.9,10.7,15.3,10.4,15,12.4z M8.2,9.1H6v2h2.4 C10.1,11.1,10.3,9.1,8.2,9.1z M24,5.1v14c0,2.8-2.2,5-5,5H5c-2.8,0-5-2.2-5-5v-14c0-2.8,2.2-5,5-5h14C21.8,0.1,24,2.3,24,5.1z M14,8.1h5v-1h-5V8.1z M10.4,11.7c1.9-1,1.8-4.6-1.8-4.6H4v10h4.3C12.8,17.1,12.8,12.5,10.4,11.7z M19.9,12.3 c-0.3-1.8-1.5-2.9-3.6-2.9c-2.1,0-3.4,1.3-3.4,3.9c0,2.6,1.4,3.8,3.4,3.8s3.1-1.1,3.4-2h-2.1c-0.7,0.9-2.9,0.5-2.8-1.4H20 C20,13.1,20,12.6,19.9,12.3z"></path>
+                                        </svg></a></li>
+                            </ul>
+                            <div class="sidebar__buttons in-viewport fully-in-viewport" data-in-viewport="i6">
+                                <div class="sidebar__buttons-message"><a class="flex ai-c jc-c sidebar__button sidebar__button--message" href="#" target="_blank"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 67 60.1" style="enable-background:new 0 0 67 60.1;" xml:space="preserve">
+                                            <path d="M64.1,26.1H51.6V3.2c0-1.8-1.5-3.2-3.2-3.2H3.2C1.4,0,0,1.4,0,3.2v31.9c0,1.8,1.4,3.2,3.2,3.2h1.5c0.1,0,0.2,0.1,0.2,0.2 L5.1,43c0.1,1.2,0.8,2.3,2,2.8C7.5,46,7.9,46,8.4,46c0.8,0,1.5-0.3,2.1-0.8l0.1-0.2l5.6-6.7c0,0,0.1,0,0.1,0h8.8v13.4 c0,1.5,1.3,2.8,2.8,2.8c0,0,0,0,0.1,0h25.5l4.4,4.7l0.2,0.2c0.5,0.4,1.2,0.6,1.8,0.6c0.4,0,0.9-0.1,1.3-0.3c0.9-0.4,1.6-1.3,1.7-2.3 l0.1-2.9h1.1c1.5,0,2.8-1.2,2.9-2.7c0,0,0,0,0-0.1v-23C66.9,27.3,65.7,26.1,64.1,26.1z M14.2,36.2l-0.2,0.2L8.5,43 c-0.1,0-0.1,0-0.2,0c-0.1,0-0.1-0.1-0.1-0.2L8,38.4c-0.1-1.7-1.5-3-3.2-3H3.2c-0.1,0-0.2-0.1-0.2-0.2c0,0,0,0,0,0V3.2 C3,3.1,3.1,3,3.2,3h45.1c0.1,0,0.2,0.1,0.2,0.2c0,0,0,0,0,0v31.9c0,0.1-0.1,0.2-0.2,0.2c0,0,0,0,0,0h-32 C15.6,35.4,14.8,35.6,14.2,36.2z M64,51.5h-1.1c-1.5,0-2.8,1.1-2.9,2.6l-0.1,2.8l-4.3-4.6l-0.2-0.1c-0.5-0.4-1.2-0.7-1.9-0.7H28.2 V38.3h20.2c1.8,0,3.2-1.5,3.2-3.2v-6H64V51.5z"></path>
+                                        </svg></a>
+                                    <div class="sidebar__buttons-inner"><a class="flex ai-c jc-c sidebar__button sidebar__button--telegram" href="https://t.me/wezombot" target="_blank"><svg version="1.1" xmlns:serif="http://www.serif.com/" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 20" style="enable-background:new 0 0 24 20;" xml:space="preserve">
+                                                <path d="M23.7,0.2c-0.2-0.2-0.5-0.2-0.8-0.1C18.7,1.6,5.8,6.4,0.5,8.4C0.2,8.5,0,8.8,0,9.2C0,9.6,0.3,9.9,0.6,10 c2.4,0.7,5.5,1.7,5.5,1.7s1.5,4.4,2.2,6.6c0.1,0.3,0.3,0.5,0.6,0.6c0.3,0.1,0.6,0,0.8-0.2c1.2-1.1,3.1-2.9,3.1-2.9s3.6,2.6,5.6,4.1 c0.3,0.2,0.7,0.3,1.1,0.1c0.4-0.1,0.6-0.5,0.7-0.8c0.9-4.1,3-14.4,3.8-18.1C24,0.7,23.9,0.4,23.7,0.2z M19.6,3.9 c-3.7,3.3-10.2,9.2-10.2,9.2l-0.4,3.5l-1.7-5.5c0,0,7.6-4.9,11.9-7.6c0.1-0.1,0.3-0.1,0.4,0.1C19.7,3.7,19.7,3.8,19.6,3.9z"></path>
+                                            </svg></a><a class="flex ai-c jc-c sidebar__button sidebar__button--messenger" href="https://wa.me/1583024635344026" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                <path d="M256.064 0h-.128C114.784 0 0 114.816 0 256c0 56 18.048 107.904 48.736 150.048l-31.904 95.104 98.4-31.456C155.712 496.512 204 512 256.064 512 397.216 512 512 397.152 512 256S397.216 0 256.064 0zm148.96 361.504c-6.176 17.44-30.688 31.904-50.24 36.128-13.376 2.848-30.848 5.12-89.664-19.264-75.232-31.168-123.68-107.616-127.456-112.576-3.616-4.96-30.4-40.48-30.4-77.216s18.656-54.624 26.176-62.304c6.176-6.304 16.384-9.184 26.176-9.184 3.168 0 6.016.16 8.576.288 7.52.32 11.296.768 16.256 12.64 6.176 14.88 21.216 51.616 23.008 55.392 1.824 3.776 3.648 8.896 1.088 13.856-2.4 5.12-4.512 7.392-8.288 11.744-3.776 4.352-7.36 7.68-11.136 12.352-3.456 4.064-7.36 8.416-3.008 15.936 4.352 7.36 19.392 31.904 41.536 51.616 28.576 25.44 51.744 33.568 60.032 37.024 6.176 2.56 13.536 1.952 18.048-2.848 5.728-6.176 12.8-16.416 20-26.496 5.12-7.232 11.584-8.128 18.368-5.568 6.912 2.4 43.488 20.48 51.008 24.224 7.52 3.776 12.48 5.568 14.304 8.736 1.792 3.168 1.792 18.048-4.384 35.52z"></path>
+                                            </svg></a></div>
+                                </div>
+                                <div class="sidebar__button-phone"><a class="flex ai-c jc-c sidebar__button sidebar__button--phone" data-fancybox data-src="#sidebar-modal" href="#" target="_blank"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 19 19" style="enable-background:new 0 0 19 19;" xml:space="preserve">
+                                            <g>
+                                                <g>
+                                                    <rect x="-2.5" y="-2.5" style="fill: none;" width="24" height="24"></rect>
+                                                    <path d="M11.6,13.1c0.3-0.3,0.3-0.3,0.7-0.7c0.3-0.3,0.6-0.6,0.8-0.8c0.9-0.8,2-0.9,2.9,0c0.8,0.8,1.6,1.6,2.4,2.4 c0.9,0.9,0.9,2,0,2.9c-0.2,0.2-0.5,0.4-0.8,0.6c-0.1,0.1-0.2,0.1-0.3,0.2c-0.3,0.2-0.5,0.3-0.8,0.5c-0.2,0.1-0.3,0.2-0.4,0.2 c-1,0.6-2.6,0.7-3.6,0.3c-0.1,0-0.3-0.1-0.5-0.2c-0.4-0.2-0.9-0.4-1.4-0.6c-1.4-0.7-2.9-1.6-4.2-2.7c-0.5-0.4-1-0.9-1.5-1.4 c-0.4-0.4-0.8-0.8-1.1-1.3c-1.2-1.4-2.1-3-2.8-4.5C0.7,7.5,0.5,7,0.4,6.6C0.3,6.3,0.2,6.1,0.2,6C-0.2,5,0,3.3,0.7,2.4 c0-0.1,0.1-0.2,0.2-0.3C1,1.9,1.2,1.6,1.4,1.4c0.1-0.1,0.1-0.2,0.2-0.3C1.7,0.9,1.9,0.8,2,0.6c0.9-0.8,2-0.8,2.9,0 C5.2,1,6.7,2.5,7.3,3c0.9,0.9,0.9,2,0,2.9C7.2,6.1,6.9,6.4,6.5,6.8C6.1,7.1,6.1,7.1,5.9,7.4C5.7,7.6,5.7,7.6,5.6,7.6 C5.7,7.8,5.8,8,5.9,8.3c0.2,0.5,0.5,1.1,0.8,1.6c0.3,0.5,0.7,1,1.1,1.4c0.3,0.3,0.7,0.6,1.2,0.9c0.5,0.4,1.1,0.7,1.7,0.9 c0.3,0.1,0.5,0.2,0.7,0.3C11.4,13.4,11.4,13.3,11.6,13.1z M5.6,7.6C5.6,7.6,5.6,7.6,5.6,7.6C5.6,7.6,5.6,7.6,5.6,7.6z M17.6,14.8 c-0.8-0.8-1.6-1.6-2.4-2.4c-0.5-0.5-1-0.5-1.5,0c-0.2,0.2-0.4,0.4-0.8,0.8c-0.4,0.4-0.4,0.4-0.7,0.7c-0.2,0.2-0.2,0.2-0.3,0.3 c-0.2,0.2-0.7,0.3-1,0.2c-0.2-0.1-0.5-0.2-0.8-0.4c-0.6-0.3-1.2-0.6-1.8-1c-0.5-0.3-0.9-0.7-1.3-1.1c-0.4-0.4-0.8-0.9-1.2-1.5 C5.6,9.8,5.3,9.3,5,8.7C4.8,8.4,4.7,8.1,4.7,7.9c-0.1-0.3,0-0.7,0.2-1c0.1-0.1,0.1-0.1,0.3-0.3c0.3-0.3,0.3-0.3,0.6-0.6 c0.4-0.4,0.7-0.7,0.8-0.8c0.5-0.5,0.5-1,0-1.5C6,3.2,4.5,1.7,4.2,1.3c-0.5-0.5-1-0.5-1.5,0C2.6,1.4,2.5,1.6,2.3,1.8 C2.3,1.9,2.2,1.9,2.2,2C2,2.2,1.8,2.4,1.7,2.7C1.6,2.8,1.5,2.9,1.5,3C1,3.7,0.9,4.9,1.1,5.7c0,0.1,0.1,0.3,0.2,0.5 c0.1,0.4,0.3,0.9,0.6,1.4c0.7,1.5,1.5,2.9,2.6,4.3c0.3,0.4,0.7,0.8,1.1,1.2C6,13.7,6.5,14.1,7,14.5c1.3,1.1,2.6,1.9,4,2.6 c0.5,0.2,0.9,0.4,1.3,0.6c0.2,0.1,0.4,0.1,0.5,0.2c0.8,0.3,2.1,0.2,2.8-0.2c0.1,0,0.2-0.1,0.3-0.2c0.3-0.1,0.5-0.3,0.8-0.5 c0.1-0.1,0.2-0.1,0.3-0.2c0.3-0.2,0.6-0.4,0.7-0.5C18.1,15.8,18.1,15.3,17.6,14.8z"></path>
+                                                </g>
+                                            </g>
+                                        </svg></a></div>
+                            </div><a class="sidebar__arrow" href="#s-services"><span class="sidebar__text sidebar__arrow-text">вверх</span><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 64 64">
+                                    <g>
+                                        <path d="M3.352,48.296l28.56-28.328l28.58,28.347c0.397,0.394,0.917,0.59,1.436,0.59c0.52,0,1.04-0.196,1.436-0.59   c0.793-0.787,0.793-2.062,0-2.849l-29.98-29.735c-0.2-0.2-0.494-0.375-0.757-0.475c-0.75-0.282-1.597-0.107-2.166,0.456   L0.479,45.447c-0.793,0.787-0.793,2.062,0,2.849C1.273,49.082,2.558,49.082,3.352,48.296z"></path>
+                                    </g>
+                                </svg></a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <main class="center">
+                <div class="p-services-category">
+                    <div class="container">
+                        <div class="breadcrumbs">
+                            <ul class="breadcrumbs__list flex jc-fs fw-w ai-s">
+                                <li><a class="nuxt-link-active" href="/">ART MARKS</a></li>
+                                <li><a class="nuxt-link-active" href="/services">Услуги</a></li>
+                                <li>WEB</li>
+                            </ul>
+                        </div>
+                        <div class="p-services-category__top">
+                            <div class="caption caption--big caption--services--visible">
+                                <div class="caption__inner above-viewport" data-in-viewport="i25">
+                                    <p class="caption__main">WEB</p>
+                                    <!---->
+                                    <div class="caption__content">
+                                        <p>Мы разрабатываем проекты с нуля, а также берем на редизайн и развитие сайты, от которых вы хотели бы большего. Наши специалисты внимательно следят за развитием современных технологий. Они постоянно повышают знания в этой отрасли, чтобы быть в курсе всех тенденций в мире IT.</p>
+                                        <p>Постоянно поддерживаем связь с клиентами и учитываем все их пожелания. Наши решения помогают развиться бизнесу любого направления.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <section class="p-services-category__items flex fw-w jc-fs ai-s">
+                            <div class="services-category__item p-services-category__item above-viewport" data-in-viewport="i26">
+                                <p class="services-category__item-title">Комплексное<br> решение</p>
+                                <div class="services-category__item-descr">
+                                    <p>Не просто сайт, а готовое решение для бизнеса за 24 дня с гарантией получения заказов</p>
+                                </div>
+                                <div class="btn__wrap"><a class="btn p-services-category__btn btn--icon" href="/services/web/complex">
+                                        <div class="btn__wrap-inner"><i class="btn__wrap-icon"><span class="btn__wrap-icon-inner inline-flex ai-c jc-c"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 129 129" enable-background="new 0 0 129 129">
+                                                        <g>
+                                                            <path d="m40.4,121.3c-0.8,0.8-1.8,1.2-2.9,1.2s-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.2 0-5.8l51-51-51-51c-1.6-1.6-1.6-4.2 0-5.8 1.6-1.6 4.2-1.6 5.8,0l53.9,53.9c1.6,1.6 1.6,4.2 0,5.8l-53.9,53.9z"></path>
+                                                        </g>
+                                                    </svg></span></i><span class="btn__wrap-text">Узнать больше</span></div>
+                                    </a>
+                                    <!---->
+                                </div>
+                            </div>
+                            <div class="services-category__item p-services-category__item above-viewport" data-in-viewport="i27">
+                                <p class="services-category__item-title">РАЗРАБОТКА<br> ИНТЕРНЕТ-МАГАЗИНА</p>
+                                <div class="services-category__item-descr">
+                                    <p>Не просто сайт, а готовое решение для бизнеса за 24 дня с гарантией получения заказов</p>
+                                </div>
+                                <div class="btn__wrap"><a class="btn p-services-category__btn btn--icon" href="/services/web/ecommerce">
+                                        <div class="btn__wrap-inner"><i class="btn__wrap-icon"><span class="btn__wrap-icon-inner inline-flex ai-c jc-c"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 129 129" enable-background="new 0 0 129 129">
+                                                        <g>
+                                                            <path d="m40.4,121.3c-0.8,0.8-1.8,1.2-2.9,1.2s-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.2 0-5.8l51-51-51-51c-1.6-1.6-1.6-4.2 0-5.8 1.6-1.6 4.2-1.6 5.8,0l53.9,53.9c1.6,1.6 1.6,4.2 0,5.8l-53.9,53.9z"></path>
+                                                        </g>
+                                                    </svg></span></i><span class="btn__wrap-text">Узнать больше</span></div>
+                                    </a>
+                                    <!---->
+                                </div>
+                            </div>
+                            <div class="services-category__item p-services-category__item above-viewport" data-in-viewport="i28">
+                                <p class="services-category__item-title">РАЗРАБОТКА<br> САЙТА КОМПАНИИ</p>
+                                <div class="services-category__item-descr">
+                                    <p>Не просто сайт, а готовое решение для бизнеса за 24 дня с гарантией получения заказов</p>
+                                </div>
+                                <div class="btn__wrap"><a class="btn p-services-category__btn btn--icon" href="/services/web/company">
+                                        <div class="btn__wrap-inner"><i class="btn__wrap-icon"><span class="btn__wrap-icon-inner inline-flex ai-c jc-c"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 129 129" enable-background="new 0 0 129 129">
+                                                        <g>
+                                                            <path d="m40.4,121.3c-0.8,0.8-1.8,1.2-2.9,1.2s-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.2 0-5.8l51-51-51-51c-1.6-1.6-1.6-4.2 0-5.8 1.6-1.6 4.2-1.6 5.8,0l53.9,53.9c1.6,1.6 1.6,4.2 0,5.8l-53.9,53.9z"></path>
+                                                        </g>
+                                                    </svg></span></i><span class="btn__wrap-text">Узнать больше</span></div>
+                                    </a>
+                                    <!---->
+                                </div>
+                            </div>
+                            <div class="services-category__item p-services-category__item above-viewport" data-in-viewport="i29">
+                                <p class="services-category__item-title">РАЗРАБОТКА<br> КАТАЛОГА</p>
+                                <div class="services-category__item-descr">
+                                    <p>Не просто сайт, а готовое решение для бизнеса за 24 дня с гарантией получения заказов</p>
+                                </div>
+                                <div class="btn__wrap"><a class="btn p-services-category__btn btn--icon" href="/services/web/catalog">
+                                        <div class="btn__wrap-inner"><i class="btn__wrap-icon"><span class="btn__wrap-icon-inner inline-flex ai-c jc-c"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 129 129" enable-background="new 0 0 129 129">
+                                                        <g>
+                                                            <path d="m40.4,121.3c-0.8,0.8-1.8,1.2-2.9,1.2s-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.2 0-5.8l51-51-51-51c-1.6-1.6-1.6-4.2 0-5.8 1.6-1.6 4.2-1.6 5.8,0l53.9,53.9c1.6,1.6 1.6,4.2 0,5.8l-53.9,53.9z"></path>
+                                                        </g>
+                                                    </svg></span></i><span class="btn__wrap-text">Узнать больше</span></div>
+                                    </a>
+                                    <!---->
+                                </div>
+                            </div>
+                            <div class="services-category__item p-services-category__item above-viewport" data-in-viewport="i30">
+                                <p class="services-category__item-title">РАЗРАБОТКА<br> LANDING PAGE</p>
+                                <div class="services-category__item-descr">
+                                    <p>Не просто сайт, а готовое решение для бизнеса за 24 дня с гарантией получения заказов</p>
+                                </div>
+                                <div class="btn__wrap"><a class="btn p-services-category__btn btn--icon" href="/services/web/landing">
+                                        <div class="btn__wrap-inner"><i class="btn__wrap-icon"><span class="btn__wrap-icon-inner inline-flex ai-c jc-c"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 129 129" enable-background="new 0 0 129 129">
+                                                        <g>
+                                                            <path d="m40.4,121.3c-0.8,0.8-1.8,1.2-2.9,1.2s-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.2 0-5.8l51-51-51-51c-1.6-1.6-1.6-4.2 0-5.8 1.6-1.6 4.2-1.6 5.8,0l53.9,53.9c1.6,1.6 1.6,4.2 0,5.8l-53.9,53.9z"></path>
+                                                        </g>
+                                                    </svg></span></i><span class="btn__wrap-text">Узнать больше</span></div>
+                                    </a>
+                                    <!---->
+                                </div>
+                            </div>
+                            <div class="services-category__item p-services-category__item above-viewport" data-in-viewport="i31">
+                                <p class="services-category__item-title">ТЕХНИЧЕСКАЯ<br> ПОДДЕРЖКА</p>
+                                <div class="services-category__item-descr">
+                                    <p>Не просто сайт, а готовое решение для бизнеса за 24 дня с гарантией получения заказов</p>
+                                </div>
+                                <div class="btn__wrap"><a class="btn p-services-category__btn btn--icon" href="/services/web/support">
+                                        <div class="btn__wrap-inner"><i class="btn__wrap-icon"><span class="btn__wrap-icon-inner inline-flex ai-c jc-c"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 129 129" enable-background="new 0 0 129 129">
+                                                        <g>
+                                                            <path d="m40.4,121.3c-0.8,0.8-1.8,1.2-2.9,1.2s-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.2 0-5.8l51-51-51-51c-1.6-1.6-1.6-4.2 0-5.8 1.6-1.6 4.2-1.6 5.8,0l53.9,53.9c1.6,1.6 1.6,4.2 0,5.8l-53.9,53.9z"></path>
+                                                        </g>
+                                                    </svg></span></i><span class="btn__wrap-text">Узнать больше</span></div>
+                                    </a>
+                                    <!---->
+                                </div>
+                            </div>
+                        </section>
+                        <div class="p-services-category--padding">
+                            <section class="p-services-category__process">
+                                <div class="caption caption--small caption--centered caption--services--visible">
+                                    <div class="caption__inner above-viewport" data-in-viewport="i32">
+                                        <p class="caption__main">ПРОЦЕСС РАБОТЫ</p>
+                                        <!---->
+                                        <!---->
+                                    </div>
+                                </div>
+                                <div class="p-services-category__process-items flex jc-sb ai-s">
+                                    <div class="services-process__item p-services-process__item above-viewport" data-in-viewport="i33">
+                                        <div class="services-process__item-icon"><i class="inline-flex ai-fe jc-c"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 57.4 56.7">
+                                                    <path d="M16.7 5c-5 0-9 4-9 9s4 9 9 9c1.9 0 3.7-.6 5.1-1.6l3.1 3.3c.2.2.4.3.7.3.6 0 1-.4 1-1 0-.3-.1-.5-.3-.7L23.2 20c1.5-1.6 2.4-3.7 2.4-6.1C25.7 9 21.7 5 16.7 5zm-7 9c0-3.9 3.1-7 7-7s7 3.1 7 7-3.1 7-7 7-7-3.1-7-7z"></path>
+                                                    <path d="M16.7 28h37c.6 0 1-.4 1-1s-.4-1-1-1h-37c-6.6 0-12-5.4-12-12s5.4-12 12-12h37c.6 0 1-.4 1-1s-.4-1-1-1h-37C9 0 2.7 6.3 2.7 14s6.3 14 14 14zM57.4 55.3c-.2-.2-4.7-4.6-14.5-6.9.5-.8.8-1.6 1.1-2.4h.7c2.2 0 4-1.8 4-4s-1.8-4-4-4v2c1.1 0 2 .9 2 2s-.9 2-2 2h-.2c.1-.7.2-1.3.2-2h-2c0 6.6-6.3 12-14 12s-14-5.4-14-12h-2c0 .7.1 1.3.2 2h-.2c-1.1 0-2-.9-2-2s.9-2 2-2v-2c-2.2 0-4 1.8-4 4s1.8 4 4 4h.7c.3.8.7 1.7 1.1 2.4C4.7 50.7.2 55.1 0 55.3l1.4 1.4s4.6-4.5 14.4-6.5c2.9 3.5 7.6 5.8 12.9 5.8s10-2.3 12.9-5.8c9.7 2 14.3 6.5 14.4 6.5l1.4-1.4z"></path>
+                                                    <path d="M25.7 38v4c0 1.7 1.3 3 3 3s3-1.3 3-3v-4h-2v4c0 .6-.4 1-1 1s-1-.4-1-1v-4h-2zM37.1 47.8v-2c-6.9 0-7 5-7 5h2c0-.3.2-3 5-3z"></path>
+                                                    <circle cx="31.7" cy="20" r="1"></circle>
+                                                    <circle cx="35.7" cy="20" r="1"></circle>
+                                                    <circle cx="39.7" cy="20" r="1"></circle>
+                                                    <circle cx="22.2" cy="36.5" r="1.5"></circle>
+                                                    <circle cx="38.2" cy="36.5" r="1.5"></circle>
+                                                    <path d="M41.2 31.2c-3.5-2.3-7-.1-7.1 0l1.1 1.7s2.5-1.6 4.9 0l1.1-1.7zM23.2 31.2c-3.5-2.3-7-.1-7.1 0l1.1 1.7s2.5-1.6 4.9 0l1.1-1.7z"></path>
+                                                </svg></i></div>
+                                        <p class="services-process__item-title">ИССЛЕДОВАНИЯ</p>
+                                        <p class="services-process__item-text">Проводится анализ рынка в целом. Мониторинг всех возможных конкурентов</p>
+                                    </div>
+                                    <div class="services-process__item p-services-process__item above-viewport" data-in-viewport="i34">
+                                        <div class="services-process__item-icon"><i class="inline-flex ai-fe jc-c"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 57.4 56.7">
+                                                    <path d="M57.4 55.3c-.2-.2-4.7-4.6-14.5-6.9.5-.8.8-1.6 1.1-2.4h.7c2.2 0 4-1.8 4-4s-1.8-4-4-4v2c1.1 0 2 .9 2 2s-.9 2-2 2h-.2c.1-.7.2-1.3.2-2h-2c0 6.6-6.3 12-14 12s-14-5.4-14-12h-2c0 .7.1 1.3.2 2h-.2c-1.1 0-2-.9-2-2s.9-2 2-2v-2c-2.2 0-4 1.8-4 4s1.8 4 4 4h.7c.3.8.7 1.7 1.1 2.4C4.7 50.7.2 55.1 0 55.3l1.4 1.4s4.6-4.5 14.4-6.5c2.9 3.5 7.6 5.8 12.9 5.8s10-2.3 12.9-5.8c9.7 2 14.3 6.5 14.4 6.5l1.4-1.4z"></path>
+                                                    <path d="M28.7 45c1.7 0 3-1.3 3-3v-4h-2v4c0 .6-.4 1-1 1s-1-.4-1-1v-4h-2v4c0 1.7 1.4 3 3 3zM41.3 32.1c-3.5-2.3-7-.1-7.1 0l1.1 1.7s2.5-1.6 4.9 0l1.1-1.7zM16.2 34.2l1.1 1.7s2.5-1.6 4.9 0l1.1-1.7c-3.6-2.4-7-.1-7.1 0z"></path>
+                                                    <circle cx="21.2" cy="38.5" r="1.5"></circle>
+                                                    <circle cx="38.2" cy="38.5" r="1.5"></circle>
+                                                    <path d="M37.7 46h-2c0 .3-.2 3-5 3v2c6.9 0 7-4.9 7-5zM11.7 27c.1 0 .2 0 .3-.1l6.9-2.3c.1 0 .3-.1.4-.2L37.4 6.7c.2-.2.3-.4.3-.7 0-.3-.1-.5-.3-.7l-5-5c-.2-.2-.4-.3-.7-.3-.3 0-.5.1-.7.3L13.3 18.4c-.1.1-.2.2-.2.4l-2.3 6.9c0 .1-.1.2-.1.3 0 .6.5 1 1 1zm1.6-2.6l1.2-3.5 2.3 2.3-3.5 1.2zm4.5-3L29.9 9.3l1 1-12.2 12-.9-.9zM16.3 20l-.9-1 12-12.2 1 1L16.3 20zM31.7 2.4L35.3 6l-3 2.9-3.5-3.5 2.9-3zM35.7 26c0-.6-.4-1-1-1h-14c-.6 0-1 .4-1 1s.4 1 1 1h14c.6 0 1-.4 1-1z"></path>
+                                                    <circle cx="38.7" cy="26" r="1"></circle>
+                                                    <circle cx="42.7" cy="26" r="1"></circle>
+                                                    <circle cx="46.7" cy="26" r="1"></circle>
+                                                </svg></i></div>
+                                        <p class="services-process__item-title">дизайн</p>
+                                        <p class="services-process__item-text">Разрабатывается индивидуальный дизайн в соответствии с тематикой товаров или услуг</p>
+                                    </div>
+                                    <div class="services-process__item p-services-process__item above-viewport" data-in-viewport="i35">
+                                        <div class="services-process__item-icon"><i class="inline-flex ai-fe jc-c"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 57.4 56.2">
+                                                    <path d="M8.5 21.7h2.1c.1.2.1.3.2.5l-1.5 1.5c-.9.9-.9 2.3 0 3.2l2.6 2.6c.8.8 2.3.8 3.2 0l1.5-1.5c.2.1.3.1.5.2v2.1c0 1.3 1 2.3 2.2 2.3H23c1.2 0 2.2-1 2.2-2.3v-2.1c.2-.1.3-.1.5-.2l1.5 1.5c.9.9 2.3.9 3.2 0l2.6-2.6c.9-.9.9-2.3 0-3.2l-1.5-1.5c.1-.2.1-.3.2-.5h2.1c1.3 0 2.3-1 2.3-2.2v-.8l1.9.9c.9.4 2 0 2.4-.8l.4-.9.3.9c.2.7.9 1.3 1.7 1.3.2 0 .4 0 .6-.1l2.3-.8c.5-.1.8-.5 1-.9.2-.4.3-.9.1-1.4l-.3-.9.9.4c.3.1.5.2.8.2.7 0 1.3-.4 1.6-1l1.1-2.2c.2-.4.2-.9.1-1.4-.2-.5-.5-.8-.9-1l-.9-.4.9-.3c.5-.2.8-.5 1.1-.9.2-.4.3-.9.1-1.4l-.8-2.3c-.3-.9-1.4-1.5-2.3-1.1l-.9.3.6-.9c.4-.9.1-2-.8-2.4L44.9.5c-.9-.4-2 0-2.4.8l-.4.9-.3-.9C41.5.4 40.4-.2 39.5.1l-2.3.8c-.5.1-.8.5-1 .9-.2.4-.3.9-.1 1.4l.3.9-.9-.4c-.9-.4-2-.1-2.4.8L32 6.6c-.1.1-.1.3-.1.4l-1.4-1.4c-.8-.8-2.3-.8-3.2 0l-1.5 1.5c-.2-.1-.3-.1-.5-.2V4.8c0-1.3-1-2.3-2.2-2.3h-3.7c-1.2 0-2.2 1-2.2 2.3v2.1c-.2.1-.3.1-.5.2l-1.5-1.5c-.9-.9-2.3-.9-3.2 0L9.3 8.3c-.4.4-.7 1-.7 1.6 0 .6.2 1.2.7 1.6l1.5 1.5c-.1.2-.1.3-.2.5H8.5c-1.3 0-2.3 1-2.3 2.2v3.7c0 1.2 1 2.3 2.3 2.3zM34.8 5.5l1.5.7c.4.2.9.1 1.2-.2.2-.2.5-.5.8-.7.4-.3.5-.7.4-1.1L38 2.7l1.9-.7.5 1.6c.1.4.6.7 1 .7.3 0 .6 0 .9.1.4.1.9-.1 1.1-.5l.7-1.5 1.9.9-.7 1.5c-.2.4-.1.9.2 1.2l.7.7c.2.3.7.5 1.1.3l1.6-.5.6 1.9-1.6.5c-.4.1-.7.5-.7 1 0 .3 0 .6-.1 1s.1.9.5 1.1l1.5.7-.9 1.8-1.5-.7c-.4-.2-.9-.1-1.2.2-.2.2-.5.5-.8.7-.4.3-.5.7-.4 1.1l.5 1.6-1.9.6-.5-1.6c-.1-.4-.6-.7-1-.7-.3 0-.6 0-.9-.1h-.2c-.4 0-.7.2-.9.6l-.7 1.5-1.7-1 .7-1.5c.2-.4.1-.9-.2-1.2-.3-.2-.5-.5-.7-.7-.3-.4-.7-.5-1.1-.4l-1.5.5h-.1l-.6-1.9 1.6-.5c.4-.1.7-.5.7-1 0-.3 0-.6.1-1 .1-.3-.1-.8-.5-1l-1.5-.7.9-1.8zM8.2 15.7c0-.1.1-.2.3-.2h2.8c.4 0 .8-.3 1-.7l.6-1.5c.2-.4.1-.9-.2-1.2l-2-2c-.1-.1-.1-.2-.1-.2s0-.1.1-.2L13.3 7c.1-.1.2-.1.4 0l2 2c.3.3.8.4 1.2.2.5-.3 1-.5 1.5-.6.4-.1.7-.5.7-1V4.8c0-.1.1-.3.2-.3H23c.1 0 .2.1.2.3v2.8c0 .4.3.8.7 1l1.5.6c.4.2.9.1 1.2-.2l2-2c.2-.2.3-.1.4 0l2.6 2.6c.1.1.1.1.1.2 0 0 0 .1-.1.2l-2 2c-.3.3-.4.8-.2 1.2.3.5.5 1 .6 1.5.1.4.5.7 1 .7h2.4c.2.1.4.1.6.1l.1.1v3.7c0 .1-.1.2-.3.2H31c-.4 0-.8.3-1 .7l-.6 1.5c-.2.4-.1.9.2 1.2l2 2c.1.1.1.3 0 .4L29 27.9c-.1.1-.2.1-.4 0l-2-2c-.3-.3-.8-.4-1.2-.2-.5.3-1 .5-1.5.6-.4.1-.7.5-.7 1v2.8c0 .2-.1.3-.2.3h-3.7c-.1 0-.2-.1-.2-.3v-2.8c0-.4-.3-.8-.7-1l-1.5-.6c-.1-.1-.3-.1-.5-.1-.3 0-.5.1-.7.3l-2 2c-.2.2-.3.1-.4 0l-2.6-2.6c-.1-.1-.1-.3 0-.4l2-2c.3-.3.4-.8.2-1.2-.3-.5-.5-1-.6-1.5-.1-.4-.5-.7-1-.7H8.5c-.1 0-.3-.1-.3-.2v-3.6z"></path>
+                                                    <path d="M21.2 24.2a6.7 6.7 0 1 0 0-13.4 6.7 6.7 0 0 0 0 13.4zm0-11.4c2.6 0 4.7 2.1 4.7 4.7s-2.1 4.7-4.7 4.7-4.7-2.1-4.7-4.7 2.1-4.7 4.7-4.7zM41.5 14.7c.5 0 1-.1 1.5-.2 2.4-.8 3.8-3.5 3-5.9-.6-1.9-2.4-3.2-4.4-3.2-.5 0-1 .1-1.5.2-2.4.8-3.8 3.5-3 5.9.6 1.9 2.4 3.2 4.4 3.2zm-.8-7.3c.3-.1.6-.1.8-.1 1.2 0 2.2.7 2.5 1.8.5 1.4-.3 2.9-1.7 3.4-.3.1-.6.1-.8.1-1.2 0-2.2-.7-2.5-1.8-.5-1.4.3-2.9 1.7-3.4zM57.4 54.8c-.2-.2-4.7-4.6-14.5-6.9.5-.8.8-1.6 1.1-2.4h.7c2.2 0 4-1.8 4-4s-1.8-4-4-4v2c1.1 0 2 .9 2 2s-.9 2-2 2h-.2c.1-.7.2-1.3.2-2h-2c0 6.6-6.3 12-14 12s-14-5.4-14-12h-2c0 .7.1 1.3.2 2h-.2c-1.1 0-2-.9-2-2s.9-2 2-2v-2c-2.2 0-4 1.8-4 4s1.8 4 4 4h.7c.3.8.7 1.7 1.1 2.4C4.7 50.2.2 54.6 0 54.8l1.4 1.4s4.6-4.5 14.4-6.5c2.9 3.5 7.6 5.8 12.9 5.8s10-2.3 12.9-5.8c9.7 2 14.3 6.5 14.4 6.5l1.4-1.4z"></path>
+                                                    <path d="M25.7 37.5v4c0 1.7 1.3 3 3 3s3-1.3 3-3v-4h-2v4c0 .6-.4 1-1 1s-1-.4-1-1v-4h-2zM37.7 45.5h-2c0 .3-.2 3-5 3v2c6.9 0 7-4.9 7-5zM21.7 39.5c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zM40.7 37.5h-4c0 1.1.9 2 2 2s2-.9 2-2zM43.2 32.7c-4-2.3-7.8-.1-8 0l1 1.7s3-1.7 6 0l1-1.7zM17.7 34.5h7v2h-7z"></path>
+                                                </svg></i></div>
+                                        <p class="services-process__item-title">разработка</p>
+                                        <p class="services-process__item-text">Внедряются самые последние стандарты. Сайт будет максимально быстро и корректно работать</p>
+                                    </div>
+                                    <div class="services-process__item p-services-process__item above-viewport" data-in-viewport="i36">
+                                        <div class="services-process__item-icon"><i class="inline-flex ai-fe jc-c"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 57.4 52.6">
+                                                    <path d="M57.4 51.2c-.2-.2-4.7-4.6-14.5-6.9.5-.8.8-1.6 1.1-2.4h.7c2.2 0 4-1.8 4-4s-1.8-4-4-4v2c1.1 0 2 .9 2 2s-.9 2-2 2h-.2c.1-.7.2-1.3.2-2h-2c0 6.6-6.3 12-14 12s-14-5.4-14-12h-2c0 .7.1 1.3.2 2h-.2c-1.1 0-2-.9-2-2s.9-2 2-2v-2c-2.2 0-4 1.8-4 4s1.8 4 4 4h.7c.3.8.7 1.7 1.1 2.4C4.7 46.6.2 51 0 51.2l1.4 1.4s4.6-4.5 14.4-6.5c2.9 3.5 7.6 5.8 12.9 5.8s10-2.3 12.9-5.8c9.7 2 14.3 6.5 14.4 6.5l1.4-1.4z"></path>
+                                                    <path d="M25.7 33.9v4c0 1.7 1.3 3 3 3s3-1.3 3-3v-4h-2v4c0 .6-.4 1-1 1s-1-.4-1-1v-4h-2z"></path>
+                                                    <circle cx="23.2" cy="35.4" r="1.5"></circle>
+                                                    <circle cx="36.2" cy="32.4" r="1.5"></circle>
+                                                    <path d="M33.7 47c1.7 0 3-1.3 3-3v-1.1c.7 0 1.3.1 1.9.1l.2-2c-.9-.1-8.4-.7-11.1 1.7-.7.6-1 1.4-1 2.2h2c0-.3.1-.5.4-.8.4-.3.9-.6 1.6-.8v.7c0 1.7 1.4 3 3 3zm0-2c-.6 0-1-.4-1-1v-.9c.6-.1 1.3-.1 2-.2V44c0 .6-.4 1-1 1zM28.6 28c6.5 0 11.7-5.4 11.7-12.1 0-6.1-4.8-11-10.7-11-5.4 0-9.7 4.5-9.7 10 0 5 4 9.1 8.8 9.1 4.4 0 8-3.7 8-8.3 0-4.2-3.3-7.5-7.3-7.5-3.7 0-6.7 3.1-6.7 6.9 0 3.5 2.8 6.3 6.1 6.3 3.1 0 5.6-2.6 5.6-5.8h-2c0 2.1-1.6 3.8-3.6 3.8-2.3 0-4.1-1.9-4.1-4.3 0-2.7 2.1-4.9 4.7-4.9 2.9 0 5.3 2.5 5.3 5.5 0 3.5-2.7 6.3-6 6.3-3.8 0-6.8-3.2-6.8-7.1 0-4.4 3.5-8 7.7-8 4.8 0 8.7 4 8.7 9 0 5.6-4.4 10.1-9.7 10.1-6 0-10.9-5.1-10.9-11.3C17.7 7.7 23.2 2 30 2c7.6 0 13.7 6.4 13.7 14.2h2C45.7 7.3 38.6 0 30 0c-7.9 0-14.3 6.6-14.3 14.7C15.7 22 21.5 28 28.6 28z"></path>
+                                                </svg></i></div>
+                                        <p class="services-process__item-title">ТЕСТИРОВАНИЕ</p>
+                                        <p class="services-process__item-text">Перед запуском, сайт детально проходит тестирование для выявления и исправления ошибок</p>
+                                    </div>
+                                </div>
+                            </section>
+                            <div class="p-services-category__video">
+                                <div class="video__block">
+                                    <!---->
+                                    <div class="video__block-inner flex ai-c jc-c above-viewport" data-in-viewport="i37"><button class="video__block-toggler inline-flex ai-c jc-c video-toggler"><svg class="video-play-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 232.153 232.153" xml:space="preserve">
+                                                <g>
+                                                    <path d="M203.791,99.628L49.307,2.294c-4.567-2.719-10.238-2.266-14.521-2.266   c-17.132,0-17.056,13.227-17.056,16.578v198.94c0,2.833-0.075,16.579,17.056,16.579c4.283,0,9.955,0.451,14.521-2.267   l154.483-97.333c12.68-7.545,10.489-16.449,10.489-16.449S216.471,107.172,203.791,99.628z" style="fill-rule: evenodd; clip-rule: evenodd;"></path>
+                                                </g>
+                                            </svg><svg class="video-pause-icon" xmlns="http://www.w3.org/2000/svg" viewBox="-37 0 320 320.00002">
+                                                <path d="m96.398438 0h-86.398438c-5.515625.015625-9.984375 4.484375-10 10v300c.015625 5.515625 4.484375 9.984375 10 10h86.398438c5.519531-.015625 9.984374-4.484375 10-10v-300c-.015626-5.515625-4.480469-9.984375-10-10zm0 0" />
+                                                <path d="m236.898438 0h-86.5c-5.515626.015625-9.984376 4.484375-10 10v300c.015624 5.515625 4.484374 9.984375 10 10h86.402343c5.515625-.015625 9.984375-4.484375 10-10v-300c.03125-2.644531-1-5.191406-2.859375-7.070312-1.859375-1.878907-4.398437-2.93359425-7.042968-2.929688zm0 0" /></svg></button><video poster="/img/video-poster.jpg">
+                                            <source src="http://techslides.com/demos/sample-videos/small.mp4" type="video/mp4"></video>
+                                        <div class="video__block-controls flex ai-c jc-sb"><button class="smalltoggler video-toggler"><svg class="video-play-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 232.153 232.153" xml:space="preserve">
+                                                    <g>
+                                                        <path d="M203.791,99.628L49.307,2.294c-4.567-2.719-10.238-2.266-14.521-2.266   c-17.132,0-17.056,13.227-17.056,16.578v198.94c0,2.833-0.075,16.579,17.056,16.579c4.283,0,9.955,0.451,14.521-2.267   l154.483-97.333c12.68-7.545,10.489-16.449,10.489-16.449S216.471,107.172,203.791,99.628z" style="fill-rule: evenodd; clip-rule: evenodd;"></path>
+                                                    </g>
+                                                </svg><svg class="video-pause-icon" xmlns="http://www.w3.org/2000/svg" viewBox="-37 0 320 320.00002">
+                                                    <path d="m96.398438 0h-86.398438c-5.515625.015625-9.984375 4.484375-10 10v300c.015625 5.515625 4.484375 9.984375 10 10h86.398438c5.519531-.015625 9.984374-4.484375 10-10v-300c-.015626-5.515625-4.480469-9.984375-10-10zm0 0" />
+                                                    <path d="m236.898438 0h-86.5c-5.515626.015625-9.984376 4.484375-10 10v300c.015624 5.515625 4.484374 9.984375 10 10h86.402343c5.515625-.015625 9.984375-4.484375 10-10v-300c.03125-2.644531-1-5.191406-2.859375-7.070312-1.859375-1.878907-4.398437-2.93359425-7.042968-2.929688zm0 0" /></svg></button>
+                                            <div class="duration"><input type="range" min="0" max="" autocomplete="off" role="slider"></div>
+                                            <div class="volume flex ai-c jc-fs"><span class="volume-mute"><svg class="video-volume-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 347.182 347.182">
+                                                        <path d="M210.133 0c-4.948 0-9.233 1.809-12.847 5.426L102.213 100.5H27.412c-4.952 0-9.235 1.809-12.85 5.424-3.618 3.621-5.426 7.901-5.426 12.85v109.634c0 4.948 1.809 9.232 5.426 12.847 3.619 3.617 7.901 5.428 12.85 5.428h74.801l95.073 95.077c3.613 3.61 7.898 5.421 12.847 5.421s9.232-1.811 12.854-5.421c3.613-3.617 5.421-7.901 5.421-12.847V18.276c0-4.948-1.808-9.235-5.421-12.851C219.362 1.809 215.081 0 210.133 0zM325.904 133.037c-8.09-12.562-18.788-21.414-32.12-26.551-1.903-.95-4.278-1.427-7.132-1.427-4.949 0-9.233 1.765-12.847 5.282-3.614 3.521-5.428 7.853-5.428 12.991 0 3.997 1.143 7.376 3.429 10.136 2.286 2.762 5.037 5.142 8.281 7.139a147.442 147.442 0 0 1 9.706 6.567c3.237 2.38 5.995 5.758 8.281 10.135 2.279 4.377 3.429 9.801 3.429 16.274 0 6.478-1.149 11.899-3.429 16.279-2.286 4.381-5.044 7.755-8.281 10.141a148.945 148.945 0 0 1-9.706 6.563c-3.244 1.995-5.995 4.38-8.281 7.139-2.286 2.762-3.429 6.139-3.429 10.137 0 5.143 1.813 9.465 5.428 12.99 3.613 3.518 7.897 5.28 12.847 5.28 2.854 0 5.229-.476 7.132-1.424 13.332-5.328 24.03-14.229 32.12-26.689 8.097-12.474 12.142-25.933 12.142-40.402 0-14.473-4.055-27.986-12.142-40.56z"></path>
+                                                    </svg><svg class="video-mute-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 508.528 508.528">
+                                                        <path d="M263.54.116c-5.784-.54-12.554.858-20.531 5.689 0 0-132.533 115.625-138.317 121.314h-72.91C14.239 127.15 0 141.389 0 158.933v194.731c0 17.607 14.239 31.782 31.782 31.782h72.941c5.784 5.753 138.317 117.277 138.317 117.277 7.977 4.799 14.747 6.229 20.531 5.689 11.76-1.112 20.023-10.965 22.534-21.358.095-1.017.095-464.533-.064-465.55C283.563 11.081 275.268 1.228 263.54.116zM447.974 254.28l54.857-54.857c7.596-7.564 7.596-19.864 0-27.428-7.564-7.564-19.864-7.564-27.428 0l-54.857 54.888-54.888-54.888c-7.532-7.564-19.864-7.564-27.397 0-7.564 7.564-7.564 19.864 0 27.428l54.857 54.857-54.857 54.888c-7.564 7.532-7.564 19.864 0 27.396 7.532 7.564 19.864 7.564 27.396 0l54.888-54.857 54.857 54.857c7.564 7.564 19.864 7.564 27.428 0 7.564-7.532 7.564-19.864 0-27.396l-54.856-54.888z"></path>
+                                                    </svg></span>
+                                                <div class="volume__line"><input type="range" min="0" max="1" step="0.01" autocomplete="off" role="slider"></div>
+                                            </div><button class="fullscreen"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 513.32 513.32">
+                                                    <path d="M177.523 305.853L42.777 440.6v-98.387H0V513.32h171.107v-42.777H74.859l134.746-134.746z"></path>
+                                                    <path d="M470.543 440.6L72.72 42.777h98.387V0H0v171.107h42.777V72.72L440.6 470.543h-98.387v42.777H513.32V342.213h-42.777z"></path>
+                                                    <path d="M342.213 0v42.777h100.526L307.992 177.523l29.943 29.944L470.543 74.859v96.248h42.777V0z"></path>
+                                                </svg></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <section class="p-services-category__technologies">
+                                <div class="caption caption--small caption--centered caption--services--visible">
+                                    <div class="caption__inner above-viewport" data-in-viewport="i38">
+                                        <p class="caption__main">технологии</p>
+                                        <!---->
+                                        <!---->
+                                    </div>
+                                </div>
+                                <div class="p-services-category__technologies-items flex jc-c ai-s fw-w">
+                                    <div class="tag flex ai-c jc-c p-services-technologies__item above-viewport" data-val="wordpress" data-in-viewport="i39">
+                                        <p class="tag-title">WordPress</p>
+                                    </div>
+                                    <div class="tag flex ai-c jc-c p-services-technologies__item above-viewport" data-val="laravel" data-in-viewport="i40">
+                                        <p class="tag-title">Laravel</p>
+                                    </div>
+                                    <div class="tag flex ai-c jc-c p-services-technologies__item above-viewport" data-val="vue.js" data-in-viewport="i41">
+                                        <p class="tag-title">Vue.js</p>
+                                    </div>
+                                    <div class="tag flex ai-c jc-c p-services-technologies__item above-viewport" data-val="docker" data-in-viewport="i42">
+                                        <p class="tag-title">Docker</p>
+                                    </div>
+                                    <div class="tag flex ai-c jc-c p-services-technologies__item above-viewport" data-val="node.js" data-in-viewport="i43">
+                                        <p class="tag-title">Node.js</p>
+                                    </div>
+                                    <div class="tag flex ai-c jc-c p-services-technologies__item above-viewport" data-val="mysql" data-in-viewport="i44">
+                                        <p class="tag-title">MySQL</p>
+                                    </div>
+                                    <div class="tag flex ai-c jc-c p-services-technologies__item above-viewport" data-val="opencart" data-in-viewport="i45">
+                                        <p class="tag-title">OpenCart</p>
+                                    </div>
+                                    <div class="tag flex ai-c jc-c p-services-technologies__item above-viewport" data-val="sass" data-in-viewport="i46">
+                                        <p class="tag-title">Sass</p>
+                                    </div>
+                                    <div class="tag flex ai-c jc-c p-services-technologies__item above-viewport" data-val="ajax" data-in-viewport="i47">
+                                        <p class="tag-title">Ajax</p>
+                                    </div>
+                                    <div class="tag flex ai-c jc-c p-services-technologies__item above-viewport" data-val="bootstrap" data-in-viewport="i48">
+                                        <p class="tag-title">Bootstrap</p>
+                                    </div>
+                                    <div class="tag flex ai-c jc-c p-services-technologies__item above-viewport" data-val="invision" data-in-viewport="i49">
+                                        <p class="tag-title">InVision</p>
+                                    </div>
+                                    <div class="tag flex ai-c jc-c p-services-technologies__item above-viewport" data-val="photoshop" data-in-viewport="i50">
+                                        <p class="tag-title">Photoshop</p>
+                                    </div>
+                                    <div class="tag flex ai-c jc-c p-services-technologies__item above-viewport" data-val="axure" data-in-viewport="i51">
+                                        <p class="tag-title">Axure</p>
+                                    </div>
+                                    <div class="tag flex ai-c jc-c p-services-technologies__item above-viewport" data-val="illustrator" data-in-viewport="i52">
+                                        <p class="tag-title">Illustrator</p>
+                                    </div>
+                                    <div class="tag flex ai-c jc-c p-services-technologies__item above-viewport" data-val="animate_cc" data-in-viewport="i53">
+                                        <p class="tag-title">Animate CC</p>
+                                    </div>
+                                    <div class="tag flex ai-c jc-c p-services-technologies__item above-viewport" data-val="php" data-in-viewport="i54">
+                                        <p class="tag-title">PHP</p>
+                                    </div>
+                                    <div class="tag flex ai-c jc-c p-services-technologies__item above-viewport" data-val="javascript" data-in-viewport="i55">
+                                        <p class="tag-title">JavaScript</p>
+                                    </div>
+                                    <div class="tag flex ai-c jc-c p-services-technologies__item above-viewport" data-val="jquery" data-in-viewport="i56">
+                                        <p class="tag-title">jQuery</p>
+                                    </div>
+                                    <div class="tag flex ai-c jc-c p-services-technologies__item above-viewport" data-val="css" data-in-viewport="i57">
+                                        <p class="tag-title">CSS</p>
+                                    </div>
+                                    <div class="tag flex ai-c jc-c p-services-technologies__item above-viewport" data-val="html" data-in-viewport="i58">
+                                        <p class="tag-title">HTML</p>
+                                    </div>
+                                    <div class="tag flex ai-c jc-c p-services-technologies__item above-viewport" data-val="less" data-in-viewport="i59">
+                                        <p class="tag-title">Less</p>
+                                    </div>
+                                    <div class="tag flex ai-c jc-c p-services-technologies__item above-viewport" data-val="adobexd" data-in-viewport="i60">
+                                        <p class="tag-title">AdobeXD</p>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                    <section class="s-discuss p-services-category__discuss">
+                        <div class="container">
+                            <div class="s-discuss__wrapper">
+                                <form class="form discuss__project-form s-discuss__form">
+                                    <div class="caption caption--centered caption--services--visible">
+                                        <div class="caption__inner in-viewport fully-in-viewport" data-in-viewport="i61">
+                                            <p class="caption__main">обсудить проект</p>
+                                            <p class="caption__additional">Все крутые проекты начинаются с заполнения этой формы</p>
+                                            <!---->
+                                        </div>
+                                    </div>
+                                    <div class="form__inner flex ai-s jc-sb">
+                                        <div class="form__inner-part">
+                                            <div class="form-input">
+                                                <div class="form-input__inner">
+                                                    <!----><input placeholder="Имя" required="required" name="username" type="text"><i class="form-input__line"></i>
+                                                    <!---->
+                                                </div><span class="form-message"></span>
+                                            </div>
+                                            <div class="form-input">
+                                                <div class="form-input__inner">
+                                                    <!----><input placeholder="Телефон" required="required" name="userphone" type="tel"><i class="form-input__line"></i>
+                                                    <!---->
+                                                </div><span class="form-message"></span>
+                                            </div>
+                                            <div class="form-input">
+                                                <div class="form-input__inner">
+                                                    <!----><input placeholder="E-mail" required="required" name="useremail" type="email"><i class="form-input__line"></i>
+                                                    <!---->
+                                                </div><span class="form-message"></span>
+                                            </div>
+                                        </div>
+                                        <div class="form__inner-part flex fd-c jc-sb ai-fs">
+                                            <div class="form-input form-input--textarea">
+                                                <div class="form-input__inner">
+                                                    <!----><textarea rows="1" placeholder="Опишите свою идею" required="required" name="usertext"></textarea><i class="form-input__line"></i>
+                                                    <!---->
+                                                </div><span class="form-message"></span>
+                                            </div>
+                                            <div class="form-input form-input--file">
+                                                <div class="form-input__inner">
+                                                    <!----><label class="flex ai-fe jc-fs" for="header-modal-file"><input id="header-modal-file" type="file" placeholder="Добавить файл" name="userfile" multiple="multiple"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20 22" xml:space="preserve">
+                                                            <path d="M15.8,0c2.2,0,3.9,1.8,3.9,3.9c0,0.4-0.1,1.7-1.2,2.8l-8.5,8.5c-0.6,0.7-2.1,1.3-3.3,0.1c-1.2-1.2-0.6-2.7,0.1-3.3l4.4-4.4 L12,8.3l-3.2,3.2l0,0l-1.4,1.4l0,0c-1,1.2,0.6,2.9,2,1.6l8.4-8.4c0.7-0.7,0.9-1.4,0.9-2.2c0-1.6-1.3-2.9-2.9-2.9 c-0.8,0-1.5,0.3-2,0.8l0,0C13.2,2.4,2.3,13.3,2.3,13.4l0,0C1.5,14.2,1,15.3,1,16.5C1,19,3,21,5.5,21c0.6,0,1.8,0,3.5-1.7L19.3,9.1 L20,9.8L9.5,20.2c-1,1.1-2.4,1.8-4,1.8c-3,0-5.5-2.5-5.5-5.5c0-1.6,0.7-3,1.7-4C12.4,1.8,12.6,1.7,13,1.2C13.3,0.9,14.2,0,15.8,0"></path>
+                                                        </svg><span>Добавить файл</span></label>
+                                                    <!---->
+                                                    <!---->
+                                                </div><span class="form-message"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="btn__wrap">
+                                        <!----><button class="btn s-discuss-btn btn--filled" type="submit">
+                                            <div class="btn__wrap-inner"><span class="btn__wrap-text">ОТПРАВИТЬ</span>
+                                                <!---->
+                                            </div>
+                                        </button></div>
+                                </form>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </main>
+            <footer class="footer">
+                <div class="container">
+                    <div class="footer__wrapper flex jc-sb ai-fs">
+                        <div class="footer__info footer__col"><a class="nuxt-link-exact-active nuxt-link-active logo footer__logo" href="/"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1189.5 252" style="enable-background:new 0 0 1189.5 252;" xml:space="preserve">
+                                    <polygon points="5.5,47.3 121.8,3 240,47.3 122.8,100.8 "></polygon>
+                                    <polygon points="4,55.5 118.8,108.8 118.8,249 4,192.8 "></polygon>
+                                    <polygon points="125,108.3 240,55.5 240,192 125,249 "></polygon>
+                                    <g>
+                                        <path d="M356,92.2h11.8l47.4,74.5c1.2,1.9-0.2,4.3-2.4,4.3h-11.3c-1.1,0-2.2-0.6-2.8-1.5l-13.8-21.4l-46.2-0.2l-13.7,22 c-0.4,0.7-1.1,1-1.9,1h-12.3c-2.3,0-3.7-2.6-2.5-4.5L356,92.2z M379.1,135.8L361.4,109l-16.3,26.9L379.1,135.8z"></path>
+                                        <path d="M425.7,167.4V92.2h48.8c5.1,0,9.8,0.8,14.1,2.3c4.3,1.5,8,3.5,11.1,6s5.5,5.3,7.3,8.4s2.6,6.3,2.6,9.5 c0,5.1-1.8,9.8-5.4,13.9c-3.6,4.2-8.4,7.2-14.5,9l23.8,25c1.7,1.8,0.4,4.7-2,4.7H498c-0.8,0-1.6-0.3-2.1-0.9l-24.1-25.5h-28.6 l0.1,23.1c0,1.8-1.5,3.3-3.3,3.3h-10.6C427.3,171,425.7,169.4,425.7,167.4z M443.1,131.2H474c2,0,9.8-0.3,11.5-1s3.2-1.6,4.4-2.7 c1.2-1.1,2.2-2.5,3-4.1c0.7-1.6,1.1-3.2,1.1-5s-0.4-3.6-1.2-5.1c-0.8-1.6-1.9-2.9-3.3-4.1c-1.4-1.1-3-2-4.8-2.7 c-1.8-0.6-9.7-0.9-11.5-0.9H443L443.1,131.2z"></path>
+                                        <path d="M899.7,167.4V92.2h48.8c5.1,0,9.8,0.8,14.1,2.3s8,3.5,11.1,6s5.5,5.3,7.3,8.4s2.6,6.3,2.6,9.5c0,5.1-1.8,9.8-5.4,13.9 c-3.6,4.2-8.4,7.2-14.5,9l23.8,25c1.7,1.8,0.4,4.7-2,4.7H972c-0.8,0-1.6-0.3-2.1-0.9l-24.1-25.5h-28.6l0.1,23.1 c0,1.8-1.5,3.3-3.3,3.3h-10.6C901.3,171,899.7,169.4,899.7,167.4z M917.1,131.2H948c2,0,9.8-0.3,11.5-1s3.2-1.6,4.4-2.7 c1.2-1.1,2.2-2.5,3-4.1c0.7-1.6,1.1-3.2,1.1-5s-0.4-3.6-1.2-5.1c-0.8-1.6-1.9-2.9-3.3-4.1c-1.4-1.1-3-2-4.8-2.7 c-1.8-0.6-9.7-0.9-11.5-0.9H917L917.1,131.2z"></path>
+                                        <path d="M606.5,104.2l-35.3,0.2l0.1,63c0,2-1.7,3.7-3.7,3.7h-9.8c-2,0-3.6-1.6-3.6-3.6l0.2-63.2l-35.3,0.2c-2.3,0-4.3-0.6-4.3-2.8 v-5.9c0-1.9,1.5-3.4,3.4-3.4h89.3c1.9,0,3.5,1.6,3.5,3.5v5.5C610.8,103.6,609,104.2,606.5,104.2z"></path>
+                                        <path d="M754.3,167.8v-51.3l-34.7,39.7c-0.8,1-2,1.5-3.3,1.5h-4.1c-1.3,0-2.5-0.6-3.4-1.5l-35-39l-0.2,50.8c0,1.7-1.4,3.1-3.1,3.1 h-10.1c-1.7,0-3-1.3-3-3V94.8c0-1.4,1.2-2.6,2.6-2.6h13.1l41.5,46.6l41-46.6h13.1c1.7,0,3.1,1.4,3.1,3.1v72.3 c0,1.9-1.5,3.4-3.4,3.4h-11C755.8,171,754.3,169.6,754.3,167.8z"></path>
+                                        <path d="M831.3,92.2h9.4c0.9,0,1.8,0.5,2.3,1.3l45.5,72.3c1.4,2.3-0.2,5.3-2.9,5.3h-8.7c-2.1,0-4.1-1.1-5.3-2.8L859,148.7 c-0.5-0.8-1.4-1.2-2.3-1.2l-43.1-0.2c-1,0-1.9,0.5-2.4,1.4l-12.3,21c-0.5,0.8-1.4,1.4-2.4,1.4H785c-2.3,0-3.7-2.5-2.4-4.5L829,93.5 C829.5,92.7,830.4,92.2,831.3,92.2z M852,135.3l-16.1-26c0-0.1-0.1-0.1-0.1,0l-16.2,26.2c-0.1,0.2,0,0.4,0.2,0.4l31.9-0.1 C852,135.8,852.1,135.5,852,135.3z"></path>
+                                        <path d="M1000.8,167.4l0.3-71.5c0-2,1.6-3.6,3.6-3.6h10.1c1.8,0,3.3,1.5,3.3,3.3l0.2,36l56.8-39.4h14.1c2.5,0,3.6,3.2,1.5,4.7 l-42,30.2l43.8,37.8c2.4,2.1,0.9,6-2.2,6h-10.7c-1.1,0-2.2-0.4-3.1-1.2l-39.9-35.3l-18,12.3v20.5c0,2-1.6,3.7-3.7,3.7h-10.6 C1002.4,171,1000.8,169.4,1000.8,167.4z"></path>
+                                        <path d="M1179.3,110.1c-1,1.1-2.5,1.5-3.9,1.1c-1-0.3-2.2-0.7-3.2-1.1c-1.9-0.9-4.2-1.8-7-2.6c-2.7-0.8-5.7-1.6-8.9-2.2 c-3.2-0.6-11.5-0.9-14.8-0.9c-5.9,0-10.2,1.1-13.2,2.3c-3.7,1.5-6.9,3.6-7.4,6.5c-0.2,1.6,0.5,4.1,1.6,5.1 c3.8,3.1,10.6,4.2,12.7,4.8c2.4,0.7,5.8,1.2,9,1.9c3.2,0.7,6.4,1.1,10.5,1.8c5.4,1,10.1,1.6,14.5,2.8s7.6,1.8,10.7,3.6 s5.4,3.9,7.1,6.4s2.5,5.5,2.5,9.2c0,4.2-1.1,7.8-3.3,10.8c-2.2,3-5.2,5.4-9,7.3c-3.8,1.9-8.1,3.2-13.1,4.1 c-4.9,0.8-10.1,1.3-15.5,1.3c-8.3,0-16.5-0.9-24.5-2.7c-7.3-1.6-16.4-5.4-22.8-8.6c-1.7-0.8-2.3-3-1.2-4.6l3.8-5.4 c1.6-2.3,3.4-2.9,8.2-1c0.3,0.1,0.5,0.2,0.8,0.4c2.4,1.1,9.3,3.1,12.6,4.2c3.3,1.1,7,2,11,2.7s8.2,1.1,12.4,1.1 c11.8,0,23.7-2.7,23.7-8.1c0-1.7-0.7-3.1-2-4.3s-3.3-2.2-5.7-3.1c-2.5-0.9-5.5-1.7-9-2.4s-7.7-1.1-12-2c-5.3-1-15.7-2.6-19.5-3.8 c-3.9-1.2-10.1-2.7-12.7-4.3c-2.6-1.7-4.5-3.6-5.8-5.8c-1.3-2.2-1.9-4.8-1.9-7.8c0-4,1-7.5,3.1-10.7c2.1-3.1,5.6-6.3,9.3-8.4 c3.7-2.1,8.4-3.7,13.3-4.8c4.9-1.1,11.2-1.3,16.8-1.3c7.8,0,15.6,1.2,22.2,3c5,1.3,10.6,3.6,15.1,5.6c1.9,0.9,2.8,3,1,4.9 L1179.3,110.1z"></path>
+                                    </g>
+                                </svg></a>
+                            <div class="footer__item footer__info-row">
+                                <p class="footer__info-title" style="display:none;"></p>
+                                <p class="footer__info-value">© 2016-2018 Web-студия Art-Marks<br> Создание и продвижение сайтов.</p>
+                            </div>
+                            <div class="footer__item footer__info-row">
+                                <p class="footer__info-title" style="display:;">Адрес:</p>
+                                <p class="footer__info-value">г. Харьков, ул. Кузнечная, 9</p>
+                            </div>
+                            <div class="footer__item footer__info-row">
+                                <p class="footer__info-title" style="display:;">график работы:</p>
+                                <p class="footer__info-value">Пн-Пт: 09:00-18:00</p>
+                                <p class="footer__info-value">Сб-Вс: выходные</p>
+                            </div>
+                        </div>
+                        <div class="footer__contacts footer__col footer--padding">
+                            <p class="footer__col-title">контакты</p>
+                            <div class="footer__col-item">
+                                <div class="footer__item footer__contacts-item">
+                                    <p class="footer__info-title" style="display:;">телефоны:</p>
+                                    <div class="phones__list footer__phones"><a href="tel: (096) 600-47-56">(096) 600-47-56</a><a href="tel: (099) 517-60-86">(099) 517-60-86</a><a href="tel: (063) 944-54-90">(063) 944-54-90</a></div>
+                                </div>
+                                <div class="footer__item footer__contacts-item">
+                                    <p class="footer__info-title" style="display:;">email:</p><a class="footer__info-value" href="mailto:info@art-marks.net">info@art-marks.net</a>
+                                </div>
+                                <div class="footer__item footer__contacts-item">
+                                    <p class="footer__info-title" style="display:;">skype:</p><a class="footer__info-value" href="skype:artmarks.ua?chat">artmarks.ua</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer__services footer__col footer--padding">
+                            <p class="footer__col-title">Услуги</p>
+                            <div class="footer__col-item">
+                                <nav class="nav__wrap">
+                                    <ul class="nav__list footer__nav-list below-viewport" data-in-viewport="i50">
+                                        <li><a href="/services/web">Web разработка</a></li>
+                                        <li><a href="/services/seo">SEO продвижение</a></li>
+                                        <li><a href="/services/smm">SMM продвижение</a></li>
+                                        <li><a href="/services/ppc">PPC</a></li>
+                                        <li><a href="/services/marketing">Маркетинг</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="footer__briefs footer__col footer--padding">
+                            <p class="footer__col-title">брифы</p>
+                            <div class="footer__col-item">
+                                <nav class="nav__wrap">
+                                    <ul class="nav__list footer__nav-list below-viewport" data-in-viewport="i51">
+                                        <li><a href="/#">Бриф на разработку сайта</a></li>
+                                        <li><a href="/#">Бриф на разработку интернет-магазина</a></li>
+                                        <li><a href="/#">Бриф на разработку landing page</a></li>
+                                        <li><a href="/#">Бриф на фирменный стиль</a></li>
+                                        <li><a href="/#">Бриф на контекстную рекламу</a></li>
+                                        <li><a href="/#">Бриф на SEO продвижение</a></li>
+                                        <li><a href="/#">Бриф на SMM продвижение</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="footer__informations footer__col footer--padding">
+                            <p class="footer__col-title">Информация</p>
+                            <div class="footer__col-item">
+                                <nav class="nav__wrap">
+                                    <ul class="nav__list footer__nav-list below-viewport" data-in-viewport="i52">
+                                        <li><a href="/portfolio">Портфолио</a></li>
+                                        <li><a href="/clients">Клиенты</a></li>
+                                        <li><a href="/about">О студии</a></li>
+                                        <li><a href="/contacts">Контакты</a></li>
+                                        <li><a href="/briefs">Брифы</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script src="js/jquery-3.3.1.min.js"></script>
+                <script src="js/build.min.js"></script>
+                <script src="js/main.js"></script>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>

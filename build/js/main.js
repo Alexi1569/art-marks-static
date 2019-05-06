@@ -3,7 +3,6 @@ jQuery(document).ready(function($) {
 
   $.fancybox.defaults.hideScrollbar = false;
   $.fancybox.defaults.touch = false;
-
   $.fancybox.defaults.btnTpl.smallBtn =
     '<button data-fancybox-close class="modal-close">' +
     '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 22 22" xml:space="preserve" style="enable-background:new 0 0 22 22;"><path d="M11,10.3L21.3,0L22,0.7L11.7,11L22,21.3L21.3,22L11,11.7L0.7,22L0,21.3L10.3,11L0,0.7L0.7,0C0.7,0,11,10.3,11,10.3z"></path></svg>' +
@@ -398,7 +397,6 @@ jQuery(document).ready(function($) {
   })();
 
   $('.form-input--textarea').each(function() {
-    console.log($(this).find('textarea'))
     $(this).find('textarea').on('input', function(e) {
 
       if (e.target.scrollHeight > e.target.clientHeight) {
@@ -406,6 +404,8 @@ jQuery(document).ready(function($) {
       }
     })
   });
+
+
 
   $('.form-input--file').each(function() {
     var $self = $(this)
@@ -428,5 +428,139 @@ jQuery(document).ready(function($) {
   $('input:not([type="submit"]):not([type="file"]), textarea').blur(function(e) {
     $(this).closest('.form-input').removeClass('form-input--focused')
   });
+
+
+
+  (function initVideo() {
+    var $videoBlocks = $('.video__block');
+
+    $videoBlocks.each(function() {
+      var $self = $(this);
+      var isPlaying = false;
+      var isFullScreen = false;
+      var isVideoMuted = false;
+      var video = $self.find('video')[0];
+      var $toggler = $self.find('.video-toggler')
+      var wrap = $self.find('.video__block-inner')[0];
+      var $screen = $self.find('.fullscreen')
+      var $mute = $self.find('.volume-mute')
+      var $volumeIcon = $('.video-volume-icon');
+      var $muteIcon = $('.video-mute-icon');
+      var $playIcon = $('.video-play-icon');
+      var $pauseIcon = $('.video-pause-icon');
+      var $duration = $('.duration input')
+      var $volume = $('.volume__line input')
+
+      $(video).on('canplay', function() {
+        video.volume = 0.5;
+        $duration.attr('max', Math.round(video.duration));
+        $duration.val(0);
+        $volume.val(.5)
+        $self.addClass('loaded')
+      });
+
+      $volume.on('input', function() {
+        video.volume = $volume.val();
+
+        if (video.volume > 0) {
+          $volumeIcon.css({
+            'display': 'block'
+          })
+
+          $muteIcon.css({
+            'display': 'none'
+          })
+        }
+      });
+
+      $mute.click(function() {
+        isVideoMuted = true;
+        video.volume = 0;
+        $volume.val(0);
+
+        $volumeIcon.css({
+          'display': 'none'
+        })
+
+        $muteIcon.css({
+          'display': 'block'
+        })
+      })
+
+      $(video).on('timeupdate', function(e) {
+        $duration.val(Math.round(video.currentTime));
+      });
+
+      $duration.on('change', function(e) {
+        video.currentTime = $duration.val()
+      });
+
+      $toggler.click(function() {
+        if (isPlaying) {
+          video.pause();
+        } else {
+          video.play();
+        }
+      });
+
+      $(video).on('play', function() {
+        isPlaying = true;
+
+        $pauseIcon.css({
+          'display': 'inline-block'
+        });
+        $playIcon.css({
+          'display': 'none'
+        });
+      })
+
+      $(video).on('pause ended', function() {
+        isPlaying = false;
+
+        $playIcon.css({
+          'display': 'inline-block'
+        });
+        $pauseIcon.css({
+          'display': 'none'
+        });
+      })
+
+
+      $(wrap).hover(function() {
+        $self.addClass('hovered')
+      }, function() {
+        $self.removeClass('hovered')
+      });
+
+      $mute.click(function() {
+        video.volume = 0;
+      })
+
+      $screen.click(function() {
+        if (!document.fullscreenElement && !document.mozFullScreenElement && !document.webkitFullscreenElement) {
+          // this.isFullScreen = true;
+
+          if (wrap.requestFullscreen) {
+            wrap.requestFullscreen();
+          } else if (wrap.mozRequestFullScreen) {
+            wrap.mozRequestFullScreen();
+          } else if (wrap.webkitRequestFullscreen) {
+            wrap.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+          }
+        } else {
+          // this.isFullScreen = false;
+
+          if (document.cancelFullScreen) {
+            document.cancelFullScreen();
+          } else if (document.mozCancelFullScreen) {
+            document.mozCancelFullScreen();
+          } else if (document.webkitCancelFullScreen) {
+            document.webkitCancelFullScreen();
+          }
+        }
+      })
+
+    });
+  })();
 
 });

@@ -1,0 +1,353 @@
+extends ../includes/_layout
+
+block content
+  - var isMain = false;
+  include ../includes/_header
+
+  block main
+    main.center
+      .p-services-category
+        .container
+          .breadcrumbs
+            ul.breadcrumbs__list.flex.jc-fs.fw-w.ai-s
+              li
+                a.nuxt-link-active(href='/') ART MARKS
+              li
+                a.nuxt-link-active(href='/services') Услуги
+              li
+                | WEB
+          .p-services-category__top
+            .caption.caption--big.caption--services--visible
+              .caption__inner.above-viewport(data-in-viewport='i25')
+                p.caption__main WEB
+                //
+                .caption__content
+                  p
+                    | Мы разрабатываем проекты с нуля, а также берем на редизайн и развитие сайты, от которых вы хотели бы большего. Наши специалисты внимательно следят за развитием современных технологий. Они постоянно повышают знания в этой отрасли, чтобы быть в курсе всех тенденций в мире IT.
+                  p
+                    | Постоянно поддерживаем связь с клиентами и учитываем все их пожелания. Наши решения помогают развиться бизнесу любого направления.
+          section.p-services-category__items.flex.fw-w.jc-fs.ai-s
+            .services-category__item.p-services-category__item.above-viewport(data-in-viewport='i26')
+              p.services-category__item-title
+                | Комплексное
+                br
+                |  решение
+              .services-category__item-descr
+                p
+                  | Не просто сайт, а готовое решение для бизнеса за 24 дня с гарантией получения заказов
+              .btn__wrap
+                a.btn.p-services-category__btn.btn--icon(href='/services/web/complex')
+                  .btn__wrap-inner
+                    i.btn__wrap-icon
+                      span.btn__wrap-icon-inner.inline-flex.ai-c.jc-c
+                        svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', version='1.1', viewBox='0 0 129 129', enable-background='new 0 0 129 129')
+                          g
+                            path(d='m40.4,121.3c-0.8,0.8-1.8,1.2-2.9,1.2s-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.2 0-5.8l51-51-51-51c-1.6-1.6-1.6-4.2 0-5.8 1.6-1.6 4.2-1.6 5.8,0l53.9,53.9c1.6,1.6 1.6,4.2 0,5.8l-53.9,53.9z')
+                    span.btn__wrap-text
+                      | Узнать больше
+                //
+            .services-category__item.p-services-category__item.above-viewport(data-in-viewport='i27')
+              p.services-category__item-title
+                | РАЗРАБОТКА
+                br
+                |  ИНТЕРНЕТ-МАГАЗИНА
+              .services-category__item-descr
+                p
+                  | Не просто сайт, а готовое решение для бизнеса за 24 дня с гарантией получения заказов
+              .btn__wrap
+                a.btn.p-services-category__btn.btn--icon(href='/services/web/ecommerce')
+                  .btn__wrap-inner
+                    i.btn__wrap-icon
+                      span.btn__wrap-icon-inner.inline-flex.ai-c.jc-c
+                        svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', version='1.1', viewBox='0 0 129 129', enable-background='new 0 0 129 129')
+                          g
+                            path(d='m40.4,121.3c-0.8,0.8-1.8,1.2-2.9,1.2s-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.2 0-5.8l51-51-51-51c-1.6-1.6-1.6-4.2 0-5.8 1.6-1.6 4.2-1.6 5.8,0l53.9,53.9c1.6,1.6 1.6,4.2 0,5.8l-53.9,53.9z')
+                    span.btn__wrap-text
+                      | Узнать больше
+                //
+            .services-category__item.p-services-category__item.above-viewport(data-in-viewport='i28')
+              p.services-category__item-title
+                | РАЗРАБОТКА
+                br
+                |  САЙТА КОМПАНИИ
+              .services-category__item-descr
+                p
+                  | Не просто сайт, а готовое решение для бизнеса за 24 дня с гарантией получения заказов
+              .btn__wrap
+                a.btn.p-services-category__btn.btn--icon(href='/services/web/company')
+                  .btn__wrap-inner
+                    i.btn__wrap-icon
+                      span.btn__wrap-icon-inner.inline-flex.ai-c.jc-c
+                        svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', version='1.1', viewBox='0 0 129 129', enable-background='new 0 0 129 129')
+                          g
+                            path(d='m40.4,121.3c-0.8,0.8-1.8,1.2-2.9,1.2s-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.2 0-5.8l51-51-51-51c-1.6-1.6-1.6-4.2 0-5.8 1.6-1.6 4.2-1.6 5.8,0l53.9,53.9c1.6,1.6 1.6,4.2 0,5.8l-53.9,53.9z')
+                    span.btn__wrap-text
+                      | Узнать больше
+                //
+            .services-category__item.p-services-category__item.above-viewport(data-in-viewport='i29')
+              p.services-category__item-title
+                | РАЗРАБОТКА
+                br
+                |  КАТАЛОГА
+              .services-category__item-descr
+                p
+                  | Не просто сайт, а готовое решение для бизнеса за 24 дня с гарантией получения заказов
+              .btn__wrap
+                a.btn.p-services-category__btn.btn--icon(href='/services/web/catalog')
+                  .btn__wrap-inner
+                    i.btn__wrap-icon
+                      span.btn__wrap-icon-inner.inline-flex.ai-c.jc-c
+                        svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', version='1.1', viewBox='0 0 129 129', enable-background='new 0 0 129 129')
+                          g
+                            path(d='m40.4,121.3c-0.8,0.8-1.8,1.2-2.9,1.2s-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.2 0-5.8l51-51-51-51c-1.6-1.6-1.6-4.2 0-5.8 1.6-1.6 4.2-1.6 5.8,0l53.9,53.9c1.6,1.6 1.6,4.2 0,5.8l-53.9,53.9z')
+                    span.btn__wrap-text
+                      | Узнать больше
+                //
+            .services-category__item.p-services-category__item.above-viewport(data-in-viewport='i30')
+              p.services-category__item-title
+                | РАЗРАБОТКА
+                br
+                |  LANDING PAGE
+              .services-category__item-descr
+                p
+                  | Не просто сайт, а готовое решение для бизнеса за 24 дня с гарантией получения заказов
+              .btn__wrap
+                a.btn.p-services-category__btn.btn--icon(href='/services/web/landing')
+                  .btn__wrap-inner
+                    i.btn__wrap-icon
+                      span.btn__wrap-icon-inner.inline-flex.ai-c.jc-c
+                        svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', version='1.1', viewBox='0 0 129 129', enable-background='new 0 0 129 129')
+                          g
+                            path(d='m40.4,121.3c-0.8,0.8-1.8,1.2-2.9,1.2s-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.2 0-5.8l51-51-51-51c-1.6-1.6-1.6-4.2 0-5.8 1.6-1.6 4.2-1.6 5.8,0l53.9,53.9c1.6,1.6 1.6,4.2 0,5.8l-53.9,53.9z')
+                    span.btn__wrap-text
+                      | Узнать больше
+                //
+            .services-category__item.p-services-category__item.above-viewport(data-in-viewport='i31')
+              p.services-category__item-title
+                | ТЕХНИЧЕСКАЯ
+                br
+                |  ПОДДЕРЖКА
+              .services-category__item-descr
+                p
+                  | Не просто сайт, а готовое решение для бизнеса за 24 дня с гарантией получения заказов
+              .btn__wrap
+                a.btn.p-services-category__btn.btn--icon(href='/services/web/support')
+                  .btn__wrap-inner
+                    i.btn__wrap-icon
+                      span.btn__wrap-icon-inner.inline-flex.ai-c.jc-c
+                        svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', version='1.1', viewBox='0 0 129 129', enable-background='new 0 0 129 129')
+                          g
+                            path(d='m40.4,121.3c-0.8,0.8-1.8,1.2-2.9,1.2s-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.2 0-5.8l51-51-51-51c-1.6-1.6-1.6-4.2 0-5.8 1.6-1.6 4.2-1.6 5.8,0l53.9,53.9c1.6,1.6 1.6,4.2 0,5.8l-53.9,53.9z')
+                    span.btn__wrap-text
+                      | Узнать больше
+                //
+          .p-services-category--padding
+            section.p-services-category__process
+              .caption.caption--small.caption--centered.caption--services--visible
+                .caption__inner.above-viewport(data-in-viewport='i32')
+                  p.caption__main ПРОЦЕСС РАБОТЫ
+                  //
+                  //
+              .p-services-category__process-items.flex.jc-sb.ai-s
+                .services-process__item.p-services-process__item.above-viewport(data-in-viewport='i33')
+                  .services-process__item-icon
+                    i.inline-flex.ai-fe.jc-c
+                      svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 57.4 56.7')
+                        path(d='M16.7 5c-5 0-9 4-9 9s4 9 9 9c1.9 0 3.7-.6 5.1-1.6l3.1 3.3c.2.2.4.3.7.3.6 0 1-.4 1-1 0-.3-.1-.5-.3-.7L23.2 20c1.5-1.6 2.4-3.7 2.4-6.1C25.7 9 21.7 5 16.7 5zm-7 9c0-3.9 3.1-7 7-7s7 3.1 7 7-3.1 7-7 7-7-3.1-7-7z')
+                        path(d='M16.7 28h37c.6 0 1-.4 1-1s-.4-1-1-1h-37c-6.6 0-12-5.4-12-12s5.4-12 12-12h37c.6 0 1-.4 1-1s-.4-1-1-1h-37C9 0 2.7 6.3 2.7 14s6.3 14 14 14zM57.4 55.3c-.2-.2-4.7-4.6-14.5-6.9.5-.8.8-1.6 1.1-2.4h.7c2.2 0 4-1.8 4-4s-1.8-4-4-4v2c1.1 0 2 .9 2 2s-.9 2-2 2h-.2c.1-.7.2-1.3.2-2h-2c0 6.6-6.3 12-14 12s-14-5.4-14-12h-2c0 .7.1 1.3.2 2h-.2c-1.1 0-2-.9-2-2s.9-2 2-2v-2c-2.2 0-4 1.8-4 4s1.8 4 4 4h.7c.3.8.7 1.7 1.1 2.4C4.7 50.7.2 55.1 0 55.3l1.4 1.4s4.6-4.5 14.4-6.5c2.9 3.5 7.6 5.8 12.9 5.8s10-2.3 12.9-5.8c9.7 2 14.3 6.5 14.4 6.5l1.4-1.4z')
+                        path(d='M25.7 38v4c0 1.7 1.3 3 3 3s3-1.3 3-3v-4h-2v4c0 .6-.4 1-1 1s-1-.4-1-1v-4h-2zM37.1 47.8v-2c-6.9 0-7 5-7 5h2c0-.3.2-3 5-3z')
+                        circle(cx='31.7', cy='20', r='1')
+                        circle(cx='35.7', cy='20', r='1')
+                        circle(cx='39.7', cy='20', r='1')
+                        circle(cx='22.2', cy='36.5', r='1.5')
+                        circle(cx='38.2', cy='36.5', r='1.5')
+                        path(d='M41.2 31.2c-3.5-2.3-7-.1-7.1 0l1.1 1.7s2.5-1.6 4.9 0l1.1-1.7zM23.2 31.2c-3.5-2.3-7-.1-7.1 0l1.1 1.7s2.5-1.6 4.9 0l1.1-1.7z')
+                  p.services-process__item-title ИССЛЕДОВАНИЯ
+                  p.services-process__item-text Проводится анализ рынка в целом. Мониторинг всех возможных конкурентов
+                .services-process__item.p-services-process__item.above-viewport(data-in-viewport='i34')
+                  .services-process__item-icon
+                    i.inline-flex.ai-fe.jc-c
+                      svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 57.4 56.7')
+                        path(d='M57.4 55.3c-.2-.2-4.7-4.6-14.5-6.9.5-.8.8-1.6 1.1-2.4h.7c2.2 0 4-1.8 4-4s-1.8-4-4-4v2c1.1 0 2 .9 2 2s-.9 2-2 2h-.2c.1-.7.2-1.3.2-2h-2c0 6.6-6.3 12-14 12s-14-5.4-14-12h-2c0 .7.1 1.3.2 2h-.2c-1.1 0-2-.9-2-2s.9-2 2-2v-2c-2.2 0-4 1.8-4 4s1.8 4 4 4h.7c.3.8.7 1.7 1.1 2.4C4.7 50.7.2 55.1 0 55.3l1.4 1.4s4.6-4.5 14.4-6.5c2.9 3.5 7.6 5.8 12.9 5.8s10-2.3 12.9-5.8c9.7 2 14.3 6.5 14.4 6.5l1.4-1.4z')
+                        path(d='M28.7 45c1.7 0 3-1.3 3-3v-4h-2v4c0 .6-.4 1-1 1s-1-.4-1-1v-4h-2v4c0 1.7 1.4 3 3 3zM41.3 32.1c-3.5-2.3-7-.1-7.1 0l1.1 1.7s2.5-1.6 4.9 0l1.1-1.7zM16.2 34.2l1.1 1.7s2.5-1.6 4.9 0l1.1-1.7c-3.6-2.4-7-.1-7.1 0z')
+                        circle(cx='21.2', cy='38.5', r='1.5')
+                        circle(cx='38.2', cy='38.5', r='1.5')
+                        path(d='M37.7 46h-2c0 .3-.2 3-5 3v2c6.9 0 7-4.9 7-5zM11.7 27c.1 0 .2 0 .3-.1l6.9-2.3c.1 0 .3-.1.4-.2L37.4 6.7c.2-.2.3-.4.3-.7 0-.3-.1-.5-.3-.7l-5-5c-.2-.2-.4-.3-.7-.3-.3 0-.5.1-.7.3L13.3 18.4c-.1.1-.2.2-.2.4l-2.3 6.9c0 .1-.1.2-.1.3 0 .6.5 1 1 1zm1.6-2.6l1.2-3.5 2.3 2.3-3.5 1.2zm4.5-3L29.9 9.3l1 1-12.2 12-.9-.9zM16.3 20l-.9-1 12-12.2 1 1L16.3 20zM31.7 2.4L35.3 6l-3 2.9-3.5-3.5 2.9-3zM35.7 26c0-.6-.4-1-1-1h-14c-.6 0-1 .4-1 1s.4 1 1 1h14c.6 0 1-.4 1-1z')
+                        circle(cx='38.7', cy='26', r='1')
+                        circle(cx='42.7', cy='26', r='1')
+                        circle(cx='46.7', cy='26', r='1')
+                  p.services-process__item-title дизайн
+                  p.services-process__item-text
+                    | Разрабатывается индивидуальный дизайн в соответствии с тематикой товаров или услуг
+                .services-process__item.p-services-process__item.above-viewport(data-in-viewport='i35')
+                  .services-process__item-icon
+                    i.inline-flex.ai-fe.jc-c
+                      svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 57.4 56.2')
+                        path(d='M8.5 21.7h2.1c.1.2.1.3.2.5l-1.5 1.5c-.9.9-.9 2.3 0 3.2l2.6 2.6c.8.8 2.3.8 3.2 0l1.5-1.5c.2.1.3.1.5.2v2.1c0 1.3 1 2.3 2.2 2.3H23c1.2 0 2.2-1 2.2-2.3v-2.1c.2-.1.3-.1.5-.2l1.5 1.5c.9.9 2.3.9 3.2 0l2.6-2.6c.9-.9.9-2.3 0-3.2l-1.5-1.5c.1-.2.1-.3.2-.5h2.1c1.3 0 2.3-1 2.3-2.2v-.8l1.9.9c.9.4 2 0 2.4-.8l.4-.9.3.9c.2.7.9 1.3 1.7 1.3.2 0 .4 0 .6-.1l2.3-.8c.5-.1.8-.5 1-.9.2-.4.3-.9.1-1.4l-.3-.9.9.4c.3.1.5.2.8.2.7 0 1.3-.4 1.6-1l1.1-2.2c.2-.4.2-.9.1-1.4-.2-.5-.5-.8-.9-1l-.9-.4.9-.3c.5-.2.8-.5 1.1-.9.2-.4.3-.9.1-1.4l-.8-2.3c-.3-.9-1.4-1.5-2.3-1.1l-.9.3.6-.9c.4-.9.1-2-.8-2.4L44.9.5c-.9-.4-2 0-2.4.8l-.4.9-.3-.9C41.5.4 40.4-.2 39.5.1l-2.3.8c-.5.1-.8.5-1 .9-.2.4-.3.9-.1 1.4l.3.9-.9-.4c-.9-.4-2-.1-2.4.8L32 6.6c-.1.1-.1.3-.1.4l-1.4-1.4c-.8-.8-2.3-.8-3.2 0l-1.5 1.5c-.2-.1-.3-.1-.5-.2V4.8c0-1.3-1-2.3-2.2-2.3h-3.7c-1.2 0-2.2 1-2.2 2.3v2.1c-.2.1-.3.1-.5.2l-1.5-1.5c-.9-.9-2.3-.9-3.2 0L9.3 8.3c-.4.4-.7 1-.7 1.6 0 .6.2 1.2.7 1.6l1.5 1.5c-.1.2-.1.3-.2.5H8.5c-1.3 0-2.3 1-2.3 2.2v3.7c0 1.2 1 2.3 2.3 2.3zM34.8 5.5l1.5.7c.4.2.9.1 1.2-.2.2-.2.5-.5.8-.7.4-.3.5-.7.4-1.1L38 2.7l1.9-.7.5 1.6c.1.4.6.7 1 .7.3 0 .6 0 .9.1.4.1.9-.1 1.1-.5l.7-1.5 1.9.9-.7 1.5c-.2.4-.1.9.2 1.2l.7.7c.2.3.7.5 1.1.3l1.6-.5.6 1.9-1.6.5c-.4.1-.7.5-.7 1 0 .3 0 .6-.1 1s.1.9.5 1.1l1.5.7-.9 1.8-1.5-.7c-.4-.2-.9-.1-1.2.2-.2.2-.5.5-.8.7-.4.3-.5.7-.4 1.1l.5 1.6-1.9.6-.5-1.6c-.1-.4-.6-.7-1-.7-.3 0-.6 0-.9-.1h-.2c-.4 0-.7.2-.9.6l-.7 1.5-1.7-1 .7-1.5c.2-.4.1-.9-.2-1.2-.3-.2-.5-.5-.7-.7-.3-.4-.7-.5-1.1-.4l-1.5.5h-.1l-.6-1.9 1.6-.5c.4-.1.7-.5.7-1 0-.3 0-.6.1-1 .1-.3-.1-.8-.5-1l-1.5-.7.9-1.8zM8.2 15.7c0-.1.1-.2.3-.2h2.8c.4 0 .8-.3 1-.7l.6-1.5c.2-.4.1-.9-.2-1.2l-2-2c-.1-.1-.1-.2-.1-.2s0-.1.1-.2L13.3 7c.1-.1.2-.1.4 0l2 2c.3.3.8.4 1.2.2.5-.3 1-.5 1.5-.6.4-.1.7-.5.7-1V4.8c0-.1.1-.3.2-.3H23c.1 0 .2.1.2.3v2.8c0 .4.3.8.7 1l1.5.6c.4.2.9.1 1.2-.2l2-2c.2-.2.3-.1.4 0l2.6 2.6c.1.1.1.1.1.2 0 0 0 .1-.1.2l-2 2c-.3.3-.4.8-.2 1.2.3.5.5 1 .6 1.5.1.4.5.7 1 .7h2.4c.2.1.4.1.6.1l.1.1v3.7c0 .1-.1.2-.3.2H31c-.4 0-.8.3-1 .7l-.6 1.5c-.2.4-.1.9.2 1.2l2 2c.1.1.1.3 0 .4L29 27.9c-.1.1-.2.1-.4 0l-2-2c-.3-.3-.8-.4-1.2-.2-.5.3-1 .5-1.5.6-.4.1-.7.5-.7 1v2.8c0 .2-.1.3-.2.3h-3.7c-.1 0-.2-.1-.2-.3v-2.8c0-.4-.3-.8-.7-1l-1.5-.6c-.1-.1-.3-.1-.5-.1-.3 0-.5.1-.7.3l-2 2c-.2.2-.3.1-.4 0l-2.6-2.6c-.1-.1-.1-.3 0-.4l2-2c.3-.3.4-.8.2-1.2-.3-.5-.5-1-.6-1.5-.1-.4-.5-.7-1-.7H8.5c-.1 0-.3-.1-.3-.2v-3.6z')
+                        path(d='M21.2 24.2a6.7 6.7 0 1 0 0-13.4 6.7 6.7 0 0 0 0 13.4zm0-11.4c2.6 0 4.7 2.1 4.7 4.7s-2.1 4.7-4.7 4.7-4.7-2.1-4.7-4.7 2.1-4.7 4.7-4.7zM41.5 14.7c.5 0 1-.1 1.5-.2 2.4-.8 3.8-3.5 3-5.9-.6-1.9-2.4-3.2-4.4-3.2-.5 0-1 .1-1.5.2-2.4.8-3.8 3.5-3 5.9.6 1.9 2.4 3.2 4.4 3.2zm-.8-7.3c.3-.1.6-.1.8-.1 1.2 0 2.2.7 2.5 1.8.5 1.4-.3 2.9-1.7 3.4-.3.1-.6.1-.8.1-1.2 0-2.2-.7-2.5-1.8-.5-1.4.3-2.9 1.7-3.4zM57.4 54.8c-.2-.2-4.7-4.6-14.5-6.9.5-.8.8-1.6 1.1-2.4h.7c2.2 0 4-1.8 4-4s-1.8-4-4-4v2c1.1 0 2 .9 2 2s-.9 2-2 2h-.2c.1-.7.2-1.3.2-2h-2c0 6.6-6.3 12-14 12s-14-5.4-14-12h-2c0 .7.1 1.3.2 2h-.2c-1.1 0-2-.9-2-2s.9-2 2-2v-2c-2.2 0-4 1.8-4 4s1.8 4 4 4h.7c.3.8.7 1.7 1.1 2.4C4.7 50.2.2 54.6 0 54.8l1.4 1.4s4.6-4.5 14.4-6.5c2.9 3.5 7.6 5.8 12.9 5.8s10-2.3 12.9-5.8c9.7 2 14.3 6.5 14.4 6.5l1.4-1.4z')
+                        path(d='M25.7 37.5v4c0 1.7 1.3 3 3 3s3-1.3 3-3v-4h-2v4c0 .6-.4 1-1 1s-1-.4-1-1v-4h-2zM37.7 45.5h-2c0 .3-.2 3-5 3v2c6.9 0 7-4.9 7-5zM21.7 39.5c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zM40.7 37.5h-4c0 1.1.9 2 2 2s2-.9 2-2zM43.2 32.7c-4-2.3-7.8-.1-8 0l1 1.7s3-1.7 6 0l1-1.7zM17.7 34.5h7v2h-7z')
+                  p.services-process__item-title разработка
+                  p.services-process__item-text
+                    | Внедряются самые последние стандарты. Сайт будет максимально быстро и корректно работать
+                .services-process__item.p-services-process__item.above-viewport(data-in-viewport='i36')
+                  .services-process__item-icon
+                    i.inline-flex.ai-fe.jc-c
+                      svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 57.4 52.6')
+                        path(d='M57.4 51.2c-.2-.2-4.7-4.6-14.5-6.9.5-.8.8-1.6 1.1-2.4h.7c2.2 0 4-1.8 4-4s-1.8-4-4-4v2c1.1 0 2 .9 2 2s-.9 2-2 2h-.2c.1-.7.2-1.3.2-2h-2c0 6.6-6.3 12-14 12s-14-5.4-14-12h-2c0 .7.1 1.3.2 2h-.2c-1.1 0-2-.9-2-2s.9-2 2-2v-2c-2.2 0-4 1.8-4 4s1.8 4 4 4h.7c.3.8.7 1.7 1.1 2.4C4.7 46.6.2 51 0 51.2l1.4 1.4s4.6-4.5 14.4-6.5c2.9 3.5 7.6 5.8 12.9 5.8s10-2.3 12.9-5.8c9.7 2 14.3 6.5 14.4 6.5l1.4-1.4z')
+                        path(d='M25.7 33.9v4c0 1.7 1.3 3 3 3s3-1.3 3-3v-4h-2v4c0 .6-.4 1-1 1s-1-.4-1-1v-4h-2z')
+                        circle(cx='23.2', cy='35.4', r='1.5')
+                        circle(cx='36.2', cy='32.4', r='1.5')
+                        path(d='M33.7 47c1.7 0 3-1.3 3-3v-1.1c.7 0 1.3.1 1.9.1l.2-2c-.9-.1-8.4-.7-11.1 1.7-.7.6-1 1.4-1 2.2h2c0-.3.1-.5.4-.8.4-.3.9-.6 1.6-.8v.7c0 1.7 1.4 3 3 3zm0-2c-.6 0-1-.4-1-1v-.9c.6-.1 1.3-.1 2-.2V44c0 .6-.4 1-1 1zM28.6 28c6.5 0 11.7-5.4 11.7-12.1 0-6.1-4.8-11-10.7-11-5.4 0-9.7 4.5-9.7 10 0 5 4 9.1 8.8 9.1 4.4 0 8-3.7 8-8.3 0-4.2-3.3-7.5-7.3-7.5-3.7 0-6.7 3.1-6.7 6.9 0 3.5 2.8 6.3 6.1 6.3 3.1 0 5.6-2.6 5.6-5.8h-2c0 2.1-1.6 3.8-3.6 3.8-2.3 0-4.1-1.9-4.1-4.3 0-2.7 2.1-4.9 4.7-4.9 2.9 0 5.3 2.5 5.3 5.5 0 3.5-2.7 6.3-6 6.3-3.8 0-6.8-3.2-6.8-7.1 0-4.4 3.5-8 7.7-8 4.8 0 8.7 4 8.7 9 0 5.6-4.4 10.1-9.7 10.1-6 0-10.9-5.1-10.9-11.3C17.7 7.7 23.2 2 30 2c7.6 0 13.7 6.4 13.7 14.2h2C45.7 7.3 38.6 0 30 0c-7.9 0-14.3 6.6-14.3 14.7C15.7 22 21.5 28 28.6 28z')
+                  p.services-process__item-title ТЕСТИРОВАНИЕ
+                  p.services-process__item-text
+                    | Перед запуском, сайт детально проходит тестирование для выявления и исправления ошибок
+            .p-services-category__video
+              .video__block
+                //
+                .video__block-inner.flex.ai-c.jc-c.above-viewport(data-in-viewport='i37')
+                  button.video__block-toggler.inline-flex.ai-c.jc-c.video-toggler
+                    svg(class="video-play-icon" xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', version='1.1', x='0px', y='0px', viewBox='0 0 232.153 232.153', xml:space='preserve')
+                      g
+                        path(d='M203.791,99.628L49.307,2.294c-4.567-2.719-10.238-2.266-14.521-2.266   c-17.132,0-17.056,13.227-17.056,16.578v198.94c0,2.833-0.075,16.579,17.056,16.579c4.283,0,9.955,0.451,14.521-2.267   l154.483-97.333c12.68-7.545,10.489-16.449,10.489-16.449S216.471,107.172,203.791,99.628z', style='fill-rule: evenodd; clip-rule: evenodd;')
+                    <svg class="video-pause-icon" xmlns="http://www.w3.org/2000/svg" viewBox="-37 0 320 320.00002"><path d="m96.398438 0h-86.398438c-5.515625.015625-9.984375 4.484375-10 10v300c.015625 5.515625 4.484375 9.984375 10 10h86.398438c5.519531-.015625 9.984374-4.484375 10-10v-300c-.015626-5.515625-4.480469-9.984375-10-10zm0 0"/><path d="m236.898438 0h-86.5c-5.515626.015625-9.984376 4.484375-10 10v300c.015624 5.515625 4.484374 9.984375 10 10h86.402343c5.515625-.015625 9.984375-4.484375 10-10v-300c.03125-2.644531-1-5.191406-2.859375-7.070312-1.859375-1.878907-4.398437-2.93359425-7.042968-2.929688zm0 0"/></svg>
+
+
+                  video(poster='/img/video-poster.jpg')
+                    source(src='http://techslides.com/demos/sample-videos/small.mp4', type='video/mp4')
+                  .video__block-controls.flex.ai-c.jc-sb
+                    button.smalltoggler.video-toggler
+                      svg(class="video-play-icon" xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', version='1.1', x='0px', y='0px', viewBox='0 0 232.153 232.153', xml:space='preserve')
+                        g
+                          path(d='M203.791,99.628L49.307,2.294c-4.567-2.719-10.238-2.266-14.521-2.266   c-17.132,0-17.056,13.227-17.056,16.578v198.94c0,2.833-0.075,16.579,17.056,16.579c4.283,0,9.955,0.451,14.521-2.267   l154.483-97.333c12.68-7.545,10.489-16.449,10.489-16.449S216.471,107.172,203.791,99.628z', style='fill-rule: evenodd; clip-rule: evenodd;')
+                      <svg class="video-pause-icon" xmlns="http://www.w3.org/2000/svg" viewBox="-37 0 320 320.00002"><path d="m96.398438 0h-86.398438c-5.515625.015625-9.984375 4.484375-10 10v300c.015625 5.515625 4.484375 9.984375 10 10h86.398438c5.519531-.015625 9.984374-4.484375 10-10v-300c-.015626-5.515625-4.480469-9.984375-10-10zm0 0"/><path d="m236.898438 0h-86.5c-5.515626.015625-9.984376 4.484375-10 10v300c.015624 5.515625 4.484374 9.984375 10 10h86.402343c5.515625-.015625 9.984375-4.484375 10-10v-300c.03125-2.644531-1-5.191406-2.859375-7.070312-1.859375-1.878907-4.398437-2.93359425-7.042968-2.929688zm0 0"/></svg>
+                    .duration
+                      input(type='range', min='0', max='', autocomplete='off', role='slider')
+                    .volume.flex.ai-c.jc-fs
+                      span.volume-mute
+                        svg(class="video-volume-icon" xmlns='http://www.w3.org/2000/svg', viewBox='0 0 347.182 347.182')
+                          path(d='M210.133 0c-4.948 0-9.233 1.809-12.847 5.426L102.213 100.5H27.412c-4.952 0-9.235 1.809-12.85 5.424-3.618 3.621-5.426 7.901-5.426 12.85v109.634c0 4.948 1.809 9.232 5.426 12.847 3.619 3.617 7.901 5.428 12.85 5.428h74.801l95.073 95.077c3.613 3.61 7.898 5.421 12.847 5.421s9.232-1.811 12.854-5.421c3.613-3.617 5.421-7.901 5.421-12.847V18.276c0-4.948-1.808-9.235-5.421-12.851C219.362 1.809 215.081 0 210.133 0zM325.904 133.037c-8.09-12.562-18.788-21.414-32.12-26.551-1.903-.95-4.278-1.427-7.132-1.427-4.949 0-9.233 1.765-12.847 5.282-3.614 3.521-5.428 7.853-5.428 12.991 0 3.997 1.143 7.376 3.429 10.136 2.286 2.762 5.037 5.142 8.281 7.139a147.442 147.442 0 0 1 9.706 6.567c3.237 2.38 5.995 5.758 8.281 10.135 2.279 4.377 3.429 9.801 3.429 16.274 0 6.478-1.149 11.899-3.429 16.279-2.286 4.381-5.044 7.755-8.281 10.141a148.945 148.945 0 0 1-9.706 6.563c-3.244 1.995-5.995 4.38-8.281 7.139-2.286 2.762-3.429 6.139-3.429 10.137 0 5.143 1.813 9.465 5.428 12.99 3.613 3.518 7.897 5.28 12.847 5.28 2.854 0 5.229-.476 7.132-1.424 13.332-5.328 24.03-14.229 32.12-26.689 8.097-12.474 12.142-25.933 12.142-40.402 0-14.473-4.055-27.986-12.142-40.56z')
+                        svg(class="video-mute-icon" xmlns='http://www.w3.org/2000/svg', viewBox='0 0 508.528 508.528')
+                          path(d='M263.54.116c-5.784-.54-12.554.858-20.531 5.689 0 0-132.533 115.625-138.317 121.314h-72.91C14.239 127.15 0 141.389 0 158.933v194.731c0 17.607 14.239 31.782 31.782 31.782h72.941c5.784 5.753 138.317 117.277 138.317 117.277 7.977 4.799 14.747 6.229 20.531 5.689 11.76-1.112 20.023-10.965 22.534-21.358.095-1.017.095-464.533-.064-465.55C283.563 11.081 275.268 1.228 263.54.116zM447.974 254.28l54.857-54.857c7.596-7.564 7.596-19.864 0-27.428-7.564-7.564-19.864-7.564-27.428 0l-54.857 54.888-54.888-54.888c-7.532-7.564-19.864-7.564-27.397 0-7.564 7.564-7.564 19.864 0 27.428l54.857 54.857-54.857 54.888c-7.564 7.532-7.564 19.864 0 27.396 7.532 7.564 19.864 7.564 27.396 0l54.888-54.857 54.857 54.857c7.564 7.564 19.864 7.564 27.428 0 7.564-7.532 7.564-19.864 0-27.396l-54.856-54.888z')
+
+                      .volume__line
+                        input(type='range', min='0', max='1', step='0.01', autocomplete='off', role='slider')
+                    button.fullscreen
+                      svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 513.32 513.32')
+                        path(d='M177.523 305.853L42.777 440.6v-98.387H0V513.32h171.107v-42.777H74.859l134.746-134.746z')
+                        path(d='M470.543 440.6L72.72 42.777h98.387V0H0v171.107h42.777V72.72L440.6 470.543h-98.387v42.777H513.32V342.213h-42.777z')
+                        path(d='M342.213 0v42.777h100.526L307.992 177.523l29.943 29.944L470.543 74.859v96.248h42.777V0z')
+            section.p-services-category__technologies
+              .caption.caption--small.caption--centered.caption--services--visible
+                .caption__inner.above-viewport(data-in-viewport='i38')
+                  p.caption__main технологии
+                  //
+                  //
+              .p-services-category__technologies-items.flex.jc-c.ai-s.fw-w
+                .tag.flex.ai-c.jc-c.p-services-technologies__item.above-viewport(data-val='wordpress', data-in-viewport='i39')
+                  p.tag-title WordPress
+                .tag.flex.ai-c.jc-c.p-services-technologies__item.above-viewport(data-val='laravel', data-in-viewport='i40')
+                  p.tag-title Laravel
+                .tag.flex.ai-c.jc-c.p-services-technologies__item.above-viewport(data-val='vue.js', data-in-viewport='i41')
+                  p.tag-title Vue.js
+                .tag.flex.ai-c.jc-c.p-services-technologies__item.above-viewport(data-val='docker', data-in-viewport='i42')
+                  p.tag-title Docker
+                .tag.flex.ai-c.jc-c.p-services-technologies__item.above-viewport(data-val='node.js', data-in-viewport='i43')
+                  p.tag-title Node.js
+                .tag.flex.ai-c.jc-c.p-services-technologies__item.above-viewport(data-val='mysql', data-in-viewport='i44')
+                  p.tag-title MySQL
+                .tag.flex.ai-c.jc-c.p-services-technologies__item.above-viewport(data-val='opencart', data-in-viewport='i45')
+                  p.tag-title OpenCart
+                .tag.flex.ai-c.jc-c.p-services-technologies__item.above-viewport(data-val='sass', data-in-viewport='i46')
+                  p.tag-title Sass
+                .tag.flex.ai-c.jc-c.p-services-technologies__item.above-viewport(data-val='ajax', data-in-viewport='i47')
+                  p.tag-title Ajax
+                .tag.flex.ai-c.jc-c.p-services-technologies__item.above-viewport(data-val='bootstrap', data-in-viewport='i48')
+                  p.tag-title Bootstrap
+                .tag.flex.ai-c.jc-c.p-services-technologies__item.above-viewport(data-val='invision', data-in-viewport='i49')
+                  p.tag-title InVision
+                .tag.flex.ai-c.jc-c.p-services-technologies__item.above-viewport(data-val='photoshop', data-in-viewport='i50')
+                  p.tag-title Photoshop
+                .tag.flex.ai-c.jc-c.p-services-technologies__item.above-viewport(data-val='axure', data-in-viewport='i51')
+                  p.tag-title Axure
+                .tag.flex.ai-c.jc-c.p-services-technologies__item.above-viewport(data-val='illustrator', data-in-viewport='i52')
+                  p.tag-title Illustrator
+                .tag.flex.ai-c.jc-c.p-services-technologies__item.above-viewport(data-val='animate_cc', data-in-viewport='i53')
+                  p.tag-title Animate CC
+                .tag.flex.ai-c.jc-c.p-services-technologies__item.above-viewport(data-val='php', data-in-viewport='i54')
+                  p.tag-title PHP
+                .tag.flex.ai-c.jc-c.p-services-technologies__item.above-viewport(data-val='javascript', data-in-viewport='i55')
+                  p.tag-title JavaScript
+                .tag.flex.ai-c.jc-c.p-services-technologies__item.above-viewport(data-val='jquery', data-in-viewport='i56')
+                  p.tag-title jQuery
+                .tag.flex.ai-c.jc-c.p-services-technologies__item.above-viewport(data-val='css', data-in-viewport='i57')
+                  p.tag-title CSS
+                .tag.flex.ai-c.jc-c.p-services-technologies__item.above-viewport(data-val='html', data-in-viewport='i58')
+                  p.tag-title HTML
+                .tag.flex.ai-c.jc-c.p-services-technologies__item.above-viewport(data-val='less', data-in-viewport='i59')
+                  p.tag-title Less
+                .tag.flex.ai-c.jc-c.p-services-technologies__item.above-viewport(data-val='adobexd', data-in-viewport='i60')
+                  p.tag-title AdobeXD
+        section.s-discuss.p-services-category__discuss
+          .container
+            .s-discuss__wrapper
+              form.form.discuss__project-form.s-discuss__form
+                .caption.caption--centered.caption--services--visible
+                  .caption__inner.in-viewport.fully-in-viewport(data-in-viewport='i61')
+                    p.caption__main обсудить проект
+                    p.caption__additional Все крутые проекты начинаются с заполнения этой формы
+                    //
+                .form__inner.flex.ai-s.jc-sb
+                  .form__inner-part
+                    .form-input
+                      .form-input__inner
+                        //
+                        input(placeholder='Имя', required='required', name='username', type='text')
+                        i.form-input__line
+                        //
+                      span.form-message
+                    .form-input
+                      .form-input__inner
+                        //
+                        input(placeholder='Телефон', required='required', name='userphone', type='tel')
+                        i.form-input__line
+                        //
+                      span.form-message
+                    .form-input
+                      .form-input__inner
+                        //
+                        input(placeholder='E-mail', required='required', name='useremail', type='email')
+                        i.form-input__line
+                        //
+                      span.form-message
+                  .form__inner-part.flex.fd-c.jc-sb.ai-fs
+                    .form-input.form-input--textarea
+                      .form-input__inner
+                        //
+                        textarea(rows='1', placeholder='Опишите свою идею', required='required', name='usertext')
+                        i.form-input__line
+                        //
+                      span.form-message
+                    .form-input.form-input--file
+                      .form-input__inner
+                        //
+                        label.flex.ai-fe.jc-fs(for='header-modal-file')
+                          input#header-modal-file(type='file', placeholder='Добавить файл', name='userfile', multiple='multiple')
+                          svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 20 22', xml:space='preserve')
+                            path(d='M15.8,0c2.2,0,3.9,1.8,3.9,3.9c0,0.4-0.1,1.7-1.2,2.8l-8.5,8.5c-0.6,0.7-2.1,1.3-3.3,0.1c-1.2-1.2-0.6-2.7,0.1-3.3l4.4-4.4 L12,8.3l-3.2,3.2l0,0l-1.4,1.4l0,0c-1,1.2,0.6,2.9,2,1.6l8.4-8.4c0.7-0.7,0.9-1.4,0.9-2.2c0-1.6-1.3-2.9-2.9-2.9 c-0.8,0-1.5,0.3-2,0.8l0,0C13.2,2.4,2.3,13.3,2.3,13.4l0,0C1.5,14.2,1,15.3,1,16.5C1,19,3,21,5.5,21c0.6,0,1.8,0,3.5-1.7L19.3,9.1 L20,9.8L9.5,20.2c-1,1.1-2.4,1.8-4,1.8c-3,0-5.5-2.5-5.5-5.5c0-1.6,0.7-3,1.7-4C12.4,1.8,12.6,1.7,13,1.2C13.3,0.9,14.2,0,15.8,0')
+                          span Добавить файл
+                        //
+                        //
+                      span.form-message
+                .btn__wrap
+                  //
+                  button.btn.s-discuss-btn.btn--filled(type='submit')
+                    .btn__wrap-inner
+                      span.btn__wrap-text
+                        | ОТПРАВИТЬ
+                      //
+
+
+
+
+  include ../includes/_footer
+  

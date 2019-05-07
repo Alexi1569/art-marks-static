@@ -491,8 +491,9 @@
         $duration.val(Math.round(video.currentTime));
       });
 
-      $duration.on('change', function(e) {
-        video.currentTime = $duration.val()
+      $duration.on('input', function(e) {
+        console.log($duration.val())
+        video.currentTime = parseInt($duration.val(), 10)
       });
 
       $toggler.click(function() {
@@ -506,6 +507,7 @@
       $(video).on('play', function() {
         isPlaying = true;
 
+        $self.addClass('playing')
         $pauseIcon.css({
           'display': 'inline-block'
         });
@@ -516,6 +518,7 @@
 
       $(video).on('pause ended', function() {
         isPlaying = false;
+        $self.removeClass('playing')
 
         $playIcon.css({
           'display': 'inline-block'
@@ -531,6 +534,16 @@
       }, function() {
         $self.removeClass('hovered')
       });
+
+      if ($('body').hasClass('touch-device')) {
+        $self.click(function() {
+          if (isPlaying) {
+            $self.addClass('hovered')
+          } else {
+            $self.removeClass('hovered')
+          }
+        })
+      }
 
       $mute.click(function() {
         video.volume = 0;
@@ -562,5 +575,202 @@
 
     });
   })();
+
+  (function initFluidForm() {
+    var $fluid = $('.fluid__form');
+
+    if ($fluid.length) {
+      $(window).scroll(function(e) {
+        if (window.scrollY > 350) {
+          $fluid.addClass('show');
+        } else {
+          $fluid.removeClass('show');
+        }
+      })
+    }
+  })();
+
+  (function initToggleItems() {
+    var $items = $('.toggler-item');
+
+    $items.each(function() {
+      var $self = $(this);
+      var $top = $self.find('.toggler-item__top');
+      var $content = $self.find('.toggler-item__bottom');
+      var maxHeight = $content[0].scrollHeight;
+
+      $top.click(function() {
+        $self.toggleClass('opened');
+        if ($self.hasClass('opened')) {
+          $content[0].style.maxHeight = maxHeight + 'px';
+        } else {
+          $content[0].style.maxHeight = null;
+        }
+      });
+    });
+  })();
+
+  (function initSelect() {
+    var $selects = $('.select');
+
+    $selects.each(function() {
+      $(this).find('select').select2({
+        dropdownParent: $(this),
+        minimumResultsForSearch: -1,
+      });
+    });
+  })();
+
+  (function initInstagram() {
+    var $instagram = $('.s-instagram');
+
+    $instagram.each(function() {
+      var $self = $(this);
+      var $items = $self.find('.s-instagram__items');
+
+      $.ajax({
+        url: 'https://api.instagram.com/v1/users/self/media/recent/?access_token=7582844000.1677ed0.4533c36a2dce45b79e7e14a9b2a435a3'
+      }).done(function(data) {
+        var res = data.data;
+        for (var i = 0; i < res.length; i++) {
+          if (i < 8) {
+            var item = document.createElement('a');
+            item.classList.add('s-instagram__item');
+            item.classList.add('above-viewport');
+            item.setAttribute('href', res[i].link);
+            item.setAttribute('target', '_blank');
+            item.style.backgroundImage = 'url(' + res[i].images.standard_resolution.url + ')';
+            $items[0].appendChild(item);
+          }
+        }
+      }).fail(function() {
+        console.log('Error while loading instagram')
+      })
+    });
+  })();
+
+  var blogScroll = {
+    left: 0,
+    width: 0,
+    scrollY: 0,
+    innerHeight: 0,
+    blogRightInner: $('.p-blog-item__right-inner')[0],
+    blogLeft: $('.p-blog-item__left')[0],
+    blogRight: $('.p-blog-item__right')[0],
+    leftBottom: 0,
+    init: function() {
+      var rect = blogScroll.blogRightInner.getBoundingClientRect();
+      blogScroll.scrollY = window.pageYOffset;
+
+      setTimeout(function() {
+        blogScroll.leftBottom = blogScroll.blogLeft.offsetTop + blogScroll.blogLeft.clientHeight - blogScroll.innerHeight;
+      }, 100)
+
+      blogScroll.left = rect.left;
+      blogScroll.width = rect.width;
+      blogScroll.innerHeight = rect.height;
+
+      window.addEventListener('scroll', blogScroll.handleScroll);
+      blogScroll.moveBlock();
+
+    },
+    moveBlock() {
+      if (window.scrollY >= blogScroll.blogRight.offsetTop) {
+        if (blogScroll.leftBottom > window.scrollY) {
+          blogScroll.blogRightInner.style.left = blogScroll.left + 'px';
+          blogScroll.blogRightInner.style.top = '0px';
+          blogScroll.blogRightInner.style.width = blogScroll.width + 'px';
+          blogScroll.blogRight.classList.add('fixed');
+          blogScroll.blogRight.classList.remove('absolute');
+        } else {
+          blogScroll.blogRightInner.style.top = 'auto';
+          blogScroll.blogRightInner.style.bottom = '0px';
+          blogScroll.blogRightInner.style.left = '0px';
+          blogScroll.blogRight.classList.add('absolute');
+          blogScroll.blogRight.classList.remove('fixed');
+        }
+      } else {
+        blogScroll.blogRight.classList.remove('fixed');
+        blogScroll.blogRight.classList.remove('absolute');
+      }
+    },
+    handleScroll: function(e) {
+      if (window.innerWidth >= 1200) {
+
+
+        blogScroll.moveBlock();
+      } else {
+        blogScroll.blogRight.classList.remove('fixed');
+        blogScroll.blogRight.classList.remove('absolute');
+      }
+    }
+  }
+
+  if (blogScroll.blogRightInner !== undefined) {
+    blogScroll.init();
+  }
+
+  function initMap() {
+    var $map = $('#contacts-map');
+
+    if ($map.length) {
+      var map = new google.maps.Map(
+        document.getElementById('contacts-map'),
+        {
+          center: new google.maps.LatLng(49.985442, 36.234196),
+          zoom: 16,
+          mapTypeId: 'roadmap',
+          disableDefaultUI: true,
+        });
+
+      var marker = new google.maps.Marker({
+        position: map.getCenter(),
+        icon: '../img/placeholder-filled-point.png',
+        map: map
+      });
+    }
+  }
+
+  initMap();
+
+  (function initZoom() {
+    var $zoom = $('.zoom');
+    var type = 'mouseover';
+    var $items = $('.p-office__items');
+    var $gallery = $('.gallery-item');
+
+    if ($gallery.length) {
+      if (!$('body').hasClass('touch-device')) {
+        $gallery.click(function(event) {
+          event = event || window.event;
+          var target = event.target || event.srcElement,
+            link = target.src ? target.parentNode : target,
+            options = {index: link, event: event},
+            links = this.getElementsByTagName('a');
+          blueimp.Gallery(links, options);
+        });
+      }
+    }
+
+    if ($items.length) {
+      $items.masonry({
+        itemSelector: '.p-office__item',
+        transitionDuration: '0.45s',
+        stagger: '0.03s'
+      });
+    }
+
+    if ($('body').hasClass('touch-device')) {
+      type = 'grab'
+    }
+
+    $zoom.each(function() {
+      $(this).zoom({
+        on: type
+      })
+    });
+  })();
+
+
 
 });

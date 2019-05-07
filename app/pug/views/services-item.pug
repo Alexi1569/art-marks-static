@@ -1,0 +1,511 @@
+extends ../includes/_layout
+
+block content
+  - var isMain = false;
+  - var isFooterBorder = true;
+  include ../includes/_header
+
+  block main
+    main.center
+      .p-services-item
+        .container
+          .breadcrumbs
+            ul.breadcrumbs__list.flex.jc-fs.fw-w.ai-s
+              li
+                a.nuxt-link-active(href='/') ART MARKS
+              li
+                a.nuxt-link-active(href='/services') Услуги
+              li
+                a(href='/services/web/ecommerce#1') WEB разработка
+              li
+                | Разработка интернет-магазина
+          .p-services-category__top
+            .caption.caption--big.caption--services--visible
+              .caption__inner.above-viewport(data-in-viewport='i49')
+                p.caption__main
+                  | РАЗРАБОТКА
+                  br
+                  |  ИНТЕРНЕТ-МАГАЗИНА
+                //
+                .caption__content
+                  p
+                    | Простоту и удобство интернет-магазина для покупателей и менеджеров обеспечивает большое количество реализованных нами функций. Ниже представлены основные из них.
+                    br
+                    | Узнайте стоимость и сроки создания интернет-магазина
+          section.p-services-item__tasks.above-viewport(data-in-viewport='i50')
+            table
+              tbody
+                tr
+                  td
+                    p.p-services-item__task-key ГЛАВНАЯ ЗАДАЧА:
+                  td
+                    p.p-services-item__task-val интернет-магазин обязан быть понятным, логичным и простым.
+                tr
+                  td
+                    p.p-services-item__task-key ЦЕЛЬ:
+                  td
+                    p.p-services-item__task-val заставить пользователя совершить действие.
+                tr
+                  td
+                    p.p-services-item__task-key РЕЗУЛЬТАТ:
+                  td
+                    p.p-services-item__task-val высокие ROI и KPI наших клиентов.
+          section.p-services-item__popular
+            .p-services-item__popular-img.above-viewport(data-in-viewport='i51')
+              img(src='/img/popular-functions.png', alt='ПОПУЛЯРНЫЙ ФУНКЦИОНАЛ СОВРЕМЕННОГО ИНТЕРНЕТ-МАГАЗИНА')
+            .p-services-item__popular-inner.above-viewport(data-in-viewport='i53')
+              .caption.caption--small.p-services-item__popular-title.caption--services--visible
+                .caption__inner.above-viewport(data-in-viewport='i52')
+                  p.caption__main ПОПУЛЯРНЫЙ ФУНКЦИОНАЛ СОВРЕМЕННОГО ИНТЕРНЕТ-МАГАЗИНА:
+                  //
+                  //
+              .p-services-item__popular-items.flex.fw-w.ai-s.jc-sb
+                p.p-services-item__popular-item
+                  | Разработка уникального дизайна
+                p.p-services-item__popular-item
+                  | Мультифункциональный каталог
+                p.p-services-item__popular-item
+                  | Корзина заказа
+                p.p-services-item__popular-item
+                  | Новостная лента
+                p.p-services-item__popular-item
+                  | Карта проезда
+                p.p-services-item__popular-item
+                  | Одностраничное оформление заказа
+                p.p-services-item__popular-item
+                  | Новинки, акции, хиты продаж со стикерами
+                p.p-services-item__popular-item
+                  | Кнопка подняться вверх
+                p.p-services-item__popular-item
+                  | Форма обратной связи
+                p.p-services-item__popular-item
+                  | Живой поиск
+                p.p-services-item__popular-item
+                  | Способы оплаты
+                p.p-services-item__popular-item
+                  | Способы доставки
+                p.p-services-item__popular-item
+                  | Импорт/экспорт базы всех товаров
+                p.p-services-item__popular-item
+                  | Фильтры
+                p.p-services-item__popular-item
+                  | Рейтинг товара
+                p.p-services-item__popular-item
+                  | Корзина
+                p.p-services-item__popular-item
+                  | Валюта
+                p.p-services-item__popular-item
+                  | FAQ
+                p.p-services-item__popular-item
+                  | Многоязычность
+                p.p-services-item__popular-item
+                  | Заказать звонок
+                p.p-services-item__popular-item
+                  | Купить в один клик
+                p.p-services-item__popular-item
+                  | Список желаемого
+                p.p-services-item__popular-item
+                  | Рассылка
+                p.p-services-item__popular-item
+                  | Связка с программонй 1С
+                p.p-services-item__popular-item
+                  | Индивидуальные функции
+          section.p-services-item__faq
+            .caption.caption--centered.caption--services--visible
+              .caption__inner.above-viewport(data-in-viewport='i54')
+                p.caption__main FAQ ПО РАЗРАБОТКЕ ИНТЕРНЕТ-МАГАЗИНА
+                //
+                //
+            .p-services-item__faq-content.flex.jc-sb.ai-fs
+              .p-services-item__faq-left
+                .toggler-item.faq__item
+                  .toggler-item__inner.above-viewport(data-in-viewport='i55')
+                    .toggler-item__top
+                      .faq__item-question
+                        i
+                          svg(version='1.1', fill="url('#blue-gradient')", xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 52.5 55.5', xml:space='preserve')
+                            polygon(points='0,0 52.5,27.7 0,55.5 ')
+                        p Какую платформу выберут для разработки моего сайта?
+                    .toggler-item__bottom
+                      .faq__item-answer
+                        p
+                          | В подборе оптимальной платформы, мы отталкиваемся от целей и задач проекта, а потому предлагаем проверенные опытом и многофункциональные CMS. Для сложных кастомных проектов мы используем фреймворк Laravel с открытым исходным кодом, который позволяет полностью реализовать вашу задумку с учетом всех технических сложностей.
+                .toggler-item.faq__item
+                  .toggler-item__inner.above-viewport(data-in-viewport='i56')
+                    .toggler-item__top
+                      .faq__item-question
+                        i
+                          svg(version='1.1', fill="url('#blue-gradient')", xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 52.5 55.5', xml:space='preserve')
+                            polygon(points='0,0 52.5,27.7 0,55.5 ')
+                        p Какую платформу выберут для разработки моего сайта?
+                    .toggler-item__bottom
+                      .faq__item-answer
+                        p
+                          | В подборе оптимальной платформы, мы отталкиваемся от целей и задач проекта, а потому предлагаем проверенные опытом и многофункциональные CMS. Для сложных кастомных проектов мы используем фреймворк Laravel с открытым исходным кодом, который позволяет полностью реализовать вашу задумку с учетом всех технических сложностей.
+                .toggler-item.faq__item
+                  .toggler-item__inner.above-viewport(data-in-viewport='i57')
+                    .toggler-item__top
+                      .faq__item-question
+                        i
+                          svg(version='1.1', fill="url('#blue-gradient')", xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 52.5 55.5', xml:space='preserve')
+                            polygon(points='0,0 52.5,27.7 0,55.5 ')
+                        p Какую платформу выберут для разработки моего сайта?
+                    .toggler-item__bottom
+                      .faq__item-answer
+                        p
+                          | В подборе оптимальной платформы, мы отталкиваемся от целей и задач проекта, а потому предлагаем проверенные опытом и многофункциональные CMS. Для сложных кастомных проектов мы используем фреймворк Laravel с открытым исходным кодом, который позволяет полностью реализовать вашу задумку с учетом всех технических сложностей.
+                .toggler-item.faq__item
+                  .toggler-item__inner.above-viewport(data-in-viewport='i58')
+                    .toggler-item__top
+                      .faq__item-question
+                        i
+                          svg(version='1.1', fill="url('#blue-gradient')", xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 52.5 55.5', xml:space='preserve')
+                            polygon(points='0,0 52.5,27.7 0,55.5 ')
+                        p Какую платформу выберут для разработки моего сайта?
+                    .toggler-item__bottom
+                      .faq__item-answer
+                        p
+                          | В подборе оптимальной платформы, мы отталкиваемся от целей и задач проекта, а потому предлагаем проверенные опытом и многофункциональные CMS. Для сложных кастомных проектов мы используем фреймворк Laravel с открытым исходным кодом, который позволяет полностью реализовать вашу задумку с учетом всех технических сложностей.
+              .p-services-item__faq-right
+                .video__block.video__block--faq
+                  //
+                  .video__block-inner.flex.ai-c.jc-c.above-viewport(data-in-viewport='i37')
+                    button.video__block-toggler.inline-flex.ai-c.jc-c.video-toggler
+                      svg(class="video-play-icon" xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', version='1.1', x='0px', y='0px', viewBox='0 0 232.153 232.153', xml:space='preserve')
+                        g
+                          path(d='M203.791,99.628L49.307,2.294c-4.567-2.719-10.238-2.266-14.521-2.266   c-17.132,0-17.056,13.227-17.056,16.578v198.94c0,2.833-0.075,16.579,17.056,16.579c4.283,0,9.955,0.451,14.521-2.267   l154.483-97.333c12.68-7.545,10.489-16.449,10.489-16.449S216.471,107.172,203.791,99.628z', style='fill-rule: evenodd; clip-rule: evenodd;')
+                      <svg class="video-pause-icon" xmlns="http://www.w3.org/2000/svg" viewBox="-37 0 320 320.00002"><path d="m96.398438 0h-86.398438c-5.515625.015625-9.984375 4.484375-10 10v300c.015625 5.515625 4.484375 9.984375 10 10h86.398438c5.519531-.015625 9.984374-4.484375 10-10v-300c-.015626-5.515625-4.480469-9.984375-10-10zm0 0"/><path d="m236.898438 0h-86.5c-5.515626.015625-9.984376 4.484375-10 10v300c.015624 5.515625 4.484374 9.984375 10 10h86.402343c5.515625-.015625 9.984375-4.484375 10-10v-300c.03125-2.644531-1-5.191406-2.859375-7.070312-1.859375-1.878907-4.398437-2.93359425-7.042968-2.929688zm0 0"/></svg>
+
+
+                    video(poster='/img/video-poster.jpg')
+                      source(src='https://www.videvo.net/videvo_files/converted/2014_07/videos/Galaxy_With_Customization.mp462194.mp4', type='video/mp4')
+                    .video__block-controls.flex.ai-c.jc-sb
+                      button.smalltoggler.video-toggler
+                        svg(class="video-play-icon" xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', version='1.1', x='0px', y='0px', viewBox='0 0 232.153 232.153', xml:space='preserve')
+                          g
+                            path(d='M203.791,99.628L49.307,2.294c-4.567-2.719-10.238-2.266-14.521-2.266   c-17.132,0-17.056,13.227-17.056,16.578v198.94c0,2.833-0.075,16.579,17.056,16.579c4.283,0,9.955,0.451,14.521-2.267   l154.483-97.333c12.68-7.545,10.489-16.449,10.489-16.449S216.471,107.172,203.791,99.628z', style='fill-rule: evenodd; clip-rule: evenodd;')
+                        <svg class="video-pause-icon" xmlns="http://www.w3.org/2000/svg" viewBox="-37 0 320 320.00002"><path d="m96.398438 0h-86.398438c-5.515625.015625-9.984375 4.484375-10 10v300c.015625 5.515625 4.484375 9.984375 10 10h86.398438c5.519531-.015625 9.984374-4.484375 10-10v-300c-.015626-5.515625-4.480469-9.984375-10-10zm0 0"/><path d="m236.898438 0h-86.5c-5.515626.015625-9.984376 4.484375-10 10v300c.015624 5.515625 4.484374 9.984375 10 10h86.402343c5.515625-.015625 9.984375-4.484375 10-10v-300c.03125-2.644531-1-5.191406-2.859375-7.070312-1.859375-1.878907-4.398437-2.93359425-7.042968-2.929688zm0 0"/></svg>
+                      .duration
+                        input(type='range', min='0', max='', autocomplete='off', role='slider')
+                      .volume.flex.ai-c.jc-fs
+                        span.volume-mute
+                          svg(class="video-volume-icon" xmlns='http://www.w3.org/2000/svg', viewBox='0 0 347.182 347.182')
+                            path(d='M210.133 0c-4.948 0-9.233 1.809-12.847 5.426L102.213 100.5H27.412c-4.952 0-9.235 1.809-12.85 5.424-3.618 3.621-5.426 7.901-5.426 12.85v109.634c0 4.948 1.809 9.232 5.426 12.847 3.619 3.617 7.901 5.428 12.85 5.428h74.801l95.073 95.077c3.613 3.61 7.898 5.421 12.847 5.421s9.232-1.811 12.854-5.421c3.613-3.617 5.421-7.901 5.421-12.847V18.276c0-4.948-1.808-9.235-5.421-12.851C219.362 1.809 215.081 0 210.133 0zM325.904 133.037c-8.09-12.562-18.788-21.414-32.12-26.551-1.903-.95-4.278-1.427-7.132-1.427-4.949 0-9.233 1.765-12.847 5.282-3.614 3.521-5.428 7.853-5.428 12.991 0 3.997 1.143 7.376 3.429 10.136 2.286 2.762 5.037 5.142 8.281 7.139a147.442 147.442 0 0 1 9.706 6.567c3.237 2.38 5.995 5.758 8.281 10.135 2.279 4.377 3.429 9.801 3.429 16.274 0 6.478-1.149 11.899-3.429 16.279-2.286 4.381-5.044 7.755-8.281 10.141a148.945 148.945 0 0 1-9.706 6.563c-3.244 1.995-5.995 4.38-8.281 7.139-2.286 2.762-3.429 6.139-3.429 10.137 0 5.143 1.813 9.465 5.428 12.99 3.613 3.518 7.897 5.28 12.847 5.28 2.854 0 5.229-.476 7.132-1.424 13.332-5.328 24.03-14.229 32.12-26.689 8.097-12.474 12.142-25.933 12.142-40.402 0-14.473-4.055-27.986-12.142-40.56z')
+                          svg(class="video-mute-icon" xmlns='http://www.w3.org/2000/svg', viewBox='0 0 508.528 508.528')
+                            path(d='M263.54.116c-5.784-.54-12.554.858-20.531 5.689 0 0-132.533 115.625-138.317 121.314h-72.91C14.239 127.15 0 141.389 0 158.933v194.731c0 17.607 14.239 31.782 31.782 31.782h72.941c5.784 5.753 138.317 117.277 138.317 117.277 7.977 4.799 14.747 6.229 20.531 5.689 11.76-1.112 20.023-10.965 22.534-21.358.095-1.017.095-464.533-.064-465.55C283.563 11.081 275.268 1.228 263.54.116zM447.974 254.28l54.857-54.857c7.596-7.564 7.596-19.864 0-27.428-7.564-7.564-19.864-7.564-27.428 0l-54.857 54.888-54.888-54.888c-7.532-7.564-19.864-7.564-27.397 0-7.564 7.564-7.564 19.864 0 27.428l54.857 54.857-54.857 54.888c-7.564 7.532-7.564 19.864 0 27.396 7.532 7.564 19.864 7.564 27.396 0l54.888-54.857 54.857 54.857c7.564 7.564 19.864 7.564 27.428 0 7.564-7.532 7.564-19.864 0-27.396l-54.856-54.888z')
+
+                        .volume__line
+                          input(type='range', min='0', max='1', step='0.01', autocomplete='off', role='slider')
+                      button.fullscreen
+                        svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 513.32 513.32')
+                          path(d='M177.523 305.853L42.777 440.6v-98.387H0V513.32h171.107v-42.777H74.859l134.746-134.746z')
+                          path(d='M470.543 440.6L72.72 42.777h98.387V0H0v171.107h42.777V72.72L440.6 470.543h-98.387v42.777H513.32V342.213h-42.777z')
+                          path(d='M342.213 0v42.777h100.526L307.992 177.523l29.943 29.944L470.543 74.859v96.248h42.777V0z')
+
+          .services-category__process
+            .caption.caption--centered.caption--services--visible
+              .caption__inner.above-viewport(data-in-viewport='i60')
+                p.caption__main ПРОЦЕСС РАЗРАБОТКИ ИНТЕРНЕТ-МАГАЗИНА
+                //
+                //
+            .services-category__process-items.flex.fw-w.jc-sb.ai-s
+              .category__process-item.flex.p-services-category__process-item.above-viewport(data-in-viewport='i61')
+                .category__process-item-inner.inline-flex.ai-fs
+                  p.category__process-item-number.inline-flex.ai-c.jc-c
+                    span 1
+                  .category__process-item-content
+                    p.category__process-item-title Сбор требований
+                    p.category__process-item-text Получение брифа и его анализ
+              .category__process-item.flex.p-services-category__process-item.above-viewport(data-in-viewport='i62')
+                .category__process-item-inner.inline-flex.ai-fs
+                  p.category__process-item-number.inline-flex.ai-c.jc-c
+                    span 2
+                  .category__process-item-content
+                    p.category__process-item-title РАЗРАБОТКА ТЗ
+                    p.category__process-item-text Формировка ТЗ с указанием стуктуры сайта
+              .category__process-item.flex.p-services-category__process-item.above-viewport(data-in-viewport='i63')
+                .category__process-item-inner.inline-flex.ai-fs
+                  p.category__process-item-number.inline-flex.ai-c.jc-c
+                    span 3
+                  .category__process-item-content
+                    p.category__process-item-title ДИЗАЙН
+                    p.category__process-item-text Решение по UI и UX с пожеланиями клиента
+              .category__process-item.flex.p-services-category__process-item.above-viewport(data-in-viewport='i64')
+                .category__process-item-inner.inline-flex.ai-fs
+                  p.category__process-item-number.inline-flex.ai-c.jc-c
+                    span 4
+                  .category__process-item-content
+                    p.category__process-item-title ВЕРСТКА
+                    p.category__process-item-text На этапе верстки формируется вся иерархия сайта
+              .category__process-item.flex.p-services-category__process-item.above-viewport(data-in-viewport='i65')
+                .category__process-item-inner.inline-flex.ai-fs
+                  p.category__process-item-number.inline-flex.ai-c.jc-c
+                    span 5
+                  .category__process-item-content
+                    p.category__process-item-title РАЗРАБОТКА
+                    p.category__process-item-text Разворачивание CMS, которая максимально подходит проекту
+              .category__process-item.flex.p-services-category__process-item.above-viewport(data-in-viewport='i66')
+                .category__process-item-inner.inline-flex.ai-fs
+                  p.category__process-item-number.inline-flex.ai-c.jc-c
+                    span 6
+                  .category__process-item-content
+                    p.category__process-item-title ТЕСТИРОВАНИЕ
+                    p.category__process-item-text Отдел QA проверит сайт на работоспособность
+              .category__process-item.flex.p-services-category__process-item.above-viewport(data-in-viewport='i67')
+                .category__process-item-inner.inline-flex.ai-fs
+                  p.category__process-item-number.inline-flex.ai-c.jc-c
+                    span 7
+                  .category__process-item-content
+                    p.category__process-item-title ЗАПОЛНЕНИЕ
+                    p.category__process-item-text Мы всегда осуществим минимальное заполнение сайта контентом
+              .category__process-item.flex.p-services-category__process-item.above-viewport(data-in-viewport='i68')
+                .category__process-item-inner.inline-flex.ai-fs
+                  p.category__process-item-number.inline-flex.ai-c.jc-c
+                    span 8
+                  .category__process-item-content
+                    p.category__process-item-title ТЕХНИЧЕСКАЯ ПОДДЕРЖКА
+                    p.category__process-item-text Помогаем клиентам после сдачи проекта
+        section.s-portfolio.s-portfolio__services
+          .container
+            .caption.caption--centered.caption--services--visible
+              .caption__inner.above-viewport(data-in-viewport='i69')
+                p.caption__main ПРИМЕРЫ РЕАЛИЗОВАННЫХ НАМИ ПРОЕКТОВ
+                //
+                //
+            .s-portfolio__wrapper.flex.fw-w.jc-sb.ai-s
+              .s-portfolio__item
+                a.above-viewport(href='/portfolio/karree', data-in-viewport='i70')
+                  .s-portfolio__item-overlay
+                  .s-portfolio__item-img(style='background-image: url("/img/portfolio-1.jpg");')
+                  .s-portfolio__item-inner.flex.fd-c.ai-s.jc-c
+                    p.s-portfolio__item-title karree
+                    .s-portfolio__item-info
+                      p.s-portfolio__item-description интернет-магазин женской одежды
+                      p.s-portfolio__item-category web
+              .s-portfolio__item
+                a.above-viewport(href='/portfolio/lisoped', data-in-viewport='i71')
+                  .s-portfolio__item-overlay
+                  .s-portfolio__item-img(style='background-image: url("/img/portfolio-2.jpg");')
+                  .s-portfolio__item-inner.flex.fd-c.ai-s.jc-c
+                    p.s-portfolio__item-title lisoped
+                    .s-portfolio__item-info
+                      p.s-portfolio__item-description интернет-магазин женской одежды
+                      p.s-portfolio__item-category web
+              .s-portfolio__item
+                a.above-viewport(href='/portfolio/pets', data-in-viewport='i72')
+                  .s-portfolio__item-overlay
+                  .s-portfolio__item-img(style='background-image: url("/img/portfolio-3.jpg");')
+                  .s-portfolio__item-inner.flex.fd-c.ai-s.jc-c
+                    p.s-portfolio__item-title 4pets
+                    .s-portfolio__item-info
+                      p.s-portfolio__item-description интернет-магазин женской одежды
+                      p.s-portfolio__item-category web
+              .s-portfolio__item
+                a.above-viewport(href='/portfolio/mshop', data-in-viewport='i73')
+                  .s-portfolio__item-overlay
+                  .s-portfolio__item-img(style='background-image: url("/img/portfolio-4.jpg");')
+                  .s-portfolio__item-inner.flex.fd-c.ai-s.jc-c
+                    p.s-portfolio__item-title m1
+                    .s-portfolio__item-info
+                      p.s-portfolio__item-description интернет-магазин одежды
+                      p.s-portfolio__item-category web
+            .btn__wrap
+              a.btn.s-portfolio__btn.btn--filled(href='/portfolio')
+                .btn__wrap-inner
+                  span.btn__wrap-text
+                    | все работы
+                  //
+                  //
+        section.s-discuss.p-services-category-item__discuss
+          .container
+            .s-discuss__wrapper
+              form.form.discuss__project-form.s-discuss__form
+                .caption.caption--centered.caption--services--visible
+                  .caption__inner.in-viewport.fully-in-viewport(data-in-viewport='i74')
+                    p.caption__main обсудить проект
+                    p.caption__additional Все крутые проекты начинаются с заполнения этой формы
+                    //
+                .form__inner.flex.ai-s.jc-sb
+                  .form__inner-part
+                    .form-input
+                      .form-input__inner
+                        //
+                        input(placeholder='Имя', required='required', name='username', type='text')
+                        i.form-input__line
+                        //
+                      span.form-message
+                    .form-input
+                      .form-input__inner
+                        //
+                        input(placeholder='Телефон', required='required', name='userphone', type='tel')
+                        i.form-input__line
+                        //
+                      span.form-message
+                    .form-input
+                      .form-input__inner
+                        //
+                        input(placeholder='E-mail', required='required', name='useremail', type='email')
+                        i.form-input__line
+                        //
+                      span.form-message
+                  .form__inner-part.flex.fd-c.jc-sb.ai-fs
+                    .form-input.form-input--textarea
+                      .form-input__inner
+                        //
+                        textarea(rows='1', placeholder='Опишите свою идею', required='required', name='usertext')
+                        i.form-input__line
+                        //
+                      span.form-message
+                    .form-input.form-input--file
+                      .form-input__inner
+                        //
+                        label.flex.ai-fe.jc-fs(for='header-modal-file')
+                          input#header-modal-file(type='file', placeholder='Добавить файл', name='userfile', multiple='multiple')
+                          svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 20 22', xml:space='preserve')
+                            path(d='M15.8,0c2.2,0,3.9,1.8,3.9,3.9c0,0.4-0.1,1.7-1.2,2.8l-8.5,8.5c-0.6,0.7-2.1,1.3-3.3,0.1c-1.2-1.2-0.6-2.7,0.1-3.3l4.4-4.4 L12,8.3l-3.2,3.2l0,0l-1.4,1.4l0,0c-1,1.2,0.6,2.9,2,1.6l8.4-8.4c0.7-0.7,0.9-1.4,0.9-2.2c0-1.6-1.3-2.9-2.9-2.9 c-0.8,0-1.5,0.3-2,0.8l0,0C13.2,2.4,2.3,13.3,2.3,13.4l0,0C1.5,14.2,1,15.3,1,16.5C1,19,3,21,5.5,21c0.6,0,1.8,0,3.5-1.7L19.3,9.1 L20,9.8L9.5,20.2c-1,1.1-2.4,1.8-4,1.8c-3,0-5.5-2.5-5.5-5.5c0-1.6,0.7-3,1.7-4C12.4,1.8,12.6,1.7,13,1.2C13.3,0.9,14.2,0,15.8,0')
+                          span Добавить файл
+                        //
+                        //
+                      span.form-message
+                .btn__wrap
+                  //
+                  button.btn.s-discuss-btn.btn--filled(type='submit')
+                    .btn__wrap-inner
+                      span.btn__wrap-text
+                        | ОТПРАВИТЬ
+                      //
+        .fluid__form
+          .fluid__form-inner.flex.jc-c.ai-c
+            .btn__wrap
+              //
+              a.btn.fluid__form__btn.fluid__form__btn--question.btn--linear(data-src data-fancybox="#question-modal" href="#question-modal")
+                .btn__wrap-inner
+                  span.btn__wrap-text
+                    | ОСТАЛИСЬ ВОПРОСЫ?
+                  //
+            .btn__wrap
+              //
+              a.btn.fluid__form__btn.fluid__form__btn--project.btn--filled(data-src data-fancybox="#order-modal" href="#order-modal")
+                .btn__wrap-inner
+                  span.btn__wrap-text
+                    | заказать услугу
+                  //
+        .modal-mask.p-services-item__modal(style='display: none;')
+          .modal-wrapper
+            .modal-container
+              button.modal-close
+                svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 22 22', xml:space='preserve')
+                  path(d='M11,10.3L21.3,0L22,0.7L11.7,11L22,21.3L21.3,22L11,11.7L0.7,22L0,21.3L10.3,11L0,0.7L0.7,0C0.7,0,11,10.3,11,10.3z')
+              .modal-body
+                form.form.p-services-item__form
+                  .caption.header-modal__caption.caption--services--visible
+                    .caption__inner.fully-in-viewport(data-in-viewport='i75')
+                      p.caption__main ОСТАЛИСЬ ВОПРОСЫ?
+                      //
+                      //
+                  .form__inner.flex.ai-s.jc-sb
+                    .form__inner-part
+                      .form-input
+                        .form-input__inner
+                          //
+                          input(placeholder='Имя', required='required', name='username', type='text')
+                          i.form-input__line
+                          //
+                        span.form-message
+                      .form-input
+                        .form-input__inner
+                          //
+                          input(placeholder='Телефон', required='required', name='userphone', type='tel')
+                          i.form-input__line
+                          //
+                        span.form-message
+                      .form-input
+                        .form-input__inner
+                          //
+                          input(placeholder='E-mail', required='required', name='useremail', type='email')
+                          i.form-input__line
+                          //
+                        span.form-message
+                    .form__inner-part.flex.fd-c.jc-sb.ai-fs
+                      .form-input.form-input--textarea
+                        .form-input__inner
+                          //
+                          textarea(rows='1', placeholder='Вопрос', required='required', name='usertext')
+                          i.form-input__line
+                          //
+                        span.form-message
+                      //
+                  .btn__wrap
+                    //
+                    button.btn.s-discuss-btn.btn--filled(type='submit')
+                      .btn__wrap-inner
+                        span.btn__wrap-text
+                          | ОТПРАВИТЬ
+                        //
+        .modal-mask.p-services-item__modal(style='display: none;')
+          .modal-wrapper
+            .modal-container
+              button.modal-close
+                svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 22 22', xml:space='preserve')
+                  path(d='M11,10.3L21.3,0L22,0.7L11.7,11L22,21.3L21.3,22L11,11.7L0.7,22L0,21.3L10.3,11L0,0.7L0.7,0C0.7,0,11,10.3,11,10.3z')
+              .modal-body
+                form.form
+                  .caption.header-modal__caption.caption--services--visible
+                    .caption__inner.fully-in-viewport(data-in-viewport='i76')
+                      p.caption__main ЗАКАЗАТЬ УСЛУГУ
+                      //
+                      //
+                  .form__inner.flex.ai-s.jc-sb
+                    .form__inner-part
+                      .form-input
+                        .form-input__inner
+                          //
+                          input(placeholder='Имя', required='required', name='username', type='text')
+                          i.form-input__line
+                          //
+                        span.form-message
+                      .form-input
+                        .form-input__inner
+                          //
+                          input(placeholder='Телефон', required='required', name='userphone', type='tel')
+                          i.form-input__line
+                          //
+                        span.form-message
+                      .form-input
+                        .form-input__inner
+                          //
+                          input(placeholder='E-mail', required='required', name='useremail', type='email')
+                          i.form-input__line
+                          //
+                        span.form-message
+                    .form__inner-part.flex.fd-c.jc-sb.ai-fs
+                      .form-input.form-input--textarea
+                        .form-input__inner
+                          //
+                          textarea(rows='1', placeholder='Расскажите об идеи', required='required', name='usertext')
+                          i.form-input__line
+                          //
+                        span.form-message
+                      .form-input.form-input--file
+                        .form-input__inner
+                          //
+                          label.flex.ai-fe.jc-fs(for='header-modal-file')
+                            input#header-modal-file(type='file', placeholder='Добавить файл', name='userfile', multiple='multiple')
+                            svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewBox='0 0 20 22', xml:space='preserve')
+                              path(d='M15.8,0c2.2,0,3.9,1.8,3.9,3.9c0,0.4-0.1,1.7-1.2,2.8l-8.5,8.5c-0.6,0.7-2.1,1.3-3.3,0.1c-1.2-1.2-0.6-2.7,0.1-3.3l4.4-4.4 L12,8.3l-3.2,3.2l0,0l-1.4,1.4l0,0c-1,1.2,0.6,2.9,2,1.6l8.4-8.4c0.7-0.7,0.9-1.4,0.9-2.2c0-1.6-1.3-2.9-2.9-2.9 c-0.8,0-1.5,0.3-2,0.8l0,0C13.2,2.4,2.3,13.3,2.3,13.4l0,0C1.5,14.2,1,15.3,1,16.5C1,19,3,21,5.5,21c0.6,0,1.8,0,3.5-1.7L19.3,9.1 L20,9.8L9.5,20.2c-1,1.1-2.4,1.8-4,1.8c-3,0-5.5-2.5-5.5-5.5c0-1.6,0.7-3,1.7-4C12.4,1.8,12.6,1.7,13,1.2C13.3,0.9,14.2,0,15.8,0')
+                            span Добавить файл
+                          //
+                          //
+                        span.form-message
+                  .btn__wrap
+                    //
+                    button.btn.s-discuss-btn.btn--filled(type='submit')
+                      .btn__wrap-inner
+                        span.btn__wrap-text
+                          | ЗАКАЗАТЬ
+                        //
+
+
+
+  include ../includes/_footer
+  

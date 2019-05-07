@@ -1,0 +1,159 @@
+extends ../includes/_layout
+
+block content
+  - var isFooterBorder = true;
+  include ../includes/_header
+
+  block main
+    main.center
+      .p-team
+        .container
+          .breadcrumbs
+            ul.breadcrumbs__list.flex.jc-fs.fw-w.ai-s
+              li
+                a.nuxt-link-active(href='/') ART MARKS
+              li
+                a.nuxt-link-active(href='/about') О студии
+              li
+                | Наша команда
+          .p-services__top
+            .caption.caption--big.caption--services--visible
+              .caption__inner.above-viewport(data-in-viewport='i34')
+                p.caption__main НАША КОМАНДА
+                //
+                .caption__content
+                  p
+                    | Мы работаем вместе, напряженно, преданно, с любовью, драйвом, страстью и любопытством. Будучи фанатиками родственными по духу, мы сочетаем в себе творчество с мастерством, талант с опытом, и свежие идеи с экспертностью.
+          .p-team__items-wrap
+            .artmarks-img.p-team__artmarks.in-viewport.above-viewport(data-in-viewport='i35')
+              img(src='/img/p-team-artmarks.png', alt='ArtMarks')
+            .p-team__items.flex.fw-w.jc-fs.ai-s
+              .p-team__item.flex.fd-c.ai-c.jc-fs.in-viewport.below-viewport(data-in-viewport='i37')
+                .p-team__item-img(style='background-image: url("/img/p-team-1.jpg");')
+                .p-team__item-img.p-team__item-img--bg(style='background-image: url("/img/p-team-1.jpg");')
+                .p-team__item-info
+                  p.p-team__item-name артур
+                  p.p-team__item-position Учредитель, создатель компании
+                  ul.p-team__socials.flex.fw-w.ai-c.jc-c.above-viewport(data-in-viewport='i36')
+                    li
+                      a(href='http://facebook.com', target='_blank')
+                        svg(width='16', height='16', xmlns='http://www.w3.org/2000/svg', viewBox='0 0 96.124 96.123')
+                          path(d='M72.089.02L59.624 0C45.62 0 36.57 9.285 36.57 23.656v10.907H24.037a1.96 1.96 0 0 0-1.96 1.961v15.803a1.96 1.96 0 0 0 1.96 1.96H36.57v39.876a1.96 1.96 0 0 0 1.96 1.96h16.352a1.96 1.96 0 0 0 1.96-1.96V54.287h14.654a1.96 1.96 0 0 0 1.96-1.96l.006-15.803a1.963 1.963 0 0 0-1.961-1.961H56.842v-9.246c0-4.444 1.059-6.7 6.848-6.7l8.397-.003a1.96 1.96 0 0 0 1.959-1.96V1.98A1.96 1.96 0 0 0 72.089.02z')
+                    li
+                      a(href='http://linkedin.com', target='_blank')
+                        svg(width='12', height='12', xmlns='http://www.w3.org/2000/svg', viewBox='0 0 438.536 438.535')
+                          path(d='M5.424 145.895H99.64v282.932H5.424zM408.842 171.739c-19.791-21.604-45.967-32.408-78.512-32.408-11.991 0-22.891 1.475-32.695 4.427-9.801 2.95-18.079 7.089-24.838 12.419-6.755 5.33-12.135 10.278-16.129 14.844-3.798 4.337-7.512 9.389-11.136 15.104v-40.232h-93.935l.288 13.706c.193 9.139.288 37.307.288 84.508 0 47.205-.19 108.777-.572 184.722h93.931V270.942c0-9.705 1.041-17.412 3.139-23.127 4-9.712 10.037-17.843 18.131-24.407 8.093-6.572 18.13-9.855 30.125-9.855 16.364 0 28.407 5.662 36.117 16.987 7.707 11.324 11.561 26.98 11.561 46.966V428.82h93.931V266.664c-.007-41.688-9.897-73.328-29.694-94.925zM53.103 9.708c-15.796 0-28.595 4.619-38.4 13.848C4.899 32.787 0 44.441 0 58.529 0 72.42 4.758 84.034 14.275 93.358c9.514 9.325 22.078 13.99 37.685 13.99h.571c15.99 0 28.887-4.661 38.688-13.99 9.801-9.324 14.606-20.934 14.417-34.829-.19-14.087-5.047-25.742-14.561-34.973C81.562 14.323 68.9 9.708 53.103 9.708z')
+                    li
+                      a(href='http://instagram.com', target='_blank')
+                        svg(width='16', height='16', xmlns='http://www.w3.org/2000/svg', viewBox='0 0 512 512')
+                          path(d='M373.659 0H138.341C62.06 0 0 62.06 0 138.341v235.318C0 449.94 62.06 512 138.341 512h235.318C449.94 512 512 449.94 512 373.659V138.341C512 62.06 449.94 0 373.659 0zm96.977 373.659c0 53.473-43.503 96.977-96.977 96.977H138.341c-53.473 0-96.977-43.503-96.977-96.977V138.341c0-53.473 43.503-96.977 96.977-96.977h235.318c53.473 0 96.977 43.503 96.977 96.977v235.318z')
+                          path(d='M370.586 238.141c-3.64-24.547-14.839-46.795-32.386-64.342-17.547-17.546-39.795-28.746-64.341-32.385a114.73 114.73 0 0 0-33.682 0c-30.336 4.499-57.103 20.541-75.372 45.172-18.269 24.631-25.854 54.903-21.355 85.237 4.499 30.335 20.541 57.102 45.172 75.372 19.996 14.831 43.706 22.619 68.153 22.619 5.667 0 11.375-.418 17.083-1.265 30.336-4.499 57.103-20.541 75.372-45.172 18.27-24.63 25.855-54.901 21.356-85.236zm-102.795 89.491c-19.405 2.882-38.77-1.973-54.527-13.66-15.757-11.687-26.019-28.811-28.896-48.216-2.878-19.405 1.973-38.77 13.66-54.527 11.688-15.757 28.811-26.019 48.217-28.897a73.42 73.42 0 0 1 21.545.001c32.231 4.779 57.098 29.645 61.878 61.877 5.94 40.058-21.817 77.482-61.877 83.422zM400.049 111.951a20.83 20.83 0 0 0-14.625-6.058 20.826 20.826 0 0 0-14.625 6.058 20.814 20.814 0 0 0-6.058 14.625 20.814 20.814 0 0 0 6.058 14.625 20.83 20.83 0 0 0 14.625 6.058 20.826 20.826 0 0 0 14.625-6.058 20.83 20.83 0 0 0 6.058-14.625 20.826 20.826 0 0 0-6.058-14.625z')
+              .p-team__item.flex.fd-c.ai-c.jc-fs.in-viewport.below-viewport(data-in-viewport='i38')
+                .p-team__item-img(style='background-image: url("/img/p-team-1.jpg");')
+                .p-team__item-img.p-team__item-img--bg(style='background-image: url("/img/p-team-1.jpg");')
+                .p-team__item-info
+                  p.p-team__item-name ИВАН
+                  p.p-team__item-position Соучредитель, СЕО
+                  //
+              .p-team__item.flex.fd-c.ai-c.jc-fs.in-viewport.below-viewport(data-in-viewport='i40')
+                .p-team__item-img(style='background-image: url("/img/p-team-1.jpg");')
+                .p-team__item-img.p-team__item-img--bg(style='background-image: url("/img/p-team-1.jpg");')
+                .p-team__item-info
+                  p.p-team__item-name ДИМА
+                  p.p-team__item-position Руководитель отдела WEB-разработки
+                  ul.p-team__socials.flex.fw-w.ai-c.jc-c.above-viewport(data-in-viewport='i39')
+                    li
+                      a(href='http://facebook.com', target='_blank')
+                        svg(width='16', height='16', xmlns='http://www.w3.org/2000/svg', viewBox='0 0 96.124 96.123')
+                          path(d='M72.089.02L59.624 0C45.62 0 36.57 9.285 36.57 23.656v10.907H24.037a1.96 1.96 0 0 0-1.96 1.961v15.803a1.96 1.96 0 0 0 1.96 1.96H36.57v39.876a1.96 1.96 0 0 0 1.96 1.96h16.352a1.96 1.96 0 0 0 1.96-1.96V54.287h14.654a1.96 1.96 0 0 0 1.96-1.96l.006-15.803a1.963 1.963 0 0 0-1.961-1.961H56.842v-9.246c0-4.444 1.059-6.7 6.848-6.7l8.397-.003a1.96 1.96 0 0 0 1.959-1.96V1.98A1.96 1.96 0 0 0 72.089.02z')
+                    li
+                      a(href='http://linkedin.com', target='_blank')
+                        svg(width='12', height='12', xmlns='http://www.w3.org/2000/svg', viewBox='0 0 438.536 438.535')
+                          path(d='M5.424 145.895H99.64v282.932H5.424zM408.842 171.739c-19.791-21.604-45.967-32.408-78.512-32.408-11.991 0-22.891 1.475-32.695 4.427-9.801 2.95-18.079 7.089-24.838 12.419-6.755 5.33-12.135 10.278-16.129 14.844-3.798 4.337-7.512 9.389-11.136 15.104v-40.232h-93.935l.288 13.706c.193 9.139.288 37.307.288 84.508 0 47.205-.19 108.777-.572 184.722h93.931V270.942c0-9.705 1.041-17.412 3.139-23.127 4-9.712 10.037-17.843 18.131-24.407 8.093-6.572 18.13-9.855 30.125-9.855 16.364 0 28.407 5.662 36.117 16.987 7.707 11.324 11.561 26.98 11.561 46.966V428.82h93.931V266.664c-.007-41.688-9.897-73.328-29.694-94.925zM53.103 9.708c-15.796 0-28.595 4.619-38.4 13.848C4.899 32.787 0 44.441 0 58.529 0 72.42 4.758 84.034 14.275 93.358c9.514 9.325 22.078 13.99 37.685 13.99h.571c15.99 0 28.887-4.661 38.688-13.99 9.801-9.324 14.606-20.934 14.417-34.829-.19-14.087-5.047-25.742-14.561-34.973C81.562 14.323 68.9 9.708 53.103 9.708z')
+                    li
+                      a(href='http://instagram.com', target='_blank')
+                        svg(width='16', height='16', xmlns='http://www.w3.org/2000/svg', viewBox='0 0 512 512')
+                          path(d='M373.659 0H138.341C62.06 0 0 62.06 0 138.341v235.318C0 449.94 62.06 512 138.341 512h235.318C449.94 512 512 449.94 512 373.659V138.341C512 62.06 449.94 0 373.659 0zm96.977 373.659c0 53.473-43.503 96.977-96.977 96.977H138.341c-53.473 0-96.977-43.503-96.977-96.977V138.341c0-53.473 43.503-96.977 96.977-96.977h235.318c53.473 0 96.977 43.503 96.977 96.977v235.318z')
+                          path(d='M370.586 238.141c-3.64-24.547-14.839-46.795-32.386-64.342-17.547-17.546-39.795-28.746-64.341-32.385a114.73 114.73 0 0 0-33.682 0c-30.336 4.499-57.103 20.541-75.372 45.172-18.269 24.631-25.854 54.903-21.355 85.237 4.499 30.335 20.541 57.102 45.172 75.372 19.996 14.831 43.706 22.619 68.153 22.619 5.667 0 11.375-.418 17.083-1.265 30.336-4.499 57.103-20.541 75.372-45.172 18.27-24.63 25.855-54.901 21.356-85.236zm-102.795 89.491c-19.405 2.882-38.77-1.973-54.527-13.66-15.757-11.687-26.019-28.811-28.896-48.216-2.878-19.405 1.973-38.77 13.66-54.527 11.688-15.757 28.811-26.019 48.217-28.897a73.42 73.42 0 0 1 21.545.001c32.231 4.779 57.098 29.645 61.878 61.877 5.94 40.058-21.817 77.482-61.877 83.422zM400.049 111.951a20.83 20.83 0 0 0-14.625-6.058 20.826 20.826 0 0 0-14.625 6.058 20.814 20.814 0 0 0-6.058 14.625 20.814 20.814 0 0 0 6.058 14.625 20.83 20.83 0 0 0 14.625 6.058 20.826 20.826 0 0 0 14.625-6.058 20.83 20.83 0 0 0 6.058-14.625 20.826 20.826 0 0 0-6.058-14.625z')
+              .p-team__item.flex.fd-c.ai-c.jc-fs.in-viewport.below-viewport(data-in-viewport='i41')
+                .p-team__item-img(style='background-image: url("/img/p-team-1.jpg");')
+                .p-team__item-img.p-team__item-img--bg(style='background-image: url("/img/p-team-1.jpg");')
+                .p-team__item-info
+                  p.p-team__item-name АРТЕМ
+                  p.p-team__item-position Таргетолог
+                  //
+              .p-team__item.flex.fd-c.ai-c.jc-fs.in-viewport.below-viewport(data-in-viewport='i42')
+                .p-team__item-img(style='background-image: url("/img/p-team-1.jpg");')
+                .p-team__item-img.p-team__item-img--bg(style='background-image: url("/img/p-team-1.jpg");')
+                .p-team__item-info
+                  p.p-team__item-name Эля
+                  p.p-team__item-position Офис-менеджер
+                  //
+              .p-team__item.flex.fd-c.ai-c.jc-fs.below-viewport.in-viewport(data-in-viewport='i43')
+                .p-team__item-img(style='background-image: url("/img/p-team-1.jpg");')
+                .p-team__item-img.p-team__item-img--bg(style='background-image: url("/img/p-team-1.jpg");')
+                .p-team__item-info
+                  p.p-team__item-name ВИКА
+                  p.p-team__item-position Project Manager (SMM)
+                  //
+              .p-team__item.flex.fd-c.ai-c.jc-fs.below-viewport.in-viewport(data-in-viewport='i44')
+                .p-team__item-img(style='background-image: url("/img/p-team-1.jpg");')
+                .p-team__item-img.p-team__item-img--bg(style='background-image: url("/img/p-team-1.jpg");')
+                .p-team__item-info
+                  p.p-team__item-name Руслан
+                  p.p-team__item-position Back-End Developer
+                  //
+              .p-team__item.flex.fd-c.ai-c.jc-fs.below-viewport.in-viewport(data-in-viewport='i45')
+                .p-team__item-img(style='background-image: url("/img/p-team-1.jpg");')
+                .p-team__item-img.p-team__item-img--bg(style='background-image: url("/img/p-team-1.jpg");')
+                .p-team__item-info
+                  p.p-team__item-name ЛЕНА
+                  p.p-team__item-position Фотограф
+                  //
+              .p-team__item.flex.fd-c.ai-c.jc-fs.below-viewport.in-viewport(data-in-viewport='i46')
+                .p-team__item-img(style='background-image: url("/img/p-team-1.jpg");')
+                .p-team__item-img.p-team__item-img--bg(style='background-image: url("/img/p-team-1.jpg");')
+                .p-team__item-info
+                  p.p-team__item-name АНДРЕЙ
+                  p.p-team__item-position Back-End Developer
+                  //
+              .p-team__item.flex.fd-c.ai-c.jc-fs.below-viewport.in-viewport(data-in-viewport='i47')
+                .p-team__item-img(style='background-image: url("/img/p-team-1.jpg");')
+                .p-team__item-img.p-team__item-img--bg(style='background-image: url("/img/p-team-1.jpg");')
+                .p-team__item-info
+                  p.p-team__item-name АНДРЕЙ
+                  p.p-team__item-position Project Manager (WEB)
+                  //
+              .p-team__item.flex.fd-c.ai-c.jc-fs.below-viewport.in-viewport(data-in-viewport='i48')
+                .p-team__item-img(style='background-image: url("/img/p-team-1.jpg");')
+                .p-team__item-img.p-team__item-img--bg(style='background-image: url("/img/p-team-1.jpg");')
+                .p-team__item-info
+                  p.p-team__item-name МАША
+                  p.p-team__item-position Аккаунт менеджер
+                  //
+              .p-team__item.flex.fd-c.ai-c.jc-fs.below-viewport.in-viewport(data-in-viewport='i49')
+                .p-team__item-img(style='background-image: url("/img/p-team-1.jpg");')
+                .p-team__item-img.p-team__item-img--bg(style='background-image: url("/img/p-team-1.jpg");')
+                .p-team__item-info
+                  p.p-team__item-name ВИКА
+                  p.p-team__item-position Project Manager (SMM)
+                  //
+              .p-team__item.flex.fd-c.ai-c.jc-fs.below-viewport.in-viewport(data-in-viewport='i50')
+                .p-team__item-img(style='background-image: url("/img/p-team-1.jpg");')
+                .p-team__item-img.p-team__item-img--bg(style='background-image: url("/img/p-team-1.jpg");')
+                .p-team__item-info
+                  p.p-team__item-name ОЛЯ
+                  p.p-team__item-position Digital Designer
+                  //
+              .p-team__item.flex.fd-c.ai-c.jc-fs.below-viewport.in-viewport(data-in-viewport='i51')
+                .p-team__item-img(style='background-image: url("/img/p-team-1.jpg");')
+                .p-team__item-img.p-team__item-img--bg(style='background-image: url("/img/p-team-1.jpg");')
+                .p-team__item-info
+                  p.p-team__item-name КОСТЯ
+                  p.p-team__item-position Front-End Developer
+                  //
+
+
+
+  include ../includes/_footer
+  

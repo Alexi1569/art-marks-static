@@ -1,0 +1,62 @@
+extends ../includes/_layout
+
+block content
+  - var isFooterBorder = true;
+  include ../includes/_header
+
+  block main
+    main.center
+      .p-office
+        #blueimp-gallery.blueimp-gallery
+          .slides
+          h3.title
+          a.prev ‹
+          a.next ›
+          a.close ×
+          a.play-pause
+          ol.indicator
+        .container
+          .breadcrumbs
+            ul.breadcrumbs__list.flex.jc-fs.fw-w.ai-s
+              li
+                a.nuxt-link-active(href='/') ART MARKS
+              li
+                a.nuxt-link-active(href='/about') О студии
+              li
+                | Наши офисы
+          .p-services__top
+            .caption.caption--big.caption--services--visible
+              .caption__inner.above-viewport(data-in-viewport='i52')
+                p.caption__main НАШИ ОФИСЫ
+                //
+                //
+
+          .p-office__items.gallery-item
+            a(href="/img/office-1.jpg").p-office__item
+              .zoom
+                img(src='/img/office-1.jpg', width='100%')
+            a(href="/img/office-2.jpg").p-office__item.p-office__item--centered
+              .zoom
+                img(src='/img/office-2.jpg', width='100%')
+            a(href="/img/office-3.jpg").p-office__item
+              .zoom
+                img(src='/img/office-3.jpg', width='100%')
+            a(href="/img/office-5.jpg").p-office__item.p-office__item--centered
+              .zoom
+                img(src='/img/office-5.jpg', width='100%')
+            a(href="/img/office-4.jpg").p-office__item
+              .zoom
+                img(src='/img/office-4.jpg', width='100%')
+            a(href="/img/office-6.jpg").p-office__item
+              .zoom
+                img(src='/img/office-6.jpg', width='100%')
+            a(href="/img/office-7.jpg").p-office__item.p-office__item--centered
+              .zoom
+                img(src='/img/office-7.jpg', width='100%')
+
+
+
+
+
+  include ../includes/_footer
+  

@@ -1,0 +1,56 @@
+extends ../includes/_layout
+
+block content
+  - var isFooterBorder = true;
+  include ../includes/_header
+
+  block main
+    main.center
+      .p-awards
+        #blueimp-gallery.blueimp-gallery
+          .slides
+          h3.title
+          a.prev ‹
+          a.next ›
+          a.close ×
+          a.play-pause
+          ol.indicator
+        .container
+          .breadcrumbs
+            ul.breadcrumbs__list.flex.jc-fs.fw-w.ai-s
+              li
+                a.nuxt-link-active(href='/') ART MARKS
+              li
+                a.nuxt-link-active(href='/about') О студии
+              li
+                | Наши награды
+          .p-services__top
+            .caption.caption--big.caption--services--visible
+              .caption__inner.above-viewport(data-in-viewport='i13')
+                p.caption__main Наши награды
+                //
+                //
+          .p-awards__inner
+
+            .p-awards__items.flex.fw-w.ai-s.jc-fs.in-viewport.above-viewport.gallery-item
+              a(href="/img/certificate-1.jpg").about__certificate
+                .zoom
+                  img(src='/img/certificate-1.jpg')
+              a(href="/img/certificate-2.jpg").about__certificate
+                .zoom
+                  img(src='/img/certificate-2.jpg')
+              a(href="/img/certificate-3.jpg").about__certificate
+                .zoom
+                  img(src='/img/certificate-3.jpg')
+              a(href="/img/certificate-4.jpg").about__certificate
+                .zoom
+                  img(src='/img/certificate-4.jpg')
+              a(href="/img/certificate-5.jpg").about__certificate
+                .zoom
+                  img(src='/img/certificate-5.jpg')
+
+
+
+
+  include ../includes/_footer
+  

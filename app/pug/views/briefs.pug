@@ -1,0 +1,202 @@
+extends ../includes/_layout
+
+block content
+  - var isFooterBorder = true;
+  include ../includes/_header
+
+  block main
+    main.center
+      .p-briefs
+        .container
+          .breadcrumbs
+            ul.breadcrumbs__list.flex.jc-fs.fw-w.ai-s
+              li
+                a.nuxt-link-active(href='/') ART MARKS
+              li
+                | Брифы
+          .p-services__top
+            .caption.caption--big.caption--services--visible
+              .caption__inner.in-viewport.fully-in-viewport(data-in-viewport='i16')
+                p.caption__main БРИФЫ
+                //
+                .caption__content
+                  p
+                    | Данный документ поможет Вам как можно точнее сформулировать желания и потребности на счет разработки сайта, так же он станет гарантом профессионального и успешного сайта, а это в Ваших интересах. Качественное заполнение брифа занимает большое количество времени, но мы постарались максимально минимизировать количество возникающих у Вас вопросов и описали каждую страницу и элемент отдельно
+          .p-briefs__items.flex.fw-w.ai-s.jc-fs
+            .services__block.services__block--web.p-services__services__block.in-viewport.fully-in-viewport(data-in-viewport='i23')
+              .services__block-title
+                p.services__block-title--main Web
+                p.services__block-title--additional(style='color: rgb(241, 240, 253);') Web
+              .brief__content
+                .brief__content-item
+                  .toggler-item
+                    .toggler-item__inner.in-viewport.fully-in-viewport(data-in-viewport='i18')
+                      .toggler-item__top
+                        .brief__content-top.flex.ai-c.jc-fs
+                          i
+                            svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 129 129')
+                              path(d='M121.3 34.6c-1.6-1.6-4.2-1.6-5.8 0l-51 51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8 0-1.6 1.6-1.6 4.2 0 5.8l53.9 53.9c.8.8 1.8 1.2 2.9 1.2 1 0 2.1-.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2.1-5.8z')
+                          p Бриф на разработку сайта компании
+                      .toggler-item__bottom
+                        .brief__content-links
+                          nav.nav__wrap
+                            ul.nav__list.briefs__nav-list.in-viewport.fully-in-viewport(data-in-viewport='i17')
+                              li
+                                a(href='http://kmmc.in/wp-content/uploads/2014/01/lesson2.pdf', target='_blank')
+                                  | Заполнить online
+                                //
+                              li
+                                a(href='/img/test.pdf', download='')
+                                  | Скачать документ Microsoft Word
+                                //
+                                //
+                .brief__content-item
+                  .toggler-item
+                    .toggler-item__inner.in-viewport.fully-in-viewport(data-in-viewport='i20')
+                      .toggler-item__top
+                        .brief__content-top.flex.ai-c.jc-fs
+                          i
+                            svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 129 129')
+                              path(d='M121.3 34.6c-1.6-1.6-4.2-1.6-5.8 0l-51 51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8 0-1.6 1.6-1.6 4.2 0 5.8l53.9 53.9c.8.8 1.8 1.2 2.9 1.2 1 0 2.1-.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2.1-5.8z')
+                          p Бриф на разработку интернет-магазина
+                      .toggler-item__bottom
+                        .brief__content-links
+                          nav.nav__wrap
+                            ul.nav__list.briefs__nav-list.in-viewport.fully-in-viewport(data-in-viewport='i19')
+                              li
+                                a(href='http://kmmc.in/wp-content/uploads/2014/01/lesson2.pdf', target='_blank')
+                                  | Заполнить online
+                                //
+                              li
+                                a(href='/img/test.pdf', download='')
+                                  | Скачать документ Microsoft Word
+                                //
+                                //
+                .brief__content-item
+                  .toggler-item
+                    .toggler-item__inner.in-viewport.fully-in-viewport(data-in-viewport='i22')
+                      .toggler-item__top
+                        .brief__content-top.flex.ai-c.jc-fs
+                          i
+                            svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 129 129')
+                              path(d='M121.3 34.6c-1.6-1.6-4.2-1.6-5.8 0l-51 51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8 0-1.6 1.6-1.6 4.2 0 5.8l53.9 53.9c.8.8 1.8 1.2 2.9 1.2 1 0 2.1-.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2.1-5.8z')
+                          p Бриф на разработку landing page
+                      .toggler-item__bottom
+                        .brief__content-links
+                          nav.nav__wrap
+                            ul.nav__list.briefs__nav-list.in-viewport.fully-in-viewport(data-in-viewport='i21')
+                              li
+                                a(href='http://kmmc.in/wp-content/uploads/2014/01/lesson2.pdf', target='_blank')
+                                  | Заполнить online
+                                //
+                              li
+                                a(href='/img/test.pdf', download='')
+                                  | Скачать документ Microsoft Word
+                                //
+                                //
+                                //
+            .services__block.services__block--smm.p-services__services__block.in-viewport.fully-in-viewport(data-in-viewport='i30')
+              .services__block-title
+                p.services__block-title--main smm
+                p.services__block-title--additional(style='color: rgb(226, 246, 253);') smm
+              .brief__content
+                .brief__content-item
+                  .toggler-item
+                    .toggler-item__inner.in-viewport.fully-in-viewport(data-in-viewport='i25')
+                      .toggler-item__top
+                        .brief__content-top.flex.ai-c.jc-fs
+                          i
+                            svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 129 129')
+                              path(d='M121.3 34.6c-1.6-1.6-4.2-1.6-5.8 0l-51 51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8 0-1.6 1.6-1.6 4.2 0 5.8l53.9 53.9c.8.8 1.8 1.2 2.9 1.2 1 0 2.1-.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2.1-5.8z')
+                          p Бриф на SMM продвижение
+                      .toggler-item__bottom
+                        .brief__content-links
+                          nav.nav__wrap
+                            ul.nav__list.briefs__nav-list.in-viewport.fully-in-viewport(data-in-viewport='i24')
+                              li
+                                a(href='http://kmmc.in/wp-content/uploads/2014/01/lesson2.pdf', target='_blank')
+                                  | Заполнить online
+                                //
+                              li
+                                a(href='/img/test.pdf', download='')
+                                  | Скачать документ Microsoft Word
+                                //
+                                //
+                .brief__content-item
+                  .toggler-item
+                    .toggler-item__inner.in-viewport.fully-in-viewport(data-in-viewport='i27')
+                      .toggler-item__top
+                        .brief__content-top.flex.ai-c.jc-fs
+                          i
+                            svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 129 129')
+                              path(d='M121.3 34.6c-1.6-1.6-4.2-1.6-5.8 0l-51 51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8 0-1.6 1.6-1.6 4.2 0 5.8l53.9 53.9c.8.8 1.8 1.2 2.9 1.2 1 0 2.1-.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2.1-5.8z')
+                          p Бриф на фирменный стиль
+                      .toggler-item__bottom
+                        .brief__content-links
+                          nav.nav__wrap
+                            ul.nav__list.briefs__nav-list.in-viewport.fully-in-viewport(data-in-viewport='i26')
+                              li
+                                a(href='http://kmmc.in/wp-content/uploads/2014/01/lesson2.pdf', target='_blank')
+                                  | Заполнить online
+                                //
+                              li
+                                a(href='/img/test.pdf', download='')
+                                  | Скачать документ Microsoft Word
+                                //
+                                //
+                .brief__content-item
+                  .toggler-item
+                    .toggler-item__inner.in-viewport.fully-in-viewport(data-in-viewport='i29')
+                      .toggler-item__top
+                        .brief__content-top.flex.ai-c.jc-fs
+                          i
+                            svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 129 129')
+                              path(d='M121.3 34.6c-1.6-1.6-4.2-1.6-5.8 0l-51 51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8 0-1.6 1.6-1.6 4.2 0 5.8l53.9 53.9c.8.8 1.8 1.2 2.9 1.2 1 0 2.1-.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2.1-5.8z')
+                          p Бриф на логотип
+                      .toggler-item__bottom
+                        .brief__content-links
+                          nav.nav__wrap
+                            ul.nav__list.briefs__nav-list.in-viewport.fully-in-viewport(data-in-viewport='i28')
+                              li
+                                a(href='http://kmmc.in/wp-content/uploads/2014/01/lesson2.pdf', target='_blank')
+                                  | Заполнить online
+                                //
+                              li
+                                a(href='/img/test.pdf', download='')
+                                  | Скачать документ Microsoft Word
+                                //
+                                //
+                                //
+            .services__block.services__block--seo.p-services__services__block.in-viewport.fully-in-viewport(data-in-viewport='i33')
+              .services__block-title
+                p.services__block-title--main seo
+                p.services__block-title--additional(style='color: rgb(228, 249, 241);') seo
+              .brief__content
+                .brief__content-item
+                  .toggler-item
+                    .toggler-item__inner.in-viewport.fully-in-viewport(data-in-viewport='i32')
+                      .toggler-item__top
+                        .brief__content-top.flex.ai-c.jc-fs
+                          i
+                            svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 129 129')
+                              path(d='M121.3 34.6c-1.6-1.6-4.2-1.6-5.8 0l-51 51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8 0-1.6 1.6-1.6 4.2 0 5.8l53.9 53.9c.8.8 1.8 1.2 2.9 1.2 1 0 2.1-.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2.1-5.8z')
+                          p Бриф на SEO продвижение
+                      .toggler-item__bottom
+                        .brief__content-links
+                          nav.nav__wrap
+                            ul.nav__list.briefs__nav-list.in-viewport.fully-in-viewport(data-in-viewport='i31')
+                              li
+                                a(href='http://kmmc.in/wp-content/uploads/2014/01/lesson2.pdf', target='_blank')
+                                  | Заполнить online
+                                //
+                              li
+                                a(href='/img/test.pdf', download='')
+                                  | Скачать документ Microsoft Word
+                                //
+                                //
+                                //
+
+
+
+  include ../includes/_footer
+  

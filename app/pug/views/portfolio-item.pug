@@ -1,0 +1,106 @@
+extends ../includes/_layout
+
+block content
+  - var isFooterBorder = true;
+  include ../includes/_header
+
+  block main
+    main.center
+      .p-portfolio-item
+        .container
+          .breadcrumbs
+            ul.breadcrumbs__list.flex.jc-fs.fw-w.ai-s
+              li
+                a.nuxt-link-active(href='/') ART MARKS
+              li
+                a.nuxt-link-active(href='/portfolio') Портфолио
+              li
+                | KARREE
+          .p-services__top
+            .caption.caption--big.p-portfolio-item__caption.caption--services--visible
+              .caption__inner.above-viewport(data-in-viewport='i18')
+                p.caption__main KARREE
+                //
+                .caption__content
+                  p интернет-магазин женской одежды
+          .p-portfolio-item__content
+            .p-portfolio-item__top
+              .p-portfolio-item__top-img
+                img(src='/img/karree-1.jpg', alt='alt')
+              .p-portfolio-item__top-items
+                .portfolio__row.flex.ai-fs.jc-fs.above-viewport(data-in-viewport='i19')
+                  p.portfolio__row-title КЛИЕНТ
+                  .portfolio__row-content
+                    .portfolio__row-text
+                      p
+                        | KARREE - это интернет-магазин, который предлагает широкий ассортимент женской одежды по оптовым и розничным ценам!
+                    a.portfolio__row-link(target='_blank', href='http://karree.com.ua') karree.com.ua
+                .portfolio__row.flex.ai-fs.jc-fs.above-viewport(data-in-viewport='i20')
+                  p.portfolio__row-title ЗАДАЧА
+                  .portfolio__row-content
+                    .portfolio__row-text
+                      p
+                        | Обновить сайт популярного онлайн-магазина женской одежды KARREE: провести редизайн, увеличить трафик и улучшить функционал для клиентов и администраторов, одновременно сохранив позиции в поисковой выдаче.
+                    //
+            .p-portfolio-item__info
+              .p-portfolio-item__info-img
+                img(src='/img/karree-2.jpg', alt='alt')
+              .p-portfolio-item__info-items
+                .portfolio__row.flex.ai-fs.jc-fs.portfolio__row--small.above-viewport(data-in-viewport='i21')
+                  p.portfolio__row-title КОМАНДА
+                  .portfolio__row-content
+                    .portfolio__row-text
+                      p PM, UI/UX Designer, front-end, back-end, QA
+                    //
+                .portfolio__row.flex.ai-fs.jc-fs.portfolio__row--small.above-viewport(data-in-viewport='i22')
+                  p.portfolio__row-title СРОК РЕАЛИЗАЦИИ
+                  .portfolio__row-content
+                    .portfolio__row-text
+                      p 8 недель
+                    //
+                .portfolio__row.flex.ai-fs.jc-fs.portfolio__row--small.above-viewport(data-in-viewport='i23')
+                  p.portfolio__row-title ТЕХНОЛОГИИ
+                  .portfolio__row-content
+                    .portfolio__row-text
+                      p Laravel
+                    //
+                .portfolio__row.flex.ai-fs.jc-fs.portfolio__row--small.above-viewport(data-in-viewport='i24')
+                  p.portfolio__row-title НАПРАВЛЕНИЕ РАБОТЫ
+                  .portfolio__row-content
+                    .portfolio__row-text
+                      p
+                        | Создание семантического ядра, Дизайн логотипа, Дизайн сайта, Верстка, Программирование, SEO, Контекстная реклама
+                    //
+            .p-portfolio-item__info-before
+              img(src='/img/karree-3.jpg', alt='alt')
+            .p-portfolio-item__info-done
+              .portfolio__row.flex.ai-fs.jc-fs.above-viewport(data-in-viewport='i25')
+                p.portfolio__row-title ЧТО СДЕЛАЛИ
+                .portfolio__row-content
+                  .portfolio__row-text
+                    p
+                      | Интернет-магазин был реализован с акцентом на качественные и профессиональные фото, благодаря которым можно определить качество выбранной модели одежды. Также использовали весь необходимый функционал, чтобы покупатель смог найти всю необходимую ему информацию.
+                  //
+            .p-portfolio-item__info-after
+              img(src='/img/karree-4.jpg', alt='alt')
+          .p-portfolio-item__controls.flex.jc-c.ai-c.in-viewport.fully-in-viewport(data-in-viewport='i26')
+            .portfolio__arrow.flex.ai-c.jc-c.portfolio__arrow--prev
+              i.portfolio__arrow-icon
+                svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 129 129')
+                  path(d='M88.6 121.3c.8.8 1.8 1.2 2.9 1.2s2.1-.4 2.9-1.2c1.6-1.6 1.6-4.2 0-5.8l-51-51 51-51c1.6-1.6 1.6-4.2 0-5.8s-4.2-1.6-5.8 0l-54 53.9c-1.6 1.6-1.6 4.2 0 5.8l54 53.9z')
+              a.portfolio__arrow-link(href='/portfolio/karree#') предыдущий проект
+            .portfolio__counter
+              .portfolio__counter-inner
+                b 1
+                | /
+                span 7
+            .portfolio__arrow.flex.ai-c.jc-c.portfolio__arrow--next
+              i.portfolio__arrow-icon
+                svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 129 129')
+                  path(d='M40.4 121.3c-.8.8-1.8 1.2-2.9 1.2s-2.1-.4-2.9-1.2c-1.6-1.6-1.6-4.2 0-5.8l51-51-51-51c-1.6-1.6-1.6-4.2 0-5.8 1.6-1.6 4.2-1.6 5.8 0l53.9 53.9c1.6 1.6 1.6 4.2 0 5.8l-53.9 53.9z')
+              a.portfolio__arrow-link(href='/portfolio/karree#') следующий проект
+
+
+
+  include ../includes/_footer
+  
